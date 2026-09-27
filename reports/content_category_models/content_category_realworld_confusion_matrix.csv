@@ -1,0 +1,16 @@
+,safe_communication,none,negative_media_feedback,threat_violence,sexual_abuse,personal_attack,positive_media_feedback,bad_content,hate_abuse,profanity,low_quality,negative_review,spam,privacy,misinformation
+safe_communication,937,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+none,15,688,0,0,0,0,1,0,0,0,0,0,0,0,0
+negative_media_feedback,0,0,280,0,0,0,0,12,0,0,0,0,0,0,0
+threat_violence,0,0,0,87,0,0,0,0,0,0,0,0,0,0,0
+sexual_abuse,0,0,0,0,76,0,0,0,0,0,0,0,0,0,0
+personal_attack,0,0,0,0,0,65,0,0,0,0,0,0,0,0,0
+positive_media_feedback,0,27,0,0,0,0,26,0,0,0,0,0,0,0,0
+bad_content,0,2,9,0,0,0,0,38,0,0,0,0,0,0,0
+hate_abuse,0,0,0,0,0,0,0,0,39,0,0,0,0,0,0
+profanity,0,0,0,0,0,0,0,0,0,36,0,0,0,0,0
+low_quality,0,0,0,0,0,0,0,0,0,0,36,0,0,0,0
+negative_review,0,2,0,0,0,0,0,0,0,0,0,40,0,0,0
+spam,0,2,0,0,0,0,0,0,0,0,0,0,31,0,0
+privacy,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0
+misinformation,0,1,0,0,0,0,0,0,0,0,0,0,0,0,18

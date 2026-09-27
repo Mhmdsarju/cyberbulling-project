@@ -1,0 +1,16 @@
+content_category,non_cyberbullying,cyberbullying
+bad_content,490,0
+hate_abuse,0,400
+low_quality,387,0
+misinformation,230,0
+negative_media_feedback,0,3004
+negative_review,377,0
+none,6911,0
+personal_attack,0,600
+positive_media_feedback,550,0
+privacy,316,0
+profanity,0,400
+safe_communication,9464,0
+sexual_abuse,0,750
+spam,321,0
+threat_violence,0,800

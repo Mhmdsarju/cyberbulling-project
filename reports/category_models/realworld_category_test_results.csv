@@ -1,0 +1,8 @@
+category,precision,recall,f1_score
+insult,0.953125,0.9172932330827067,0.9348659003831418
+threat,1.0,1.0,1.0
+violence,1.0,1.0,1.0
+hate,1.0,1.0,1.0
+sexual_harassment,1.0,1.0,1.0
+sexual_abuse,1.0,1.0,1.0
+profanity,1.0,1.0,1.0

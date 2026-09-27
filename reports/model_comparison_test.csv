@@ -1,3 +1,0 @@
-model,accuracy,precision,recall,f1_score
-Logistic Regression,1.0,1.0,1.0,1.0
-Linear SVM,1.0,1.0,1.0,1.0

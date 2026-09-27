@@ -1,0 +1,2 @@
+model,dataset,samples,features,accuracy,macro_precision,macro_recall,macro_f1
+Linear SVM,realworld_validation,2500,27665,0.9944,0.9943723561404687,0.9914487505528528,0.9928981012165414

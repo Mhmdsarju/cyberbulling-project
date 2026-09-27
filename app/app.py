@@ -83,10 +83,6 @@ try:
 
     pipeline = PredictionPipeline()
 
-    print(
-        "Prediction pipeline initialized successfully."
-    )
-
 except Exception as error:
 
     print(
@@ -101,14 +97,38 @@ except Exception as error:
 
 
 # ============================================================
-# FRONTEND
+# DASHBOARD PAGE
 # ============================================================
 
 @app.get("/")
-def home():
+def dashboard():
 
     return render_template(
-        "index.html"
+        "dashboard.html"
+    )
+
+
+# ============================================================
+# ANALYSIS PAGE
+# ============================================================
+
+@app.get("/analysis")
+def analysis():
+
+    return render_template(
+        "analysis.html"
+    )
+
+
+# ============================================================
+# ABOUT PROJECT PAGE
+# ============================================================
+
+@app.get("/about")
+def about():
+
+    return render_template(
+        "about.html"
     )
 
 
@@ -129,7 +149,7 @@ def health():
         ),
 
         "model": (
-            "robust_multilingual"
+            "realworld_multilingual"
         ),
 
         "pipeline": (
@@ -137,7 +157,26 @@ def health():
             "+ Linear SVM"
         ),
 
-        "feature_dimension": 29385,
+        "prediction_components": [
+
+            "cyberbullying",
+
+            "offense_category",
+
+            "intent",
+
+            "content_category",
+
+            "severity",
+
+            "target_type",
+
+            "explanation",
+
+            "polite_suggestion",
+        ],
+
+        "feature_dimension": 27665,
 
     }), 200
 
@@ -303,7 +342,7 @@ if __name__ == "__main__":
     )
 
     print(
-        "CYBERBULLYING DETECTION API"
+        "CYBERBULLYING DETECTION SYSTEM"
     )
 
     print(
@@ -311,25 +350,31 @@ if __name__ == "__main__":
     )
 
     print(
-        "Model: Robust Multilingual"
+        "Model       : Real-World Multilingual"
     )
 
     print(
-        "Features: 29385"
+        "Features    : 27,665"
     )
 
     print(
-        "Server: http://127.0.0.1:5000"
+        "Dashboard   : http://127.0.0.1:5000/"
     )
 
     print(
-        "Health: "
-        "http://127.0.0.1:5000/health"
+        "Analysis    : http://127.0.0.1:5000/analysis"
     )
 
     print(
-        "Prediction: "
-        "POST /predict"
+        "About       : http://127.0.0.1:5000/about"
+    )
+
+    print(
+        "Health      : http://127.0.0.1:5000/health"
+    )
+
+    print(
+        "Prediction  : POST /predict"
     )
 
     print(
@@ -342,6 +387,6 @@ if __name__ == "__main__":
 
         port=5000,
 
-        debug=True
+        debug=False
 
     )

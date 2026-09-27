@@ -11,7 +11,9 @@ from scipy.sparse import hstack
 # ============================================================
 
 BASE_DIR = os.path.dirname(
-    os.path.dirname(os.path.abspath(__file__))
+    os.path.dirname(
+        os.path.abspath(__file__)
+    )
 )
 
 if BASE_DIR not in sys.path:
@@ -37,7 +39,6 @@ spec = importlib.util.spec_from_file_location(
 )
 
 if spec is None or spec.loader is None:
-
     raise ImportError(
         "Could not load explanation engine."
     )
@@ -64,19 +65,19 @@ build_prediction_result = (
 WORD_VECTORIZER_PATH = os.path.join(
     BASE_DIR,
     "models",
-    "tfidf_word_robust_vectorizer.joblib"
+    "tfidf_word_realworld_vectorizer.joblib"
 )
 
 CHAR_VECTORIZER_PATH = os.path.join(
     BASE_DIR,
     "models",
-    "tfidf_char_robust_vectorizer.joblib"
+    "tfidf_char_realworld_vectorizer.joblib"
 )
 
 NOSPACE_CHAR_VECTORIZER_PATH = os.path.join(
     BASE_DIR,
     "models",
-    "tfidf_nospace_char_robust_vectorizer.joblib"
+    "tfidf_nospace_char_realworld_vectorizer.joblib"
 )
 
 
@@ -87,19 +88,43 @@ NOSPACE_CHAR_VECTORIZER_PATH = os.path.join(
 CYBERBULLYING_MODEL_PATH = os.path.join(
     BASE_DIR,
     "models",
-    "logistic_regression_robust_multilingual.joblib"
+    "logistic_regression_realworld_multilingual.joblib"
 )
 
 
 # ============================================================
-# CATEGORY MODEL
+# OFFENSE CATEGORY MODEL
 # ============================================================
 
 CATEGORY_MODEL_PATH = os.path.join(
     BASE_DIR,
     "models",
     "category_models",
-    "category_multilabel_svm_robust_multilingual.joblib"
+    "category_multilabel_svm_realworld_multilingual.joblib"
+)
+
+
+# ============================================================
+# INTENT MODEL
+# ============================================================
+
+INTENT_MODEL_PATH = os.path.join(
+    BASE_DIR,
+    "models",
+    "intent_models",
+    "intent_svm_realworld_multilingual.joblib"
+)
+
+
+# ============================================================
+# CONTENT CATEGORY MODEL
+# ============================================================
+
+CONTENT_CATEGORY_MODEL_PATH = os.path.join(
+    BASE_DIR,
+    "models",
+    "content_category_models",
+    "content_category_svm_realworld_multilingual.joblib"
 )
 
 
@@ -110,7 +135,7 @@ CATEGORY_MODEL_PATH = os.path.join(
 SEVERITY_MODEL_PATH = os.path.join(
     BASE_DIR,
     "models",
-    "severity_svm_robust_multilingual.joblib"
+    "severity_svm_realworld_multilingual.joblib"
 )
 
 
@@ -121,7 +146,7 @@ SEVERITY_MODEL_PATH = os.path.join(
 TARGET_MODEL_PATH = os.path.join(
     BASE_DIR,
     "models",
-    "target_type_svm_robust_multilingual.joblib"
+    "target_type_svm_realworld_multilingual.joblib"
 )
 
 
@@ -129,11 +154,11 @@ TARGET_MODEL_PATH = os.path.join(
 # EXPECTED FEATURE DIMENSION
 # ============================================================
 
-EXPECTED_FEATURE_DIMENSION = 29385
+EXPECTED_FEATURE_DIMENSION = 27665
 
 
 # ============================================================
-# LABELS
+# OFFENSE CATEGORY LABELS
 # ============================================================
 
 CATEGORY_LABELS = [
@@ -151,6 +176,78 @@ CATEGORY_LABELS = [
     "sexual_abuse",
 
     "profanity",
+]
+
+
+# ============================================================
+# INTENT LABELS
+# ============================================================
+
+INTENT_LABELS = [
+
+    "offensive",
+
+    "informational",
+
+    "requesting",
+
+    "questioning",
+
+    "praising",
+
+    "defensive",
+
+    "neutral",
+
+    "supporting",
+
+    "apologizing",
+
+    "thanking",
+
+    "begging",
+
+    "casual",
+
+    "greeting",
+]
+
+
+# ============================================================
+# CONTENT CATEGORY LABELS
+# ============================================================
+
+CONTENT_CATEGORY_LABELS = [
+
+    "safe_communication",
+
+    "none",
+
+    "negative_media_feedback",
+
+    "threat_violence",
+
+    "sexual_abuse",
+
+    "personal_attack",
+
+    "positive_media_feedback",
+
+    "bad_content",
+
+    "hate_abuse",
+
+    "profanity",
+
+    "low_quality",
+
+    "negative_review",
+
+    "spam",
+
+    "privacy",
+
+    "misinformation",
 ]
 
 
@@ -204,10 +301,6 @@ class PredictionPipeline:
 
     def __init__(self):
 
-        print(
-            "Loading robust multilingual models..."
-        )
-
         # ====================================================
         # WORD TF-IDF
         # ====================================================
@@ -216,20 +309,12 @@ class PredictionPipeline:
             WORD_VECTORIZER_PATH
         )
 
-        print(
-            "Word TF-IDF vectorizer loaded."
-        )
-
         # ====================================================
-        # NORMAL CHARACTER TF-IDF
+        # CHARACTER TF-IDF
         # ====================================================
 
         self.char_vectorizer = joblib.load(
             CHAR_VECTORIZER_PATH
-        )
-
-        print(
-            "Character TF-IDF vectorizer loaded."
         )
 
         # ====================================================
@@ -240,10 +325,6 @@ class PredictionPipeline:
             NOSPACE_CHAR_VECTORIZER_PATH
         )
 
-        print(
-            "No-space character TF-IDF vectorizer loaded."
-        )
-
         # ====================================================
         # CYBERBULLYING MODEL
         # ====================================================
@@ -252,20 +333,28 @@ class PredictionPipeline:
             CYBERBULLYING_MODEL_PATH
         )
 
-        print(
-            "Cyberbullying model loaded."
-        )
-
         # ====================================================
-        # CATEGORY MODEL
+        # OFFENSE CATEGORY MODEL
         # ====================================================
 
         self.category_model = joblib.load(
             CATEGORY_MODEL_PATH
         )
 
-        print(
-            "Category model loaded."
+        # ====================================================
+        # INTENT MODEL
+        # ====================================================
+
+        self.intent_model = joblib.load(
+            INTENT_MODEL_PATH
+        )
+
+        # ====================================================
+        # CONTENT CATEGORY MODEL
+        # ====================================================
+
+        self.content_category_model = joblib.load(
+            CONTENT_CATEGORY_MODEL_PATH
         )
 
         # ====================================================
@@ -276,20 +365,12 @@ class PredictionPipeline:
             SEVERITY_MODEL_PATH
         )
 
-        print(
-            "Severity model loaded."
-        )
-
         # ====================================================
         # TARGET MODEL
         # ====================================================
 
         self.target_model = joblib.load(
             TARGET_MODEL_PATH
-        )
-
-        print(
-            "Target type model loaded."
         )
 
         # ====================================================
@@ -307,6 +388,14 @@ class PredictionPipeline:
                 .estimators_[0]
                 .n_features_in_,
 
+            "Intent":
+                self.intent_model
+                .n_features_in_,
+
+            "Content Category":
+                self.content_category_model
+                .n_features_in_,
+
             "Severity":
                 self.severity_model
                 .n_features_in_,
@@ -317,7 +406,7 @@ class PredictionPipeline:
         }
 
         print(
-            "\nModel feature dimensions:"
+            "Model feature dimensions:"
         )
 
         for name, dimension in (
@@ -325,10 +414,13 @@ class PredictionPipeline:
         ):
 
             print(
-                f"{name:15s}: {dimension}"
+                f"{name:20s}: {dimension}"
             )
 
-            if dimension != EXPECTED_FEATURE_DIMENSION:
+            if (
+                dimension
+                != EXPECTED_FEATURE_DIMENSION
+            ):
 
                 raise ValueError(
                     f"{name} model expects "
@@ -337,14 +429,6 @@ class PredictionPipeline:
                     f"{EXPECTED_FEATURE_DIMENSION}."
                 )
 
-        print(
-            "\nAll model dimensions validated."
-        )
-
-        print(
-            "\nAll robust multilingual models "
-            "loaded successfully."
-        )
 
     # ========================================================
     # CREATE FEATURES
@@ -352,17 +436,9 @@ class PredictionPipeline:
 
     def create_features(self, text):
 
-        # ----------------------------------------------------
-        # Original text
-        # ----------------------------------------------------
-
         texts = [
             text
         ]
-
-        # ----------------------------------------------------
-        # No-space representation
-        # ----------------------------------------------------
 
         no_space_text = (
             create_no_space_text(
@@ -385,7 +461,7 @@ class PredictionPipeline:
         )
 
         # ----------------------------------------------------
-        # Normal character TF-IDF
+        # Character TF-IDF
         # ----------------------------------------------------
 
         char_features = (
@@ -395,7 +471,7 @@ class PredictionPipeline:
         )
 
         # ----------------------------------------------------
-        # No-space character TF-IDF
+        # No-space Character TF-IDF
         # ----------------------------------------------------
 
         no_space_char_features = (
@@ -405,7 +481,7 @@ class PredictionPipeline:
         )
 
         # ----------------------------------------------------
-        # Combine features
+        # Combine
         # ----------------------------------------------------
 
         combined_features = hstack(
@@ -418,7 +494,7 @@ class PredictionPipeline:
         )
 
         # ----------------------------------------------------
-        # Validate dimension
+        # Validate
         # ----------------------------------------------------
 
         if (
@@ -435,20 +511,23 @@ class PredictionPipeline:
 
         return combined_features
 
+
     # ========================================================
     # CONFIDENCE
     # ========================================================
 
     def calculate_confidence(
         self,
-        features
+        features,
+        cyber_prediction
     ):
 
         """
         Logistic Regression probability.
 
-        This represents the model's predicted
-        probability for the cyberbullying class.
+        This represents the probability assigned
+        by the model to the predicted class.
+
         It is not a calibrated confidence score.
         """
 
@@ -459,9 +538,13 @@ class PredictionPipeline:
             )
         )
 
-        confidence = (
-            probabilities[0][1]
-        )
+        if cyber_prediction:
+
+            confidence = probabilities[0][1]
+
+        else:
+
+            confidence = probabilities[0][0]
 
         return float(
             round(
@@ -470,14 +553,12 @@ class PredictionPipeline:
             )
         )
 
+
     # ========================================================
     # PREDICT
     # ========================================================
 
-    def predict(
-        self,
-        text
-    ):
+    def predict(self, text):
 
         # ====================================================
         # INPUT VALIDATION
@@ -509,7 +590,7 @@ class PredictionPipeline:
         )
 
         # ====================================================
-        # 1. CYBERBULLYING DETECTION
+        # 1. CYBERBULLYING
         # ====================================================
 
         cyber_prediction = (
@@ -518,7 +599,6 @@ class PredictionPipeline:
             .predict(
                 features
             )[0]
-
         )
 
         cyber_prediction = bool(
@@ -531,12 +611,13 @@ class PredictionPipeline:
 
         confidence = (
             self.calculate_confidence(
-                features
+                features,
+                cyber_prediction
             )
         )
 
         # ====================================================
-        # 2. CATEGORY DETECTION
+        # 2. OFFENSE CATEGORY
         # ====================================================
 
         category_prediction = (
@@ -545,7 +626,6 @@ class PredictionPipeline:
             .predict(
                 features
             )[0]
-
         )
 
         categories = [
@@ -558,11 +638,42 @@ class PredictionPipeline:
             )
 
             if value == 1
-
         ]
 
         # ====================================================
-        # 3. SEVERITY DETECTION
+        # 3. INTENT
+        # ====================================================
+
+        intent = (
+
+            self.intent_model
+            .predict(
+                features
+            )[0]
+        )
+
+        intent = str(
+            intent
+        )
+
+        # ====================================================
+        # 4. CONTENT CATEGORY
+        # ====================================================
+
+        content_category = (
+
+            self.content_category_model
+            .predict(
+                features
+            )[0]
+        )
+
+        content_category = str(
+            content_category
+        )
+
+        # ====================================================
+        # 5. SEVERITY
         # ====================================================
 
         severity = (
@@ -571,11 +682,14 @@ class PredictionPipeline:
             .predict(
                 features
             )[0]
+        )
 
+        severity = str(
+            severity
         )
 
         # ====================================================
-        # 4. TARGET TYPE DETECTION
+        # 6. TARGET TYPE
         # ====================================================
 
         target_type = (
@@ -584,11 +698,14 @@ class PredictionPipeline:
             .predict(
                 features
             )[0]
+        )
 
+        target_type = str(
+            target_type
         )
 
         # ====================================================
-        # NORMALIZE SAFE RESULT
+        # SAFE RESULT NORMALIZATION
         # ====================================================
 
         if not cyber_prediction:
@@ -600,7 +717,7 @@ class PredictionPipeline:
             target_type = "none"
 
         # ====================================================
-        # 5. EXPLANATION ENGINE
+        # 7. EXPLANATION ENGINE
         # ====================================================
 
         result = build_prediction_result(
@@ -618,6 +735,16 @@ class PredictionPipeline:
             confidence=confidence,
         )
 
+        # ====================================================
+        # ADD INTENT + CONTENT CATEGORY
+        # ====================================================
+
+        result["intent"] = intent
+
+        result["content_category"] = (
+            content_category
+        )
+
         return result
 
 
@@ -627,28 +754,7 @@ class PredictionPipeline:
 
 def main():
 
-    print(
-        "=" * 75
-    )
-
-    print(
-        "STEP 13 — COMPLETE ROBUST "
-        "MULTILINGUAL PREDICTION PIPELINE"
-    )
-
-    print(
-        "=" * 75
-    )
-
-    # ========================================================
-    # INITIALIZE PIPELINE
-    # ========================================================
-
     pipeline = PredictionPipeline()
-
-    # ========================================================
-    # TEST MESSAGES
-    # ========================================================
 
     test_messages = [
 
@@ -661,11 +767,17 @@ def main():
         "iloveyou",
 
         "nee oru loosu da",
-    ]
 
-    # ========================================================
-    # RUN PREDICTIONS
-    # ========================================================
+        "intha topic konjam explain pannu",
+
+        "thanks da help pannathukku",
+
+        "please help me with this problem",
+
+        "why are you doing this?",
+
+        "nee nalla work pannirukka",
+    ]
 
     for index, message in enumerate(
         test_messages,
@@ -709,18 +821,6 @@ def main():
             print(
                 f"\nPrediction failed: {error}"
             )
-
-    print(
-        "\n" + "=" * 75
-    )
-
-    print(
-        "STEP 13 TEST COMPLETED"
-    )
-
-    print(
-        "=" * 75
-    )
 
 
 # ============================================================

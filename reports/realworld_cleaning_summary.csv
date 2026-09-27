@@ -1,0 +1,17 @@
+metric,value
+original_rows,25000
+final_rows,25000
+duplicate_rows_removed,0
+empty_texts_removed,0
+invalid_language_values,0
+invalid_context_type_values,0
+invalid_environment_values,0
+invalid_platform_values,0
+invalid_media_type_values,0
+invalid_intent_values,0
+invalid_content_category_values,0
+invalid_data_source_values,0
+invalid_binary_values,0
+invalid_target_types,0
+invalid_severity_values,0
+final_columns,21

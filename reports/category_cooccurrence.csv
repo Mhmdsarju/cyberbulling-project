@@ -1,8 +1,8 @@
 ,insult,threat,violence,hate,sexual_harassment,sexual_abuse,profanity
-insult,1231,0,0,0,0,0,391
-threat,0,1118,635,0,0,0,0
-violence,0,635,1086,0,0,0,0
-hate,0,0,0,608,0,0,0
-sexual_harassment,0,0,0,0,553,130,0
-sexual_abuse,0,0,0,0,130,424,0
-profanity,391,0,0,0,0,0,644
+insult,1198,0,0,0,0,0,0
+threat,0,795,0,0,0,0,0
+violence,0,0,790,0,0,0,0
+hate,0,0,0,786,0,0,0
+sexual_harassment,0,0,0,0,748,0,0
+sexual_abuse,0,0,0,0,0,744,0
+profanity,0,0,0,0,0,0,893

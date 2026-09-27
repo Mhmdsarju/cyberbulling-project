@@ -204,6 +204,9 @@ def normalize_categories(categories):
 
 def normalize_severity(severity):
 
+    if severity is None:
+        return "none"
+
     severity = str(
         severity
     ).strip().lower()
@@ -219,6 +222,9 @@ def normalize_severity(severity):
 # ============================================================
 
 def normalize_target_type(target_type):
+
+    if target_type is None:
+        return "none"
 
     target_type = str(
         target_type
@@ -256,6 +262,29 @@ def normalize_confidence(confidence):
             confidence
         )
     )
+
+
+# ============================================================
+# CYBERBULLYING NORMALIZATION
+# ============================================================
+
+def normalize_cyberbullying(value):
+
+    if isinstance(value, bool):
+        return value
+
+    try:
+
+        return bool(
+            int(value)
+        )
+
+    except (
+        TypeError,
+        ValueError
+    ):
+
+        return False
 
 
 # ============================================================
@@ -320,8 +349,8 @@ def generate_explanation(
         target_type
     )
 
-    cyberbullying = bool(
-        int(cyberbullying)
+    cyberbullying = normalize_cyberbullying(
+        cyberbullying
     )
 
     # --------------------------------------------------------
@@ -439,9 +468,11 @@ def generate_polite_suggestion(
         categories
     )
 
-    if not bool(
-        int(cyberbullying)
-    ):
+    cyberbullying = normalize_cyberbullying(
+        cyberbullying
+    )
+
+    if not cyberbullying:
 
         return (
             "The message appears acceptable. "
@@ -531,8 +562,8 @@ def build_prediction_result(
         confidence
     )
 
-    cyberbullying = bool(
-        int(cyberbullying)
+    cyberbullying = normalize_cyberbullying(
+        cyberbullying
     )
 
     explanation = generate_explanation(
@@ -601,14 +632,6 @@ def build_prediction_result(
 # ============================================================
 
 def main():
-
-    print("=" * 75)
-
-    print(
-        "STEP 12 — EXPLANATION ENGINE"
-    )
-
-    print("=" * 75)
 
     examples = [
 
@@ -711,18 +734,6 @@ def main():
             print(
                 f"{key:20s}: {value}"
             )
-
-    print(
-        "\n" + "=" * 75
-    )
-
-    print(
-        "STEP 12 COMPLETED SUCCESSFULLY"
-    )
-
-    print(
-        "=" * 75
-    )
 
 
 # ============================================================

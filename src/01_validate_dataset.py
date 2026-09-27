@@ -19,13 +19,18 @@ REPORTS_DIR.mkdir(
 
 
 # ============================================================
-# FILES
+# DATASET
 # ============================================================
 
 INPUT_FILE = (
     RAW_DIR /
-    "cyberbullying_multilingual_9000.csv"
+    "cyberbullying_25000_realworld_multilingual_v3.csv"
 )
+
+
+# ============================================================
+# REPORT FILES
+# ============================================================
 
 VALIDATION_REPORT = (
     REPORTS_DIR /
@@ -57,22 +62,132 @@ DATA_SOURCE_REPORT = (
     "data_source_distribution.csv"
 )
 
+INTENT_REPORT = (
+    REPORTS_DIR /
+    "intent_distribution.csv"
+)
+
+CONTEXT_REPORT = (
+    REPORTS_DIR /
+    "context_type_distribution.csv"
+)
+
+ENVIRONMENT_REPORT = (
+    REPORTS_DIR /
+    "environment_distribution.csv"
+)
+
+PLATFORM_REPORT = (
+    REPORTS_DIR /
+    "platform_distribution.csv"
+)
+
+MEDIA_TYPE_REPORT = (
+    REPORTS_DIR /
+    "media_type_distribution.csv"
+)
+
+CONTENT_CATEGORY_REPORT = (
+    REPORTS_DIR /
+    "content_category_distribution.csv"
+)
+
 
 # ============================================================
 # EXPECTED VALUES
 # ============================================================
 
-EXPECTED_ROWS = 9000
+EXPECTED_ROWS = 25000
+
 
 EXPECTED_LANGUAGES = {
     "tanglish",
     "english"
 }
 
-EXPECTED_DATA_SOURCES = {
-    "synthetic_tanglish",
-    "synthetic_english"
+
+EXPECTED_CONTEXT_TYPES = {
+    "social_media",
+    "non_social_realworld"
 }
+
+
+EXPECTED_ENVIRONMENTS = {
+    "social_media",
+    "gaming_chat",
+    "personal_chat",
+    "messaging",
+    "workplace",
+    "school_college",
+    "review_feedback",
+    "public_forum",
+    "email",
+    "community_chat"
+}
+
+
+EXPECTED_PLATFORMS = {
+    "instagram",
+    "youtube",
+    "facebook",
+    "socialmedia",
+    "nonsocial"
+}
+
+
+EXPECTED_MEDIA_TYPES = {
+    "post",
+    "reel",
+    "story",
+    "photo",
+    "video",
+    "caption",
+    "comment",
+    "message"
+}
+
+
+EXPECTED_CYBERBULLYING = {
+    0,
+    1
+}
+
+
+EXPECTED_INTENTS = {
+    "offensive",
+    "defensive",
+    "begging",
+    "requesting",
+    "apologizing",
+    "supporting",
+    "praising",
+    "thanking",
+    "greeting",
+    "questioning",
+    "informational",
+    "casual",
+    "neutral"
+}
+
+
+EXPECTED_CONTENT_CATEGORIES = {
+    "none",
+    "safe_communication",
+    "negative_media_feedback",
+    "bad_content",
+    "low_quality",
+    "negative_review",
+    "spam",
+    "misinformation",
+    "privacy",
+    "positive_media_feedback",
+    "personal_attack",
+    "profanity",
+    "threat_violence",
+    "hate_abuse",
+    "sexual_abuse"
+}
+
 
 EXPECTED_SEVERITY = {
     "none",
@@ -81,12 +196,19 @@ EXPECTED_SEVERITY = {
     "high"
 }
 
+
 EXPECTED_TARGET_TYPES = {
     "none",
     "individual",
     "group",
     "other"
 }
+
+
+EXPECTED_DATA_SOURCES = {
+    "synthetic_curated_realworld_v3"
+}
+
 
 CATEGORY_COLUMNS = [
     "insult",
@@ -109,19 +231,19 @@ def load_dataset():
 
         raise FileNotFoundError(
             f"\nDataset not found:\n{INPUT_FILE}\n\n"
-            "Please place the dataset inside data/raw/"
+            "Place the 25K CSV inside data/raw/"
         )
 
     df = pd.read_csv(
         INPUT_FILE,
-        encoding="utf-8"
+        encoding="utf-8-sig"
     )
 
     return df
 
 
 # ============================================================
-# CHECK REQUIRED COLUMNS
+# REQUIRED COLUMNS
 # ============================================================
 
 def check_columns(df):
@@ -130,7 +252,13 @@ def check_columns(df):
         "id",
         "text",
         "language",
+        "context_type",
+        "environment",
+        "platform",
+        "media_type",
         "cyberbullying",
+        "intent",
+        "content_category",
         "target_type",
         "insult",
         "threat",
@@ -152,108 +280,107 @@ def check_columns(df):
 
     if missing:
 
-        print("\nMissing columns:")
-
-        for column in missing:
-            print(f"  - {column}")
-
         raise ValueError(
-            "\nDataset structure is invalid."
+            "Missing required columns:\n"
+            + "\n".join(
+                f"- {column}"
+                for column in missing
+            )
         )
 
-    print("\nRequired columns: OK")
+    return True
 
 
 # ============================================================
-# CHECK EMPTY VALUES
-# ============================================================
-
-def check_missing_values(df):
-
-    print("\nMissing values:")
-
-    missing = df.isna().sum()
-
-    missing = missing[
-        missing > 0
-    ]
-
-    if len(missing) == 0:
-
-        print("  No missing values.")
-
-    else:
-
-        print(missing.to_string())
-
-    return missing
-
-
-# ============================================================
-# CHECK DUPLICATES
-# ============================================================
-
-def check_duplicates(df):
-
-    duplicate_ids = (
-        df["id"]
-        .duplicated()
-        .sum()
-    )
-
-    duplicate_texts = (
-        df["text"]
-        .duplicated()
-        .sum()
-    )
-
-    print("\nDuplicates:")
-
-    print(
-        f"  Duplicate IDs   : {duplicate_ids}"
-    )
-
-    print(
-        f"  Duplicate texts : {duplicate_texts}"
-    )
-
-    return (
-        duplicate_ids,
-        duplicate_texts
-    )
-
-
-# ============================================================
-# CHECK ROW COUNT
+# ROW COUNT
 # ============================================================
 
 def check_row_count(df):
 
     actual_rows = len(df)
 
-    print("\nRow count:")
-
-    print(
-        f"  Expected : {EXPECTED_ROWS}"
+    status = (
+        "PASS"
+        if actual_rows == EXPECTED_ROWS
+        else "WARNING"
     )
 
-    print(
-        f"  Actual   : {actual_rows}"
-    )
-
-    if actual_rows == EXPECTED_ROWS:
-
-        print("  Row count: OK")
-
-        return True
-
-    print("  Row count: WARNING")
-
-    return False
+    return {
+        "check": "row_count",
+        "expected": EXPECTED_ROWS,
+        "actual": actual_rows,
+        "status": status
+    }
 
 
 # ============================================================
-# CHECK CYBERBULLYING
+# MISSING VALUES
+# ============================================================
+
+def check_missing_values(df):
+
+    total_missing = int(
+        df.isna().sum().sum()
+    )
+
+    status = (
+        "PASS"
+        if total_missing == 0
+        else "WARNING"
+    )
+
+    return {
+        "check": "missing_values",
+        "expected": 0,
+        "actual": total_missing,
+        "status": status
+    }
+
+
+# ============================================================
+# DUPLICATE VALUES
+# ============================================================
+
+def check_duplicates(df):
+
+    duplicate_ids = int(
+        df["id"]
+        .duplicated()
+        .sum()
+    )
+
+    duplicate_texts = int(
+        df["text"]
+        .duplicated()
+        .sum()
+    )
+
+    return [
+        {
+            "check": "duplicate_ids",
+            "expected": 0,
+            "actual": duplicate_ids,
+            "status": (
+                "PASS"
+                if duplicate_ids == 0
+                else "WARNING"
+            )
+        },
+        {
+            "check": "duplicate_texts",
+            "expected": 0,
+            "actual": duplicate_texts,
+            "status": (
+                "PASS"
+                if duplicate_texts == 0
+                else "WARNING"
+            )
+        }
+    ]
+
+
+# ============================================================
+# CYBERBULLYING VALIDATION
 # ============================================================
 
 def check_cyberbullying(df):
@@ -267,40 +394,37 @@ def check_cyberbullying(df):
         .unique()
     )
 
-    invalid = values - {0, 1}
+    invalid = values - EXPECTED_CYBERBULLYING
 
-    print("\nCyberbullying labels:")
-
-    print(
-        df["cyberbullying"]
-        .value_counts()
-        .sort_index()
-        .to_string()
-    )
-
-    if invalid:
-
-        print(
-            f"\nInvalid cyberbullying values: {invalid}"
+    return {
+        "check": "cyberbullying_values",
+        "expected": "0, 1",
+        "actual": (
+            ", ".join(
+                str(int(value))
+                for value in sorted(values)
+            )
+        ),
+        "status": (
+            "PASS"
+            if len(invalid) == 0
+            else "FAIL"
         )
-
-    else:
-
-        print(
-            "\nCyberbullying values: OK"
-        )
-
-    return invalid
+    }
 
 
 # ============================================================
-# CHECK LANGUAGE
+# GENERIC STRING VALIDATION
 # ============================================================
 
-def check_language(df):
+def validate_string_column(
+    df,
+    column,
+    expected_values
+):
 
     values = set(
-        df["language"]
+        df[column]
         .dropna()
         .astype(str)
         .str.strip()
@@ -308,80 +432,31 @@ def check_language(df):
         .unique()
     )
 
-    invalid = values - EXPECTED_LANGUAGES
+    invalid = values - expected_values
 
-    print("\nLanguage distribution:")
-
-    print(
-        df["language"]
-        .value_counts()
-        .to_string()
-    )
-
-    if invalid:
-
-        print(
-            f"\nInvalid language values: {invalid}"
+    return {
+        "check": f"{column}_values",
+        "expected": ", ".join(
+            sorted(expected_values)
+        ),
+        "actual": ", ".join(
+            sorted(values)
+        ),
+        "status": (
+            "PASS"
+            if len(invalid) == 0
+            else "FAIL"
         )
-
-    else:
-
-        print(
-            "\nLanguage values: OK"
-        )
-
-    return invalid
+    }
 
 
 # ============================================================
-# CHECK DATA SOURCE
-# ============================================================
-
-def check_data_source(df):
-
-    values = set(
-        df["data_source"]
-        .dropna()
-        .astype(str)
-        .str.strip()
-        .str.lower()
-        .unique()
-    )
-
-    invalid = values - EXPECTED_DATA_SOURCES
-
-    print("\nData source distribution:")
-
-    print(
-        df["data_source"]
-        .value_counts()
-        .to_string()
-    )
-
-    if invalid:
-
-        print(
-            f"\nInvalid data_source values: {invalid}"
-        )
-
-    else:
-
-        print(
-            "\nData source values: OK"
-        )
-
-    return invalid
-
-
-# ============================================================
-# CHECK CATEGORIES
+# CATEGORY VALIDATION
 # ============================================================
 
 def check_categories(df):
 
-    print("\nCategory validation:")
-
-    invalid_values = {}
+    results = []
 
     for column in CATEGORY_COLUMNS:
 
@@ -394,118 +469,30 @@ def check_categories(df):
             .unique()
         )
 
-        invalid = values - {0, 1}
+        invalid = values - {
+            0,
+            1
+        }
 
-        if invalid:
-
-            invalid_values[column] = invalid
-
-        print(
-            f"{column:20s}: "
-            f"positive={int(df[column].sum())}"
-        )
-
-    if invalid_values:
-
-        print("\nInvalid category values:")
-
-        for column, values in invalid_values.items():
-
-            print(
-                f"  {column}: {values}"
+        results.append({
+            "check": f"{column}_values",
+            "expected": "0, 1",
+            "actual": ", ".join(
+                str(int(value))
+                for value in sorted(values)
+            ),
+            "status": (
+                "PASS"
+                if len(invalid) == 0
+                else "FAIL"
             )
+        })
 
-    else:
-
-        print(
-            "\nAll category values are valid 0/1."
-        )
-
-    return invalid_values
+    return results
 
 
 # ============================================================
-# CHECK SEVERITY
-# ============================================================
-
-def check_severity(df):
-
-    values = set(
-        df["severity"]
-        .dropna()
-        .astype(str)
-        .str.strip()
-        .str.lower()
-        .unique()
-    )
-
-    invalid = values - EXPECTED_SEVERITY
-
-    print("\nSeverity distribution:")
-
-    print(
-        df["severity"]
-        .value_counts()
-        .to_string()
-    )
-
-    if invalid:
-
-        print(
-            f"\nInvalid severity values: {invalid}"
-        )
-
-    else:
-
-        print(
-            "\nSeverity values: OK"
-        )
-
-    return invalid
-
-
-# ============================================================
-# CHECK TARGET TYPE
-# ============================================================
-
-def check_target_type(df):
-
-    values = set(
-        df["target_type"]
-        .dropna()
-        .astype(str)
-        .str.strip()
-        .str.lower()
-        .unique()
-    )
-
-    invalid = values - EXPECTED_TARGET_TYPES
-
-    print("\nTarget type distribution:")
-
-    print(
-        df["target_type"]
-        .value_counts()
-        .to_string()
-    )
-
-    if invalid:
-
-        print(
-            f"\nInvalid target types: {invalid}"
-        )
-
-    else:
-
-        print(
-            "\nTarget type values: OK"
-        )
-
-    return invalid
-
-
-# ============================================================
-# CHECK TEXT
+# TEXT VALIDATION
 # ============================================================
 
 def check_text(df):
@@ -517,177 +504,101 @@ def check_text(df):
         .str.strip()
     )
 
-    empty_count = (
-        text == ""
-    ).sum()
+    empty_count = int(
+        (text == "").sum()
+    )
 
     lengths = text.str.len()
 
-    print("\nText statistics:")
-
-    print(
-        f"  Empty texts : {empty_count}"
-    )
-
-    print(
-        f"  Minimum     : {lengths.min()}"
-    )
-
-    print(
-        f"  Maximum     : {lengths.max()}"
-    )
-
-    print(
-        f"  Mean        : {lengths.mean():.2f}"
-    )
-
-    print(
-        f"  Median      : {lengths.median():.2f}"
-    )
-
     return {
-        "empty": empty_count,
-        "min": lengths.min(),
-        "max": lengths.max(),
-        "mean": lengths.mean(),
-        "median": lengths.median()
+        "empty_texts": empty_count,
+        "minimum_length": int(
+            lengths.min()
+        ),
+        "maximum_length": int(
+            lengths.max()
+        ),
+        "mean_length": round(
+            lengths.mean(),
+            2
+        ),
+        "median_length": round(
+            lengths.median(),
+            2
+        )
     }
 
 
 # ============================================================
-# SAVE DISTRIBUTION REPORTS
+# DISTRIBUTION REPORT
 # ============================================================
 
-def save_reports(df):
+def save_distribution(
+    df,
+    column,
+    output_file
+):
 
-    # --------------------------------------------------------
-    # Category distribution
-    # --------------------------------------------------------
+    distribution = (
+        df[column]
+        .value_counts()
+        .rename_axis(column)
+        .reset_index(
+            name="count"
+        )
+    )
 
-    category_rows = []
+    distribution["percentage"] = (
+        distribution["count"]
+        / len(df)
+        * 100
+    ).round(2)
+
+    distribution.to_csv(
+        output_file,
+        index=False
+    )
+
+
+# ============================================================
+# CATEGORY REPORT
+# ============================================================
+
+def save_category_report(df):
+
+    rows = []
 
     for column in CATEGORY_COLUMNS:
 
         positive = int(
-            df[column].sum()
+            pd.to_numeric(
+                df[column],
+                errors="coerce"
+            )
+            .fillna(0)
+            .sum()
         )
 
-        negative = len(df) - positive
+        negative = (
+            len(df)
+            - positive
+        )
 
-        category_rows.append({
+        rows.append({
             "category": column,
             "positive": positive,
             "negative": negative,
-            "positive_percentage":
-                round(
-                    positive / len(df) * 100,
-                    2
-                )
+            "positive_percentage": round(
+                positive / len(df) * 100,
+                2
+            )
         })
 
-    category_df = pd.DataFrame(
-        category_rows
-    )
-
-    category_df.to_csv(
+    pd.DataFrame(
+        rows
+    ).to_csv(
         CATEGORY_REPORT,
         index=False
-    )
-
-    # --------------------------------------------------------
-    # Severity
-    # --------------------------------------------------------
-
-    severity_df = (
-        df["severity"]
-        .value_counts()
-        .rename_axis("severity")
-        .reset_index(name="count")
-    )
-
-    severity_df["percentage"] = (
-        severity_df["count"]
-        / len(df)
-        * 100
-    ).round(2)
-
-    severity_df.to_csv(
-        SEVERITY_REPORT,
-        index=False
-    )
-
-    # --------------------------------------------------------
-    # Target type
-    # --------------------------------------------------------
-
-    target_df = (
-        df["target_type"]
-        .value_counts()
-        .rename_axis("target_type")
-        .reset_index(name="count")
-    )
-
-    target_df["percentage"] = (
-        target_df["count"]
-        / len(df)
-        * 100
-    ).round(2)
-
-    target_df.to_csv(
-        TARGET_REPORT,
-        index=False
-    )
-
-    # --------------------------------------------------------
-    # Language
-    # --------------------------------------------------------
-
-    language_df = (
-        df["language"]
-        .value_counts()
-        .rename_axis("language")
-        .reset_index(name="count")
-    )
-
-    language_df["percentage"] = (
-        language_df["count"]
-        / len(df)
-        * 100
-    ).round(2)
-
-    language_df.to_csv(
-        LANGUAGE_REPORT,
-        index=False
-    )
-
-    # --------------------------------------------------------
-    # Data source
-    # --------------------------------------------------------
-
-    data_source_df = (
-        df["data_source"]
-        .value_counts()
-        .rename_axis("data_source")
-        .reset_index(name="count")
-    )
-
-    data_source_df["percentage"] = (
-        data_source_df["count"]
-        / len(df)
-        * 100
-    ).round(2)
-
-    data_source_df.to_csv(
-        DATA_SOURCE_REPORT,
-        index=False
-    )
-
-    return (
-        category_df,
-        severity_df,
-        target_df,
-        language_df,
-        data_source_df
     )
 
 
@@ -697,194 +608,237 @@ def save_reports(df):
 
 def main():
 
-    print("=" * 75)
-    print("STEP 1 — ROBUST MULTILINGUAL DATASET VALIDATION")
+    print("\n" + "=" * 75)
+    print("DATASET VALIDATION")
     print("=" * 75)
 
     # --------------------------------------------------------
-    # Load
+    # LOAD DATASET
     # --------------------------------------------------------
 
     df = load_dataset()
 
-    print(
-        "\nDataset loaded successfully."
-    )
-
+    print("\nDataset:")
     print(
         f"Rows    : {len(df)}"
     )
-
     print(
         f"Columns : {len(df.columns)}"
     )
 
     # --------------------------------------------------------
-    # Checks
+    # REQUIRED COLUMNS
     # --------------------------------------------------------
 
     check_columns(df)
 
-    row_count_ok = check_row_count(df)
+    print(
+        "\nRequired columns: PASS"
+    )
 
-    missing = check_missing_values(df)
+    # --------------------------------------------------------
+    # BASIC CHECKS
+    # --------------------------------------------------------
 
-    duplicate_ids, duplicate_texts = (
+    validation_results = []
+
+    validation_results.append(
+        check_row_count(df)
+    )
+
+    validation_results.append(
+        check_missing_values(df)
+    )
+
+    validation_results.extend(
         check_duplicates(df)
     )
 
-    invalid_binary = (
+    validation_results.append(
         check_cyberbullying(df)
     )
 
-    invalid_language = (
-        check_language(df)
+    # --------------------------------------------------------
+    # STRING LABEL CHECKS
+    # --------------------------------------------------------
+
+    validation_results.append(
+        validate_string_column(
+            df,
+            "language",
+            EXPECTED_LANGUAGES
+        )
     )
 
-    invalid_data_source = (
-        check_data_source(df)
+    validation_results.append(
+        validate_string_column(
+            df,
+            "context_type",
+            EXPECTED_CONTEXT_TYPES
+        )
     )
 
-    invalid_categories = (
+    validation_results.append(
+        validate_string_column(
+            df,
+            "environment",
+            EXPECTED_ENVIRONMENTS
+        )
+    )
+
+    validation_results.append(
+        validate_string_column(
+            df,
+            "platform",
+            EXPECTED_PLATFORMS
+        )
+    )
+
+    validation_results.append(
+        validate_string_column(
+            df,
+            "media_type",
+            EXPECTED_MEDIA_TYPES
+        )
+    )
+
+    validation_results.append(
+        validate_string_column(
+            df,
+            "intent",
+            EXPECTED_INTENTS
+        )
+    )
+
+    validation_results.append(
+        validate_string_column(
+            df,
+            "content_category",
+            EXPECTED_CONTENT_CATEGORIES
+        )
+    )
+
+    validation_results.append(
+        validate_string_column(
+            df,
+            "severity",
+            EXPECTED_SEVERITY
+        )
+    )
+
+    validation_results.append(
+        validate_string_column(
+            df,
+            "target_type",
+            EXPECTED_TARGET_TYPES
+        )
+    )
+
+    validation_results.append(
+        validate_string_column(
+            df,
+            "data_source",
+            EXPECTED_DATA_SOURCES
+        )
+    )
+
+    # --------------------------------------------------------
+    # OFFENSE CATEGORY CHECK
+    # --------------------------------------------------------
+
+    validation_results.extend(
         check_categories(df)
     )
 
-    invalid_severity = (
-        check_severity(df)
-    )
-
-    invalid_target = (
-        check_target_type(df)
-    )
+    # --------------------------------------------------------
+    # TEXT CHECK
+    # --------------------------------------------------------
 
     text_stats = check_text(df)
 
+    validation_results.append({
+        "check": "empty_texts",
+        "expected": 0,
+        "actual": text_stats["empty_texts"],
+        "status": (
+            "PASS"
+            if text_stats["empty_texts"] == 0
+            else "WARNING"
+        )
+    })
+
     # --------------------------------------------------------
-    # Save distribution reports
+    # SAVE DISTRIBUTIONS
     # --------------------------------------------------------
 
-    (
-        category_df,
-        severity_df,
-        target_df,
-        language_df,
-        data_source_df
-    ) = save_reports(df)
+    save_category_report(df)
+
+    save_distribution(
+        df,
+        "severity",
+        SEVERITY_REPORT
+    )
+
+    save_distribution(
+        df,
+        "target_type",
+        TARGET_REPORT
+    )
+
+    save_distribution(
+        df,
+        "language",
+        LANGUAGE_REPORT
+    )
+
+    save_distribution(
+        df,
+        "data_source",
+        DATA_SOURCE_REPORT
+    )
+
+    save_distribution(
+        df,
+        "intent",
+        INTENT_REPORT
+    )
+
+    save_distribution(
+        df,
+        "context_type",
+        CONTEXT_REPORT
+    )
+
+    save_distribution(
+        df,
+        "environment",
+        ENVIRONMENT_REPORT
+    )
+
+    save_distribution(
+        df,
+        "platform",
+        PLATFORM_REPORT
+    )
+
+    save_distribution(
+        df,
+        "media_type",
+        MEDIA_TYPE_REPORT
+    )
+
+    save_distribution(
+        df,
+        "content_category",
+        CONTENT_CATEGORY_REPORT
+    )
 
     # --------------------------------------------------------
-    # Overall validation summary
+    # SAVE VALIDATION REPORT
     # --------------------------------------------------------
-
-    validation_rows = [
-
-        {
-            "check": "total_rows",
-            "value": len(df),
-            "status":
-                "PASS"
-                if row_count_ok
-                else "WARNING"
-        },
-
-        {
-            "check": "total_columns",
-            "value": len(df.columns),
-            "status": "PASS"
-        },
-
-        {
-            "check": "missing_values",
-            "value": int(missing.sum()),
-            "status":
-                "PASS"
-                if missing.sum() == 0
-                else "WARNING"
-        },
-
-        {
-            "check": "duplicate_ids",
-            "value": duplicate_ids,
-            "status":
-                "PASS"
-                if duplicate_ids == 0
-                else "WARNING"
-        },
-
-        {
-            "check": "duplicate_texts",
-            "value": duplicate_texts,
-            "status":
-                "PASS"
-                if duplicate_texts == 0
-                else "WARNING"
-        },
-
-        {
-            "check": "invalid_cyberbullying_values",
-            "value": len(invalid_binary),
-            "status":
-                "PASS"
-                if len(invalid_binary) == 0
-                else "FAIL"
-        },
-
-        {
-            "check": "invalid_language_values",
-            "value": len(invalid_language),
-            "status":
-                "PASS"
-                if len(invalid_language) == 0
-                else "FAIL"
-        },
-
-        {
-            "check": "invalid_data_source_values",
-            "value": len(invalid_data_source),
-            "status":
-                "PASS"
-                if len(invalid_data_source) == 0
-                else "FAIL"
-        },
-
-        {
-            "check": "invalid_category_values",
-            "value": len(invalid_categories),
-            "status":
-                "PASS"
-                if len(invalid_categories) == 0
-                else "FAIL"
-        },
-
-        {
-            "check": "invalid_severity_values",
-            "value": len(invalid_severity),
-            "status":
-                "PASS"
-                if len(invalid_severity) == 0
-                else "FAIL"
-        },
-
-        {
-            "check": "invalid_target_type_values",
-            "value": len(invalid_target),
-            "status":
-                "PASS"
-                if len(invalid_target) == 0
-                else "FAIL"
-        },
-
-        {
-            "check": "empty_texts",
-            "value": text_stats["empty"],
-            "status":
-                "PASS"
-                if text_stats["empty"] == 0
-                else "WARNING"
-        }
-    ]
 
     validation_df = pd.DataFrame(
-        validation_rows
+        validation_results
     )
 
     validation_df.to_csv(
@@ -893,12 +847,10 @@ def main():
     )
 
     # --------------------------------------------------------
-    # Final output
+    # CONSOLE OUTPUT
     # --------------------------------------------------------
 
-    print("\n" + "=" * 75)
-    print("VALIDATION SUMMARY")
-    print("=" * 75)
+    print("\nValidation Results:")
 
     print(
         validation_df.to_string(
@@ -906,36 +858,169 @@ def main():
         )
     )
 
-    print("\nReports created:")
+    # --------------------------------------------------------
+    # TEXT STATISTICS
+    # --------------------------------------------------------
+
+    print("\nText Statistics:")
 
     print(
-        VALIDATION_REPORT
+        f"  Empty   : {text_stats['empty_texts']}"
     )
 
     print(
-        CATEGORY_REPORT
+        f"  Minimum : {text_stats['minimum_length']}"
     )
 
     print(
-        SEVERITY_REPORT
+        f"  Maximum : {text_stats['maximum_length']}"
     )
 
     print(
-        TARGET_REPORT
+        f"  Mean    : {text_stats['mean_length']}"
     )
 
     print(
-        LANGUAGE_REPORT
+        f"  Median  : {text_stats['median_length']}"
+    )
+
+    # --------------------------------------------------------
+    # DATASET DISTRIBUTION
+    # --------------------------------------------------------
+
+    print("\nDataset Distribution:")
+
+    print("\nCyberbullying:")
+
+    print(
+        df["cyberbullying"]
+        .value_counts()
+        .sort_index()
+        .to_string()
+    )
+
+    print("\nIntent:")
+
+    print(
+        df["intent"]
+        .value_counts()
+        .to_string()
+    )
+
+    print("\nContent Category:")
+
+    print(
+        df["content_category"]
+        .value_counts()
+        .to_string()
+    )
+
+    print("\nContext Type:")
+
+    print(
+        df["context_type"]
+        .value_counts()
+        .to_string()
+    )
+
+    print("\nEnvironment:")
+
+    print(
+        df["environment"]
+        .value_counts()
+        .to_string()
+    )
+
+    print("\nPlatform:")
+
+    print(
+        df["platform"]
+        .value_counts()
+        .to_string()
+    )
+
+    print("\nMedia Type:")
+
+    print(
+        df["media_type"]
+        .value_counts()
+        .to_string()
+    )
+
+    print("\nLanguage:")
+
+    print(
+        df["language"]
+        .value_counts()
+        .to_string()
+    )
+
+    print("\nSeverity:")
+
+    print(
+        df["severity"]
+        .value_counts()
+        .to_string()
+    )
+
+    # --------------------------------------------------------
+    # REPORT PATHS
+    # --------------------------------------------------------
+
+    print("\nReports:")
+
+    print(
+        f"  {VALIDATION_REPORT}"
     )
 
     print(
-        DATA_SOURCE_REPORT
+        f"  {CATEGORY_REPORT}"
     )
 
     print(
-        "\nStep 1 completed successfully."
+        f"  {SEVERITY_REPORT}"
     )
 
+    print(
+        f"  {TARGET_REPORT}"
+    )
+
+    print(
+        f"  {LANGUAGE_REPORT}"
+    )
+
+    print(
+        f"  {DATA_SOURCE_REPORT}"
+    )
+
+    print(
+        f"  {INTENT_REPORT}"
+    )
+
+    print(
+        f"  {CONTEXT_REPORT}"
+    )
+
+    print(
+        f"  {ENVIRONMENT_REPORT}"
+    )
+
+    print(
+        f"  {PLATFORM_REPORT}"
+    )
+
+    print(
+        f"  {MEDIA_TYPE_REPORT}"
+    )
+
+    print(
+        f"  {CONTENT_CATEGORY_REPORT}"
+    )
+
+
+# ============================================================
+# ENTRY POINT
+# ============================================================
 
 if __name__ == "__main__":
     main()

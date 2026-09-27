@@ -3,6 +3,7 @@ import joblib
 import pandas as pd
 
 from scipy.sparse import load_npz
+
 from sklearn.metrics import (
     accuracy_score,
     precision_score,
@@ -18,16 +19,14 @@ from sklearn.metrics import (
 
 FEATURE_DIR = (
     "data/processed/"
-    "features_robust"
+    "features_realworld"
 )
-
-MODEL_DIR = "models"
 
 REPORT_DIR = "reports"
 
 REPORT_PATH = (
     "reports/"
-    "robust_model_comparison_test.csv"
+    "realworld_model_comparison_test.csv"
 )
 
 CONFUSION_MATRIX_DIR = (
@@ -41,12 +40,12 @@ CONFUSION_MATRIX_DIR = (
 
 LOGISTIC_MODEL_PATH = (
     "models/"
-    "logistic_regression_robust_multilingual.joblib"
+    "logistic_regression_realworld_multilingual.joblib"
 )
 
 SVM_MODEL_PATH = (
     "models/"
-    "linear_svm_robust_multilingual.joblib"
+    "linear_svm_realworld_multilingual.joblib"
 )
 
 
@@ -73,14 +72,15 @@ def load_test_features():
 
     test_features_path = os.path.join(
         FEATURE_DIR,
-        "X_test_tfidf_robust.npz"
+        "X_test_tfidf_realworld.npz"
     )
 
     if not os.path.exists(
         test_features_path
     ):
+
         raise FileNotFoundError(
-            f"Test features not found: "
+            f"Test features not found:\n"
             f"{test_features_path}"
         )
 
@@ -97,14 +97,15 @@ def load_test_labels():
 
     test_label_path = os.path.join(
         FEATURE_DIR,
-        "y_test_robust.joblib"
+        "y_test_realworld.joblib"
     )
 
     if not os.path.exists(
         test_label_path
     ):
+
         raise FileNotFoundError(
-            f"Test labels not found: "
+            f"Test labels not found:\n"
             f"{test_label_path}"
         )
 
@@ -122,16 +123,18 @@ def load_models():
     if not os.path.exists(
         LOGISTIC_MODEL_PATH
     ):
+
         raise FileNotFoundError(
-            "Logistic Regression model not found: "
+            "Logistic Regression model not found:\n"
             f"{LOGISTIC_MODEL_PATH}"
         )
 
     if not os.path.exists(
         SVM_MODEL_PATH
     ):
+
         raise FileNotFoundError(
-            "Linear SVM model not found: "
+            "Linear SVM model not found:\n"
             f"{SVM_MODEL_PATH}"
         )
 
@@ -183,6 +186,7 @@ def validate_test_data(
     if X_test.shape[0] != len(
         y_test
     ):
+
         raise ValueError(
             "Test feature rows and test "
             "labels do not match."
@@ -212,6 +216,7 @@ def validate_model_features(
             model,
             "n_features_in_"
         ):
+
             raise ValueError(
                 f"{model_name} does not expose "
                 "n_features_in_."
@@ -226,7 +231,10 @@ def validate_model_features(
             f"{model_features} features"
         )
 
-        if model_features != X_test.shape[1]:
+        if (
+            model_features
+            != X_test.shape[1]
+        ):
 
             raise ValueError(
                 f"{model_name} expects "
@@ -247,7 +255,7 @@ def validate_model_features(
 def main():
 
     print("=" * 75)
-    print("STEP 8 — ROBUST MODEL COMPARISON")
+    print("STEP 8 — REAL-WORLD MODEL COMPARISON")
     print("=" * 75)
 
     # ========================================================
@@ -423,7 +431,7 @@ def main():
                 model_name,
 
             "dataset":
-                "robust_test",
+                "realworld_test",
 
             "samples":
                 len(y_test),
@@ -473,7 +481,7 @@ def main():
 
         confusion_path = os.path.join(
             CONFUSION_MATRIX_DIR,
-            f"{safe_name}_robust_test_confusion_matrix.png"
+            f"{safe_name}_realworld_test_confusion_matrix.png"
         )
 
         plt.figure(
@@ -485,7 +493,7 @@ def main():
         )
 
         plt.title(
-            f"{model_name} - Robust Test"
+            f"{model_name} - Real-World Test"
         )
 
         plt.xlabel(
@@ -595,7 +603,7 @@ def main():
     )
 
     # ========================================================
-    # FINAL OUTPUT
+    # OUTPUT
     # ========================================================
 
     print(
@@ -604,18 +612,6 @@ def main():
 
     print(
         REPORT_PATH
-    )
-
-    print(
-        "\n" + "=" * 75
-    )
-
-    print(
-        "STEP 8 COMPLETED SUCCESSFULLY"
-    )
-
-    print(
-        "=" * 75
     )
 
 

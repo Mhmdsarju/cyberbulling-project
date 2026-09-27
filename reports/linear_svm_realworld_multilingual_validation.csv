@@ -1,0 +1,2 @@
+model,dataset,samples,features,accuracy,precision,recall,f1_score,true_negative,false_positive,false_negative,true_positive
+Linear SVM,realworld_validation,2500,27665,0.9944,0.98989898989899,0.9865771812080537,0.9882352941176471,1898,6,8,588

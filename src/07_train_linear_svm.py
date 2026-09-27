@@ -3,7 +3,9 @@ import joblib
 import pandas as pd
 
 from scipy.sparse import load_npz
+
 from sklearn.svm import LinearSVC
+
 from sklearn.metrics import (
     accuracy_score,
     precision_score,
@@ -20,7 +22,7 @@ from sklearn.metrics import (
 
 FEATURE_DIR = (
     "data/processed/"
-    "features_robust"
+    "features_realworld"
 )
 
 MODEL_DIR = "models"
@@ -29,17 +31,17 @@ REPORT_DIR = "reports"
 
 MODEL_PATH = (
     "models/"
-    "linear_svm_robust_multilingual.joblib"
+    "linear_svm_realworld_multilingual.joblib"
 )
 
 REPORT_PATH = (
     "reports/"
-    "linear_svm_robust_multilingual_validation.csv"
+    "linear_svm_realworld_multilingual_validation.csv"
 )
 
 CONFUSION_MATRIX_PATH = (
     "reports/model_evaluation/"
-    "linear_svm_robust_multilingual_confusion_matrix.png"
+    "linear_svm_realworld_multilingual_confusion_matrix.png"
 )
 
 
@@ -71,22 +73,26 @@ def load_features():
 
     train_path = os.path.join(
         FEATURE_DIR,
-        "X_train_tfidf_robust.npz"
+        "X_train_tfidf_realworld.npz"
     )
 
     validation_path = os.path.join(
         FEATURE_DIR,
-        "X_validation_tfidf_robust.npz"
+        "X_validation_tfidf_realworld.npz"
     )
 
     if not os.path.exists(train_path):
+
         raise FileNotFoundError(
-            f"Training features not found: {train_path}"
+            f"Training features not found:\n"
+            f"{train_path}"
         )
 
     if not os.path.exists(validation_path):
+
         raise FileNotFoundError(
-            f"Validation features not found: {validation_path}"
+            f"Validation features not found:\n"
+            f"{validation_path}"
         )
 
     X_train = load_npz(
@@ -108,27 +114,29 @@ def load_labels():
 
     train_label_path = os.path.join(
         FEATURE_DIR,
-        "y_train_robust.joblib"
+        "y_train_realworld.joblib"
     )
 
     validation_label_path = os.path.join(
         FEATURE_DIR,
-        "y_validation_robust.joblib"
+        "y_validation_realworld.joblib"
     )
 
     if not os.path.exists(
         train_label_path
     ):
+
         raise FileNotFoundError(
-            f"Training labels not found: "
+            f"Training labels not found:\n"
             f"{train_label_path}"
         )
 
     if not os.path.exists(
         validation_label_path
     ):
+
         raise FileNotFoundError(
-            f"Validation labels not found: "
+            f"Validation labels not found:\n"
             f"{validation_label_path}"
         )
 
@@ -150,7 +158,7 @@ def load_labels():
 def main():
 
     print("=" * 75)
-    print("STEP 7 — ROBUST LINEAR SVM")
+    print("STEP 7 — REAL-WORLD LINEAR SVM")
     print("=" * 75)
 
     # ========================================================
@@ -172,13 +180,11 @@ def main():
     print("\nFeature shapes:")
 
     print(
-        f"Train      : "
-        f"{X_train.shape}"
+        f"Train      : {X_train.shape}"
     )
 
     print(
-        f"Validation : "
-        f"{X_validation.shape}"
+        f"Validation : {X_validation.shape}"
     )
 
     # ========================================================
@@ -189,7 +195,10 @@ def main():
         "\nFeature dimension validation:"
     )
 
-    if X_train.shape[1] != X_validation.shape[1]:
+    if (
+        X_train.shape[1]
+        != X_validation.shape[1]
+    ):
 
         raise ValueError(
             "Train and validation feature dimensions "
@@ -209,7 +218,9 @@ def main():
     # FEATURE / LABEL ROW VALIDATION
     # ========================================================
 
-    if X_train.shape[0] != len(y_train):
+    if X_train.shape[0] != len(
+        y_train
+    ):
 
         raise ValueError(
             "Training feature rows and labels "
@@ -426,7 +437,7 @@ def main():
         ],
 
         "dataset": [
-            "robust_validation"
+            "realworld_validation"
         ],
 
         "samples": [
@@ -498,7 +509,7 @@ def main():
     )
 
     plt.title(
-        "Linear SVM - Robust Validation"
+        "Linear SVM - Real-World Validation"
     )
 
     plt.xlabel(
@@ -556,61 +567,6 @@ def main():
 
     print(
         CONFUSION_MATRIX_PATH
-    )
-
-    # ========================================================
-    # FINAL OUTPUT
-    # ========================================================
-
-    print(
-        "\n" + "=" * 75
-    )
-
-    print(
-        "STEP 7 COMPLETED SUCCESSFULLY"
-    )
-
-    print(
-        "=" * 75
-    )
-
-    print(
-        f"Training samples      : "
-        f"{X_train.shape[0]}"
-    )
-
-    print(
-        f"Validation samples    : "
-        f"{X_validation.shape[0]}"
-    )
-
-    print(
-        f"Feature count         : "
-        f"{X_train.shape[1]}"
-    )
-
-    print(
-        f"Validation Accuracy   : "
-        f"{accuracy:.4f}"
-    )
-
-    print(
-        f"Validation Precision  : "
-        f"{precision:.4f}"
-    )
-
-    print(
-        f"Validation Recall     : "
-        f"{recall:.4f}"
-    )
-
-    print(
-        f"Validation F1 Score   : "
-        f"{f1:.4f}"
-    )
-
-    print(
-        "\nStep 7 completed successfully."
     )
 
 

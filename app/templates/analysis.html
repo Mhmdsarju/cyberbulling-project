@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Analysis | Cyberbullying Detection System</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app-shell">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                🛡
+            </div>
+
+            <div>
+
+                <h2>
+                    Cyberbullying Detection
+                </h2>
+
+                <span>
+                    Machine Learning System
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="/"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ⌂
+                </span>
+
+                Dashboard
+
+            </a>
+
+
+            <a
+                href="/analysis"
+                class="nav-item active"
+            >
+
+                <span class="nav-icon">
+                    ⌕
+                </span>
+
+                Analysis
+
+            </a>
+
+
+            <a
+                href="/about"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ⓘ
+                </span>
+
+                About Project
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="system-card">
+
+                <span
+                    id="sidebarApiDot"
+                    class="online-dot"
+                ></span>
+
+                <div>
+
+                    <strong>
+                        System Online
+                    </strong>
+
+                    <small>
+                        Prediction API Ready
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="sidebar-model">
+
+                <span>
+                    MODEL
+                </span>
+
+                <strong>
+                    Real-World Multilingual
+                </strong>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+            <div>
+
+                <span class="eyebrow">
+                    MESSAGE ANALYSIS
+                </span>
+
+                <h1>
+                    Analyze Content
+                </h1>
+
+                <p>
+                    Enter an English or Tanglish message.
+                    The machine learning system analyzes
+                    the content and identifies whether it is
+                    safe or potentially harmful.
+                </p>
+
+            </div>
+
+
+            <div
+                id="apiStatus"
+                class="api-pill"
+            >
+
+                <span class="online-dot"></span>
+
+                Prediction API
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             ANALYSIS LAYOUT
+        ================================================== -->
+
+        <section class="analysis-layout">
+
+
+            <!-- =================================================
+                 INPUT PANEL
+            ================================================== -->
+
+            <div class="panel analysis-input-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            INPUT
+                        </span>
+
+                        <h2>
+                            Message to Analyze
+                        </h2>
+
+                    </div>
+
+                    <span class="panel-icon">
+                        ✦
+                    </span>
+
+                </div>
+
+
+                <!-- PROJECT DESCRIPTION -->
+
+                <div class="analysis-intro">
+
+                    <h3>
+                        Tanglish & English Cyberbullying Detection
+                    </h3>
+
+                    <p>
+                        This machine learning system analyzes
+                        the message you provide and identifies
+                        whether the content is safe or
+                        potentially harmful.
+                    </p>
+
+                    <p>
+                        It can identify offensive categories
+                        such as insult, threat, violence, hate,
+                        sexual harassment, sexual abuse and
+                        profanity.
+                    </p>
+
+                    <p>
+                        The system also analyzes the message
+                        intent, content category, severity and
+                        target type.
+                    </p>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <label
+                    for="messageInput"
+                    class="input-label"
+                >
+                    Message
+                </label>
+
+
+                <textarea
+                    id="messageInput"
+                    class="message-input"
+                    maxlength="1000"
+                    rows="8"
+                    placeholder="Type your English or Tanglish message here..."
+                ></textarea>
+
+
+                <div class="input-meta">
+
+                    <span id="characterCount">
+                        0 / 1000
+                    </span>
+
+                    <button
+                        type="button"
+                        id="clearButton"
+                        class="text-button"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     EXAMPLES
+                ================================================== -->
+
+                <div class="examples">
+
+                    <span>
+                        Try:
+                    </span>
+
+
+                    <button
+                        type="button"
+                        class="example-button"
+                        data-text="nee romba loosu da"
+                    >
+                        Tanglish Insult
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="example-button"
+                        data-text="unakku violence panniduven"
+                    >
+                        Tanglish Threat
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="example-button"
+                        data-text="Ithu nalla useful information da"
+                    >
+                        Safe Tanglish
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="example-button"
+                        data-text="You are doing a great job"
+                    >
+                        English Safe
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     ANALYZE
+                ================================================== -->
+
+                <button
+                    type="button"
+                    id="analyzeButton"
+                    class="primary-button analyze-button"
+                >
+
+                    <span>
+                        ✦
+                    </span>
+
+                    Analyze Message
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+
+                <!-- LOADING -->
+
+                <div
+                    id="loadingState"
+                    class="loading-state hidden"
+                >
+
+                    <div class="spinner"></div>
+
+                    <div>
+
+                        <strong>
+                            Analyzing...
+                        </strong>
+
+                        <small>
+                            Running multilingual ML pipeline
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ERROR -->
+
+                <div
+                    id="errorMessage"
+                    class="error-message hidden"
+                ></div>
+
+            </div>
+
+
+            <!-- =================================================
+                 RESULT PANEL
+            ================================================== -->
+
+            <div class="panel analysis-result-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            AI RESULT
+                        </span>
+
+                        <h2>
+                            Prediction
+                        </h2>
+
+                    </div>
+
+
+                    <div
+                        id="resultStatusBadge"
+                        class="result-badge neutral"
+                    >
+                        Waiting
+                    </div>
+
+                </div>
+
+
+                <!-- EMPTY -->
+
+                <div
+                    id="resultMain"
+                    class="result-main empty-result"
+                >
+
+                    <div class="result-symbol">
+                        ✦
+                    </div>
+
+                    <h3>
+                        Ready for analysis
+                    </h3>
+
+                    <p>
+                        Submit a message to see the
+                        prediction and explanation.
+                    </p>
+
+                </div>
+
+
+                <!-- RESULT DETAILS -->
+
+                <div
+                    id="resultDetails"
+                    class="result-details hidden"
+                >
+
+                    <!-- CLASSIFICATION -->
+
+                    <div class="result-hero">
+
+                        <span>
+                            CLASSIFICATION
+                        </span>
+
+                        <h3 id="predictionStatus">
+                            —
+                        </h3>
+
+                        <p id="summaryText">
+                            —
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         RESULT METRICS
+                    ================================================== -->
+
+                    <div class="result-metrics">
+
+                        <div class="metric-card">
+
+                            <span>
+                                Confidence
+                            </span>
+
+                            <strong id="confidenceValue">
+                                —
+                            </strong>
+
+                            <div class="confidence-bar">
+
+                                <div
+                                    id="confidenceFill"
+                                    class="confidence-fill"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="metric-card">
+
+                            <span>
+                                Severity
+                            </span>
+
+                            <strong id="severityValue">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="metric-card">
+
+                            <span>
+                                Target
+                            </span>
+
+                            <strong id="targetValue">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         AI CLASSIFICATION DETAILS
+                    ================================================== -->
+
+                    <div class="result-metrics">
+
+                        <div class="metric-card">
+
+                            <span>
+                                Intent
+                            </span>
+
+                            <strong id="intentValue">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="metric-card">
+
+                            <span>
+                                Content Category
+                            </span>
+
+                            <strong id="contentCategoryValue">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         DETECTED OFFENSE CATEGORIES
+                    ================================================== -->
+
+                    <div class="detail-section">
+
+                        <div class="detail-title">
+                            Detected Offense Categories
+                        </div>
+
+                        <div
+                            id="categoryContainer"
+                            class="category-container"
+                        ></div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         REASON
+                    ================================================== -->
+
+                    <div class="detail-section">
+
+                        <div class="detail-title">
+                            💡 Why was this detected?
+                        </div>
+
+                        <p
+                            id="reasonText"
+                            class="detail-text"
+                        >
+                            —
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         SEVERITY
+                    ================================================== -->
+
+                    <div class="detail-section">
+
+                        <div class="detail-title">
+                            ⚠ Severity Analysis
+                        </div>
+
+                        <p
+                            id="severityReason"
+                            class="detail-text"
+                        >
+                            —
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         TARGET
+                    ================================================== -->
+
+                    <div class="detail-section">
+
+                        <div class="detail-title">
+                            🎯 Target Analysis
+                        </div>
+
+                        <p
+                            id="targetReason"
+                            class="detail-text"
+                        >
+                            —
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         SUGGESTION
+                    ================================================== -->
+
+                    <div class="suggestion-box">
+
+                        <div class="suggestion-icon">
+                            ✍
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Suggested Response
+                            </strong>
+
+                            <p id="suggestionText">
+                                —
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="footer">
+
+            <span>
+                Cyberbullying Detection System
+            </span>
+
+            <span>
+                Explainable Multilingual Machine Learning
+            </span>
+
+            <span>
+                © 2026
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script
+    src="{{ url_for('static', filename='script.js') }}"
+></script>
+
+</body>
+
+</html>

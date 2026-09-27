@@ -1,0 +1,16 @@
+content_category,count,percentage
+safe_communication,9464,37.86
+none,6911,27.64
+negative_media_feedback,3004,12.02
+threat_violence,800,3.2
+sexual_abuse,750,3.0
+personal_attack,600,2.4
+positive_media_feedback,550,2.2
+bad_content,490,1.96
+hate_abuse,400,1.6
+profanity,400,1.6
+low_quality,387,1.55
+negative_review,377,1.51
+spam,321,1.28
+privacy,316,1.26
+misinformation,230,0.92

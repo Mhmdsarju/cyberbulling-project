@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>About Project | Cyberbullying Detection System</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app-shell">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                🛡
+            </div>
+
+            <div>
+
+                <h2>
+                    Cyberbullying Detection
+                </h2>
+
+                <span>
+                    Machine Learning System
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="/"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ⌂
+                </span>
+
+                Dashboard
+
+            </a>
+
+
+            <a
+                href="/analysis"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ⌕
+                </span>
+
+                Analysis
+
+            </a>
+
+
+            <a
+                href="/about"
+                class="nav-item active"
+            >
+
+                <span class="nav-icon">
+                    ⓘ
+                </span>
+
+                About Project
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="system-card">
+
+                <span class="online-dot"></span>
+
+                <div>
+
+                    <strong>
+                        System Online
+                    </strong>
+
+                    <small>
+                        ML Pipeline Ready
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="sidebar-model">
+
+                <span>
+                    MODEL
+                </span>
+
+                <strong>
+                    Real-World Multilingual
+                </strong>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+            <div>
+
+                <span class="eyebrow">
+                    PROJECT INFORMATION
+                </span>
+
+                <h1>
+                    About the Project
+                </h1>
+
+                <p>
+                    An explainable machine learning system for
+                    detecting and analyzing cyberbullying in
+                    English and Tanglish text.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             PROJECT OVERVIEW
+        ================================================== -->
+
+        <section class="about-hero panel">
+
+            <span class="hero-label">
+                MACHINE LEARNING PROJECT
+            </span>
+
+            <h2>
+                Detect. Analyze. Explain.
+            </h2>
+
+            <p>
+
+                This project uses multilingual text
+                classification techniques to analyze
+                English and Tanglish messages and identify
+                potentially harmful communication.
+
+            </p>
+
+            <p>
+
+                Instead of providing only a binary
+                cyberbullying prediction, the system analyzes
+                multiple attributes of the message and
+                produces an explainable result.
+
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             HOW IT WORKS
+        ================================================== -->
+
+        <section class="panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        WORKFLOW
+                    </span>
+
+                    <h2>
+                        How the System Works
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="architecture">
+
+
+                <div class="architecture-step">
+
+                    <span>
+                        01
+                    </span>
+
+                    <strong>
+                        Text Input
+                    </strong>
+
+                    <small>
+                        English / Tanglish
+                    </small>
+
+                </div>
+
+
+                <div class="architecture-arrow">
+                    →
+                </div>
+
+
+                <div class="architecture-step">
+
+                    <span>
+                        02
+                    </span>
+
+                    <strong>
+                        Text Features
+                    </strong>
+
+                    <small>
+                        Word + Character + No-Space
+                    </small>
+
+                </div>
+
+
+                <div class="architecture-arrow">
+                    →
+                </div>
+
+
+                <div class="architecture-step">
+
+                    <span>
+                        03
+                    </span>
+
+                    <strong>
+                        ML Prediction
+                    </strong>
+
+                    <small>
+                        Logistic Regression + SVM
+                    </small>
+
+                </div>
+
+
+                <div class="architecture-arrow">
+                    →
+                </div>
+
+
+                <div class="architecture-step">
+
+                    <span>
+                        04
+                    </span>
+
+                    <strong>
+                        Analysis
+                    </strong>
+
+                    <small>
+                        Classification + Explanation
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             MODEL ARCHITECTURE
+        ================================================== -->
+
+        <section class="panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        MODEL ARCHITECTURE
+                    </span>
+
+                    <h2>
+                        Machine Learning Models
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="model-grid">
+
+
+                <div class="info-card">
+
+                    <span class="info-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Logistic Regression
+                    </h3>
+
+                    <p>
+                        Performs the primary cyberbullying
+                        classification and provides the
+                        probability used for the displayed
+                        prediction confidence.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="info-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Linear SVM
+                    </h3>
+
+                    <p>
+                        Performs offense category, intent,
+                        content category, severity and
+                        target type classification.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="info-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Explanation Engine
+                    </h3>
+
+                    <p>
+                        Converts prediction results into
+                        human-readable explanations and
+                        communication suggestions.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             DETECTION CAPABILITIES
+        ================================================== -->
+
+        <section class="panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        DETECTION CAPABILITIES
+                    </span>
+
+                    <h2>
+                        What the System Analyzes
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="category-grid">
+
+
+                <div class="category-card">
+
+                    <strong>
+                        Cyberbullying
+                    </strong>
+
+                    <span>
+                        Safe or potentially harmful content
+                    </span>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <strong>
+                        Offense Category
+                    </strong>
+
+                    <span>
+                        Insult, threat, violence, hate and more
+                    </span>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <strong>
+                        Intent
+                    </strong>
+
+                    <span>
+                        Offensive, requesting, questioning,
+                        praising and other communication intents
+                    </span>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <strong>
+                        Content Category
+                    </strong>
+
+                    <span>
+                        Personal attack, spam, privacy,
+                        misinformation and other content types
+                    </span>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <strong>
+                        Severity
+                    </strong>
+
+                    <span>
+                        None, low, medium and high
+                    </span>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <strong>
+                        Target Type
+                    </strong>
+
+                    <span>
+                        Individual, group, other or none
+                    </span>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <strong>
+                        Explanation
+                    </strong>
+
+                    <span>
+                        Human-readable reason for the prediction
+                    </span>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <strong>
+                        Response Suggestion
+                    </strong>
+
+                    <span>
+                        Polite communication guidance
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             OFFENSE CATEGORIES
+        ================================================== -->
+
+        <section class="panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        OFFENSE CATEGORIES
+                    </span>
+
+                    <h2>
+                        Harmful Content Categories
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="category-grid">
+
+
+                <div class="category-card">
+
+                    <strong>
+                        Insult
+                    </strong>
+
+                    <span>
+                        Degrading or insulting language
+                    </span>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <strong>
+                        Threat
+                    </strong>
+
+                    <span>
+                        Threatening communication
+                    </span>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <strong>
+                        Violence
+                    </strong>
+
+                    <span>
+                        Violent or harmful language
+                    </span>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <strong>
+                        Hate
+                    </strong>
+
+                    <span>
+                        Hateful or discriminatory content
+                    </span>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <strong>
+                        Sexual Harassment
+                    </strong>
+
+                    <span>
+                        Unwanted sexual language
+                    </span>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <strong>
+                        Sexual Abuse
+                    </strong>
+
+                    <span>
+                        Abusive sexual references
+                    </span>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <strong>
+                        Profanity
+                    </strong>
+
+                    <span>
+                        Offensive or profane language
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TECHNICAL SPECIFICATIONS
+        ================================================== -->
+
+        <section class="panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        TECHNICAL DETAILS
+                    </span>
+
+                    <h2>
+                        System Specifications
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="spec-grid">
+
+
+                <div>
+
+                    <span>
+                        Languages
+                    </span>
+
+                    <strong>
+                        English + Tanglish
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Dataset Size
+                    </span>
+
+                    <strong>
+                        25,000 Messages
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Feature Dimension
+                    </span>
+
+                    <strong>
+                        27,665
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Text Features
+                    </span>
+
+                    <strong>
+                        Word + Character + No-Space
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Primary Model
+                    </span>
+
+                    <strong>
+                        Logistic Regression
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Attribute Models
+                    </span>
+
+                    <strong>
+                        Linear SVM
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Backend
+                    </span>
+
+                    <strong>
+                        Flask
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        API
+                    </span>
+
+                    <strong>
+                        REST API
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="footer">
+
+            <span>
+                Cyberbullying Detection System
+            </span>
+
+            <span>
+                Explainable Multilingual Machine Learning
+            </span>
+
+            <span>
+                © 2026
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>

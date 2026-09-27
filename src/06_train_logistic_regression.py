@@ -3,7 +3,9 @@ import joblib
 import pandas as pd
 
 from scipy.sparse import load_npz
+
 from sklearn.linear_model import LogisticRegression
+
 from sklearn.metrics import (
     accuracy_score,
     precision_score,
@@ -20,7 +22,7 @@ from sklearn.metrics import (
 
 FEATURE_DIR = (
     "data/processed/"
-    "features_robust"
+    "features_realworld"
 )
 
 MODEL_DIR = "models"
@@ -29,17 +31,17 @@ REPORT_DIR = "reports"
 
 MODEL_PATH = (
     "models/"
-    "logistic_regression_robust_multilingual.joblib"
+    "logistic_regression_realworld_multilingual.joblib"
 )
 
 REPORT_PATH = (
     "reports/"
-    "logistic_regression_robust_multilingual_validation.csv"
+    "logistic_regression_realworld_multilingual_validation.csv"
 )
 
 CONFUSION_MATRIX_PATH = (
     "reports/model_evaluation/"
-    "logistic_regression_robust_multilingual_confusion_matrix.png"
+    "logistic_regression_realworld_multilingual_confusion_matrix.png"
 )
 
 
@@ -71,22 +73,26 @@ def load_features():
 
     train_path = os.path.join(
         FEATURE_DIR,
-        "X_train_tfidf_robust.npz"
+        "X_train_tfidf_realworld.npz"
     )
 
     validation_path = os.path.join(
         FEATURE_DIR,
-        "X_validation_tfidf_robust.npz"
+        "X_validation_tfidf_realworld.npz"
     )
 
     if not os.path.exists(train_path):
+
         raise FileNotFoundError(
-            f"Training features not found: {train_path}"
+            f"Training features not found:\n"
+            f"{train_path}"
         )
 
     if not os.path.exists(validation_path):
+
         raise FileNotFoundError(
-            f"Validation features not found: {validation_path}"
+            f"Validation features not found:\n"
+            f"{validation_path}"
         )
 
     X_train = load_npz(
@@ -108,27 +114,29 @@ def load_labels():
 
     train_label_path = os.path.join(
         FEATURE_DIR,
-        "y_train_robust.joblib"
+        "y_train_realworld.joblib"
     )
 
     validation_label_path = os.path.join(
         FEATURE_DIR,
-        "y_validation_robust.joblib"
+        "y_validation_realworld.joblib"
     )
 
     if not os.path.exists(
         train_label_path
     ):
+
         raise FileNotFoundError(
-            f"Training labels not found: "
+            f"Training labels not found:\n"
             f"{train_label_path}"
         )
 
     if not os.path.exists(
         validation_label_path
     ):
+
         raise FileNotFoundError(
-            f"Validation labels not found: "
+            f"Validation labels not found:\n"
             f"{validation_label_path}"
         )
 
@@ -150,7 +158,7 @@ def load_labels():
 def main():
 
     print("=" * 75)
-    print("STEP 6 — ROBUST LOGISTIC REGRESSION")
+    print("STEP 6 — REAL-WORLD LOGISTIC REGRESSION")
     print("=" * 75)
 
     # ========================================================
@@ -166,19 +174,17 @@ def main():
     y_train, y_validation = load_labels()
 
     # ========================================================
-    # FEATURE INFORMATION
+    # FEATURE SHAPES
     # ========================================================
 
     print("\nFeature shapes:")
 
     print(
-        f"Train      : "
-        f"{X_train.shape}"
+        f"Train      : {X_train.shape}"
     )
 
     print(
-        f"Validation : "
-        f"{X_validation.shape}"
+        f"Validation : {X_validation.shape}"
     )
 
     # ========================================================
@@ -187,7 +193,10 @@ def main():
 
     print("\nFeature dimension validation:")
 
-    if X_train.shape[1] != X_validation.shape[1]:
+    if (
+        X_train.shape[1]
+        != X_validation.shape[1]
+    ):
 
         raise ValueError(
             "Train and validation feature dimensions "
@@ -207,7 +216,9 @@ def main():
     # ROW COUNT VALIDATION
     # ========================================================
 
-    if X_train.shape[0] != len(y_train):
+    if X_train.shape[0] != len(
+        y_train
+    ):
 
         raise ValueError(
             "Training feature rows and labels "
@@ -253,7 +264,9 @@ def main():
     # CREATE MODEL
     # ========================================================
 
-    print("\nCreating Logistic Regression model...")
+    print(
+        "\nCreating Logistic Regression model..."
+    )
 
     model = LogisticRegression(
         max_iter=2000,
@@ -332,23 +345,19 @@ def main():
     print("=" * 75)
 
     print(
-        f"Accuracy  : "
-        f"{accuracy:.4f}"
+        f"Accuracy  : {accuracy:.4f}"
     )
 
     print(
-        f"Precision : "
-        f"{precision:.4f}"
+        f"Precision : {precision:.4f}"
     )
 
     print(
-        f"Recall    : "
-        f"{recall:.4f}"
+        f"Recall    : {recall:.4f}"
     )
 
     print(
-        f"F1 Score  : "
-        f"{f1:.4f}"
+        f"F1 Score  : {f1:.4f}"
     )
 
     # ========================================================
@@ -373,9 +382,9 @@ def main():
             y_pred,
             target_names=[
                 "Safe",
-                "Cyberbullying"
+                "Cyberbullying",
             ],
-            zero_division=0
+            zero_division=0,
         )
     )
 
@@ -407,7 +416,7 @@ def main():
         ],
 
         "dataset": [
-            "robust_validation"
+            "realworld_validation"
         ],
 
         "samples": [
@@ -479,7 +488,7 @@ def main():
     )
 
     plt.title(
-        "Logistic Regression - Robust Validation"
+        "Logistic Regression - Real-World Validation"
     )
 
     plt.xlabel(
@@ -494,7 +503,7 @@ def main():
         [0, 1],
         [
             "Safe",
-            "Cyberbullying"
+            "Cyberbullying",
         ]
     )
 
@@ -502,7 +511,7 @@ def main():
         [0, 1],
         [
             "Safe",
-            "Cyberbullying"
+            "Cyberbullying",
         ]
     )
 
@@ -537,55 +546,6 @@ def main():
 
     print(
         CONFUSION_MATRIX_PATH
-    )
-
-    # ========================================================
-    # FINAL OUTPUT
-    # ========================================================
-
-    print("\n" + "=" * 75)
-    print(
-        "STEP 6 COMPLETED SUCCESSFULLY"
-    )
-    print("=" * 75)
-
-    print(
-        f"Training samples      : "
-        f"{X_train.shape[0]}"
-    )
-
-    print(
-        f"Validation samples    : "
-        f"{X_validation.shape[0]}"
-    )
-
-    print(
-        f"Feature count         : "
-        f"{X_train.shape[1]}"
-    )
-
-    print(
-        f"Validation Accuracy   : "
-        f"{accuracy:.4f}"
-    )
-
-    print(
-        f"Validation Precision  : "
-        f"{precision:.4f}"
-    )
-
-    print(
-        f"Validation Recall     : "
-        f"{recall:.4f}"
-    )
-
-    print(
-        f"Validation F1 Score   : "
-        f"{f1:.4f}"
-    )
-
-    print(
-        "\nStep 6 completed successfully."
     )
 
 

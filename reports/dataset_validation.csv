@@ -1,13 +1,24 @@
-check,value,status
-total_rows,9000,PASS
-total_columns,15,PASS
-missing_values,0,PASS
-duplicate_ids,0,PASS
-duplicate_texts,0,PASS
-invalid_cyberbullying_values,0,PASS
-invalid_language_values,0,PASS
-invalid_data_source_values,0,PASS
-invalid_category_values,0,PASS
-invalid_severity_values,0,PASS
-invalid_target_type_values,0,PASS
-empty_texts,0,PASS
+check,expected,actual,status
+row_count,25000,25000,PASS
+missing_values,0,0,PASS
+duplicate_ids,0,0,PASS
+duplicate_texts,0,0,PASS
+cyberbullying_values,"0, 1","0, 1",PASS
+language_values,"english, tanglish","english, tanglish",PASS
+context_type_values,"non_social_realworld, social_media","non_social_realworld, social_media",PASS
+environment_values,"community_chat, email, gaming_chat, messaging, personal_chat, public_forum, review_feedback, school_college, social_media, workplace","community_chat, email, gaming_chat, messaging, personal_chat, public_forum, review_feedback, school_college, social_media, workplace",PASS
+platform_values,"facebook, instagram, nonsocial, socialmedia, youtube","facebook, instagram, nonsocial, socialmedia, youtube",PASS
+media_type_values,"caption, comment, message, photo, post, reel, story, video","caption, comment, message, photo, post, reel, story, video",PASS
+intent_values,"apologizing, begging, casual, defensive, greeting, informational, neutral, offensive, praising, questioning, requesting, supporting, thanking","apologizing, begging, casual, defensive, greeting, informational, neutral, offensive, praising, questioning, requesting, supporting, thanking",PASS
+content_category_values,"bad_content, hate_abuse, low_quality, misinformation, negative_media_feedback, negative_review, none, personal_attack, positive_media_feedback, privacy, profanity, safe_communication, sexual_abuse, spam, threat_violence","bad_content, hate_abuse, low_quality, misinformation, negative_media_feedback, negative_review, none, personal_attack, positive_media_feedback, privacy, profanity, safe_communication, sexual_abuse, spam, threat_violence",PASS
+severity_values,"high, low, medium, none","high, low, medium, none",PASS
+target_type_values,"group, individual, none, other","group, individual, none, other",PASS
+data_source_values,synthetic_curated_realworld_v3,synthetic_curated_realworld_v3,PASS
+insult_values,"0, 1","0, 1",PASS
+threat_values,"0, 1","0, 1",PASS
+violence_values,"0, 1","0, 1",PASS
+hate_values,"0, 1","0, 1",PASS
+sexual_harassment_values,"0, 1","0, 1",PASS
+sexual_abuse_values,"0, 1","0, 1",PASS
+profanity_values,"0, 1","0, 1",PASS
+empty_texts,0,0,PASS

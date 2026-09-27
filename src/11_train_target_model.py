@@ -24,22 +24,22 @@ from sklearn.metrics import (
 
 TRAIN_PATH = (
     "data/processed/"
-    "splits_robust/train.csv"
+    "splits_realworld/train.csv"
 )
 
 VALIDATION_PATH = (
     "data/processed/"
-    "splits_robust/validation.csv"
+    "splits_realworld/validation.csv"
 )
 
 TEST_PATH = (
     "data/processed/"
-    "splits_robust/test.csv"
+    "splits_realworld/test.csv"
 )
 
 FEATURE_DIR = (
     "data/processed/"
-    "features_robust"
+    "features_realworld"
 )
 
 MODEL_DIR = "models"
@@ -54,22 +54,22 @@ CHART_DIR = (
 
 MODEL_PATH = (
     f"{MODEL_DIR}/"
-    "target_type_svm_robust_multilingual.joblib"
+    "target_type_svm_realworld_multilingual.joblib"
 )
 
 VALIDATION_REPORT_PATH = (
     f"{REPORT_DIR}/"
-    "target_type_robust_validation_results.csv"
+    "target_type_realworld_validation_results.csv"
 )
 
 TEST_REPORT_PATH = (
     f"{REPORT_DIR}/"
-    "target_type_robust_test_results.csv"
+    "target_type_realworld_test_results.csv"
 )
 
 CONFUSION_MATRIX_PATH = (
     f"{CHART_DIR}/"
-    "target_type_robust_confusion_matrix.png"
+    "target_type_realworld_confusion_matrix.png"
 )
 
 RANDOM_STATE = 42
@@ -80,6 +80,15 @@ TARGET_LABELS = [
     "group",
     "other",
 ]
+
+
+# ============================================================
+# EXPECTED DATASET SIZES
+# ============================================================
+
+EXPECTED_TRAIN_ROWS = 20000
+EXPECTED_VALIDATION_ROWS = 2500
+EXPECTED_TEST_ROWS = 2500
 
 
 # ============================================================
@@ -110,17 +119,17 @@ def load_features():
 
     train_path = os.path.join(
         FEATURE_DIR,
-        "X_train_tfidf_robust.npz"
+        "X_train_tfidf_realworld.npz"
     )
 
     validation_path = os.path.join(
         FEATURE_DIR,
-        "X_validation_tfidf_robust.npz"
+        "X_validation_tfidf_realworld.npz"
     )
 
     test_path = os.path.join(
         FEATURE_DIR,
-        "X_test_tfidf_robust.npz"
+        "X_test_tfidf_realworld.npz"
     )
 
     for path in [
@@ -218,7 +227,7 @@ def validate_features(
     )
 
     # --------------------------------------------------------
-    # Feature dimension validation
+    # Feature dimensions
     # --------------------------------------------------------
 
     if (
@@ -240,26 +249,36 @@ def validate_features(
     )
 
     # --------------------------------------------------------
-    # Row count validation
+    # Row counts
     # --------------------------------------------------------
 
-    if X_train.shape[0] != 7220:
+    expected_rows = {
+        "Train": EXPECTED_TRAIN_ROWS,
+        "Validation": EXPECTED_VALIDATION_ROWS,
+        "Test": EXPECTED_TEST_ROWS,
+    }
 
-        raise ValueError(
-            "Unexpected training feature row count."
-        )
+    actual_rows = {
+        "Train": X_train.shape[0],
+        "Validation": X_validation.shape[0],
+        "Test": X_test.shape[0],
+    }
 
-    if X_validation.shape[0] != 902:
+    for split_name in expected_rows:
 
-        raise ValueError(
-            "Unexpected validation feature row count."
-        )
+        if (
+            actual_rows[split_name]
+            != expected_rows[split_name]
+        ):
 
-    if X_test.shape[0] != 903:
-
-        raise ValueError(
-            "Unexpected test feature row count."
-        )
+            raise ValueError(
+                f"Unexpected {split_name.lower()} "
+                f"feature row count. "
+                f"Expected "
+                f"{expected_rows[split_name]}, "
+                f"got "
+                f"{actual_rows[split_name]}"
+            )
 
     print(
         "Feature dimensions and row counts are valid."
@@ -292,6 +311,7 @@ def validate_target_labels(
         invalid_values = set(
             df["target_type"]
             .dropna()
+            .astype(str)
             .unique()
         ) - set(
             TARGET_LABELS
@@ -319,7 +339,7 @@ def main():
     print("=" * 75)
 
     print(
-        "STEP 11 — ROBUST MULTILINGUAL "
+        "STEP 11 — REAL-WORLD MULTILINGUAL "
         "TARGET TYPE DETECTION"
     )
 
@@ -575,7 +595,7 @@ def main():
         ],
 
         "dataset": [
-            "robust_validation"
+            "realworld_validation"
         ],
 
         "samples": [
@@ -721,7 +741,7 @@ def main():
     display.plot()
 
     plt.title(
-        "Robust Multilingual Target Type Detection "
+        "Real-World Multilingual Target Type Detection "
         "- Test Confusion Matrix"
     )
 
@@ -754,7 +774,7 @@ def main():
         ],
 
         "dataset": [
-            "robust_test"
+            "realworld_test"
         ],
 
         "samples": [
@@ -792,15 +812,7 @@ def main():
     # ========================================================
 
     print(
-        "\n" + "=" * 75
-    )
-
-    print(
-        "FILES CREATED"
-    )
-
-    print(
-        "=" * 75
+        "\nFiles created:"
     )
 
     print(
@@ -821,18 +833,6 @@ def main():
     print(
         f"Chart  : "
         f"{CONFUSION_MATRIX_PATH}"
-    )
-
-    print(
-        "\n" + "=" * 75
-    )
-
-    print(
-        "STEP 11 COMPLETED SUCCESSFULLY"
-    )
-
-    print(
-        "=" * 75
     )
 
 

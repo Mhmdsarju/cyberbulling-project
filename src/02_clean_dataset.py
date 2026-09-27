@@ -10,18 +10,18 @@ import pandas as pd
 # ============================================================
 
 INPUT_PATH = (
-    "data/processed/"
-    "clean_cyberbullying_robust_multilingual.csv"
+    "data/raw/"
+    "cyberbullying_25000_realworld_multilingual_v3.csv"
 )
 
 OUTPUT_PATH = (
     "data/processed/"
-    "clean_cyberbullying_robust_multilingual_final.csv"
+    "clean_cyberbullying_25000_realworld_multilingual_v3.csv"
 )
 
 REPORT_PATH = (
     "reports/"
-    "robust_cleaning_summary.csv"
+    "realworld_cleaning_summary.csv"
 )
 
 
@@ -59,11 +59,83 @@ VALID_LANGUAGES = {
     "english",
 }
 
-VALID_DATA_SOURCES = {
-    "synthetic_tanglish",
-    "synthetic_english",
-    "synthetic_robustness",
+
+VALID_CONTEXT_TYPES = {
+    "social_media",
+    "non_social_realworld",
 }
+
+
+VALID_ENVIRONMENTS = {
+    "social_media",
+    "gaming_chat",
+    "personal_chat",
+    "messaging",
+    "workplace",
+    "school_college",
+    "review_feedback",
+    "public_forum",
+    "email",
+    "community_chat",
+}
+
+
+VALID_PLATFORMS = {
+    "instagram",
+    "youtube",
+    "facebook",
+    "socialmedia",
+    "nonsocial",
+}
+
+
+VALID_MEDIA_TYPES = {
+    "post",
+    "reel",
+    "story",
+    "photo",
+    "video",
+    "caption",
+    "comment",
+    "message",
+}
+
+
+VALID_INTENTS = {
+    "offensive",
+    "defensive",
+    "begging",
+    "requesting",
+    "apologizing",
+    "supporting",
+    "praising",
+    "thanking",
+    "greeting",
+    "questioning",
+    "informational",
+    "casual",
+    "neutral",
+}
+
+
+VALID_CONTENT_CATEGORIES = {
+    "none",
+    "safe_communication",
+    "negative_media_feedback",
+    "bad_content",
+    "low_quality",
+    "negative_review",
+    "spam",
+    "misinformation",
+    "privacy",
+    "positive_media_feedback",
+    "personal_attack",
+    "profanity",
+    "threat_violence",
+    "hate_abuse",
+    "sexual_abuse",
+}
+
 
 VALID_SEVERITY = {
     "none",
@@ -71,6 +143,7 @@ VALID_SEVERITY = {
     "medium",
     "high",
 }
+
 
 VALID_TARGET_TYPES = {
     "none",
@@ -80,19 +153,28 @@ VALID_TARGET_TYPES = {
 }
 
 
+VALID_DATA_SOURCES = {
+    "synthetic_curated_realworld_v3",
+}
+
+
 # ============================================================
 # TEXT CLEANING
 # ============================================================
 
 def clean_text(text):
     """
-    Canonical text normalization for Tanglish and English.
+    Canonical text normalization for English and Tanglish.
 
     Important:
     - Keeps word boundaries.
+    - Keeps meaningful punctuation.
+    - Does NOT remove offensive words.
+    - Does NOT remove Tanglish slang.
+    - Does NOT remove social-media terminology.
     - Does NOT remove spaces between words.
     - Space-free representation will be created later
-      during TF-IDF feature engineering.
+      during feature engineering.
     """
 
     if pd.isna(text):
@@ -116,7 +198,7 @@ def clean_text(text):
     text = text.strip()
 
     # --------------------------------------------------------
-    # Convert multiple whitespace characters into one space
+    # Normalize multiple whitespace characters
     # --------------------------------------------------------
 
     text = re.sub(
@@ -151,13 +233,70 @@ def clean_text(text):
 
 
 # ============================================================
+# STRING NORMALIZATION
+# ============================================================
+
+def normalize_string_column(
+    df,
+    column
+):
+
+    df[column] = (
+        df[column]
+        .fillna("")
+        .astype(str)
+        .str.strip()
+        .str.lower()
+    )
+
+    return df
+
+
+# ============================================================
+# VALIDATE STRING COLUMN
+# ============================================================
+
+def validate_string_column(
+    df,
+    column,
+    valid_values
+):
+
+    invalid_mask = (
+        ~df[column].isin(valid_values)
+    )
+
+    invalid_count = int(
+        invalid_mask.sum()
+    )
+
+    if invalid_count > 0:
+
+        print(
+            f"\nWarning: {invalid_count} "
+            f"invalid {column} values found."
+        )
+
+        print(
+            df.loc[
+                invalid_mask,
+                column
+            ]
+            .value_counts()
+            .to_string()
+        )
+
+    return invalid_count
+
+
+# ============================================================
 # MAIN
 # ============================================================
 
 def main():
 
     print("=" * 75)
-    print("STEP 2 — ROBUST MULTILINGUAL DATASET CLEANING")
+    print("STEP 2 — REAL-WORLD MULTILINGUAL DATASET CLEANING")
     print("=" * 75)
 
     # --------------------------------------------------------
@@ -181,12 +320,14 @@ def main():
     if not os.path.exists(INPUT_PATH):
 
         raise FileNotFoundError(
-            f"Input dataset not found: {INPUT_PATH}"
+            f"\nInput dataset not found:\n"
+            f"{INPUT_PATH}\n\n"
+            "Place the 25K CSV inside data/raw/"
         )
 
     df = pd.read_csv(
         INPUT_PATH,
-        encoding="utf-8"
+        encoding="utf-8-sig"
     )
 
     print("\nOriginal dataset:")
@@ -202,14 +343,20 @@ def main():
     original_rows = len(df)
 
     # --------------------------------------------------------
-    # Check required columns
+    # Required columns
     # --------------------------------------------------------
 
     required_columns = [
         "id",
         "text",
         "language",
+        "context_type",
+        "environment",
+        "platform",
+        "media_type",
         "cyberbullying",
+        "intent",
+        "content_category",
         "target_type",
         *CATEGORY_COLUMNS,
         "severity",
@@ -226,18 +373,23 @@ def main():
     if missing_columns:
 
         raise ValueError(
-            f"Missing required columns: {missing_columns}"
+            "Missing required columns:\n"
+            + "\n".join(
+                f"- {column}"
+                for column in missing_columns
+            )
         )
 
-    print("\nRequired columns: OK")
+    print(
+        "\nRequired columns: OK"
+    )
 
     # --------------------------------------------------------
     # Remove exact duplicate rows
     # --------------------------------------------------------
 
-    duplicate_rows = (
-        df.duplicated()
-        .sum()
+    duplicate_rows = int(
+        df.duplicated().sum()
     )
 
     if duplicate_rows > 0:
@@ -257,14 +409,12 @@ def main():
     # Clean text
     # --------------------------------------------------------
 
-    df["text_before_cleaning"] = df["text"]
-
     df["text"] = (
         df["text"]
         .apply(clean_text)
     )
 
-    empty_after_cleaning = (
+    empty_after_cleaning = int(
         df["text"]
         .str.len()
         .eq(0)
@@ -300,74 +450,137 @@ def main():
     # Normalize language
     # --------------------------------------------------------
 
-    df["language"] = (
-        df["language"]
-        .astype(str)
-        .str.strip()
-        .str.lower()
+    df = normalize_string_column(
+        df,
+        "language"
     )
 
-    invalid_languages = (
-        ~df["language"].isin(
+    invalid_language_count = (
+        validate_string_column(
+            df,
+            "language",
             VALID_LANGUAGES
         )
     )
 
-    invalid_language_count = (
-        invalid_languages.sum()
+    # --------------------------------------------------------
+    # Normalize context type
+    # --------------------------------------------------------
+
+    df = normalize_string_column(
+        df,
+        "context_type"
     )
 
-    if invalid_language_count > 0:
-
-        print(
-            f"\nWarning: "
-            f"{invalid_language_count} "
-            f"invalid language values found."
+    invalid_context_count = (
+        validate_string_column(
+            df,
+            "context_type",
+            VALID_CONTEXT_TYPES
         )
+    )
 
-        print(
-            df.loc[
-                invalid_languages,
-                "language"
-            ].value_counts()
+    # --------------------------------------------------------
+    # Normalize environment
+    # --------------------------------------------------------
+
+    df = normalize_string_column(
+        df,
+        "environment"
+    )
+
+    invalid_environment_count = (
+        validate_string_column(
+            df,
+            "environment",
+            VALID_ENVIRONMENTS
         )
+    )
+
+    # --------------------------------------------------------
+    # Normalize platform
+    # --------------------------------------------------------
+
+    df = normalize_string_column(
+        df,
+        "platform"
+    )
+
+    invalid_platform_count = (
+        validate_string_column(
+            df,
+            "platform",
+            VALID_PLATFORMS
+        )
+    )
+
+    # --------------------------------------------------------
+    # Normalize media type
+    # --------------------------------------------------------
+
+    df = normalize_string_column(
+        df,
+        "media_type"
+    )
+
+    invalid_media_type_count = (
+        validate_string_column(
+            df,
+            "media_type",
+            VALID_MEDIA_TYPES
+        )
+    )
+
+    # --------------------------------------------------------
+    # Normalize intent
+    # --------------------------------------------------------
+
+    df = normalize_string_column(
+        df,
+        "intent"
+    )
+
+    invalid_intent_count = (
+        validate_string_column(
+            df,
+            "intent",
+            VALID_INTENTS
+        )
+    )
+
+    # --------------------------------------------------------
+    # Normalize content category
+    # --------------------------------------------------------
+
+    df = normalize_string_column(
+        df,
+        "content_category"
+    )
+
+    invalid_content_category_count = (
+        validate_string_column(
+            df,
+            "content_category",
+            VALID_CONTENT_CATEGORIES
+        )
+    )
 
     # --------------------------------------------------------
     # Normalize data source
     # --------------------------------------------------------
 
-    df["data_source"] = (
-        df["data_source"]
-        .fillna("unknown")
-        .astype(str)
-        .str.strip()
-        .str.lower()
-    )
-
-    invalid_data_sources = (
-        ~df["data_source"].isin(
-            VALID_DATA_SOURCES
-        )
+    df = normalize_string_column(
+        df,
+        "data_source"
     )
 
     invalid_data_source_count = (
-        invalid_data_sources.sum()
+        validate_string_column(
+            df,
+            "data_source",
+            VALID_DATA_SOURCES
+        )
     )
-
-    if invalid_data_source_count > 0:
-
-        print(
-            f"\nWarning: "
-            f"{invalid_data_source_count} "
-            f"invalid data_source values found."
-        )
-
-        print(
-            df.loc[
-                invalid_data_sources,
-                "data_source"
-            ].value_counts()
-        )
 
     # --------------------------------------------------------
     # Convert binary labels to integers
@@ -382,13 +595,13 @@ def main():
             errors="coerce"
         )
 
-        invalid_values = (
+        invalid_nan_values = (
             original_values.isna()
             & df[column].notna()
         ).sum()
 
-        invalid_binary_count += (
-            invalid_values
+        invalid_binary_count += int(
+            invalid_nan_values
         )
 
         df[column] = (
@@ -398,7 +611,7 @@ def main():
         )
 
         # ----------------------------------------------------
-        # Make sure binary values are only 0 or 1
+        # Ensure values are only 0 or 1
         # ----------------------------------------------------
 
         invalid_range = (
@@ -407,12 +620,12 @@ def main():
 
         if invalid_range > 0:
 
-            invalid_binary_count += (
+            invalid_binary_count += int(
                 invalid_range
             )
 
             print(
-                f"Warning: {column} contains "
+                f"\nWarning: {column} contains "
                 f"{invalid_range} non-binary values."
             )
 
@@ -442,7 +655,7 @@ def main():
         )
     )
 
-    invalid_target_count = (
+    invalid_target_count = int(
         invalid_target_types.sum()
     )
 
@@ -452,6 +665,15 @@ def main():
             f"\nWarning: "
             f"{invalid_target_count} "
             f"invalid target types found."
+        )
+
+        print(
+            df.loc[
+                invalid_target_types,
+                "target_type"
+            ]
+            .value_counts()
+            .to_string()
         )
 
         df.loc[
@@ -477,7 +699,7 @@ def main():
         )
     )
 
-    invalid_severity_count = (
+    invalid_severity_count = int(
         invalid_severity.sum()
     )
 
@@ -487,6 +709,15 @@ def main():
             f"\nWarning: "
             f"{invalid_severity_count} "
             f"invalid severity values found."
+        )
+
+        print(
+            df.loc[
+                invalid_severity,
+                "severity"
+            ]
+            .value_counts()
+            .to_string()
         )
 
         df.loc[
@@ -506,15 +737,30 @@ def main():
     )
 
     # --------------------------------------------------------
-    # Remove temporary column
+    # Remove accidental unnamed columns
     # --------------------------------------------------------
 
-    df.drop(
-        columns=[
-            "text_before_cleaning"
-        ],
-        inplace=True
-    )
+    unnamed_columns = [
+        column
+        for column in df.columns
+        if column.startswith("Unnamed:")
+    ]
+
+    if unnamed_columns:
+
+        df.drop(
+            columns=unnamed_columns,
+            inplace=True
+        )
+
+        print(
+            "\nUnnamed columns removed:"
+        )
+
+        for column in unnamed_columns:
+            print(
+                f"  - {column}"
+            )
 
     # --------------------------------------------------------
     # Reset index
@@ -553,6 +799,18 @@ def main():
 
             "invalid_language_values",
 
+            "invalid_context_type_values",
+
+            "invalid_environment_values",
+
+            "invalid_platform_values",
+
+            "invalid_media_type_values",
+
+            "invalid_intent_values",
+
+            "invalid_content_category_values",
+
             "invalid_data_source_values",
 
             "invalid_binary_values",
@@ -576,6 +834,18 @@ def main():
             empty_after_cleaning,
 
             invalid_language_count,
+
+            invalid_context_count,
+
+            invalid_environment_count,
+
+            invalid_platform_count,
+
+            invalid_media_type_count,
+
+            invalid_intent_count,
+
+            invalid_content_category_count,
 
             invalid_data_source_count,
 
@@ -601,58 +871,92 @@ def main():
     # --------------------------------------------------------
 
     print("\n" + "=" * 75)
-    print("ROBUST DATASET CLEANING SUMMARY")
+    print("REAL-WORLD DATASET CLEANING SUMMARY")
     print("=" * 75)
 
     print(
-        f"Original rows                : "
+        f"Original rows                  : "
         f"{original_rows}"
     )
 
     print(
-        f"Final rows                   : "
+        f"Final rows                     : "
         f"{len(df)}"
     )
 
     print(
-        f"Duplicate rows removed       : "
+        f"Duplicate rows removed         : "
         f"{duplicate_rows}"
     )
 
     print(
-        f"Empty texts removed          : "
+        f"Empty texts removed            : "
         f"{empty_after_cleaning}"
     )
 
     print(
-        f"Invalid language values      : "
+        f"Invalid language values        : "
         f"{invalid_language_count}"
     )
 
     print(
-        f"Invalid data source values   : "
+        f"Invalid context values         : "
+        f"{invalid_context_count}"
+    )
+
+    print(
+        f"Invalid environment values     : "
+        f"{invalid_environment_count}"
+    )
+
+    print(
+        f"Invalid platform values        : "
+        f"{invalid_platform_count}"
+    )
+
+    print(
+        f"Invalid media type values      : "
+        f"{invalid_media_type_count}"
+    )
+
+    print(
+        f"Invalid intent values          : "
+        f"{invalid_intent_count}"
+    )
+
+    print(
+        f"Invalid content category       : "
+        f"{invalid_content_category_count}"
+    )
+
+    print(
+        f"Invalid data source values     : "
         f"{invalid_data_source_count}"
     )
 
     print(
-        f"Invalid binary values        : "
+        f"Invalid binary values          : "
         f"{invalid_binary_count}"
     )
 
     print(
-        f"Invalid target types         : "
+        f"Invalid target types           : "
         f"{invalid_target_count}"
     )
 
     print(
-        f"Invalid severity values      : "
+        f"Invalid severity values        : "
         f"{invalid_severity_count}"
     )
 
     print(
-        f"Final columns                : "
+        f"Final columns                  : "
         f"{len(df.columns)}"
     )
+
+    # --------------------------------------------------------
+    # Distribution
+    # --------------------------------------------------------
 
     print("\nLanguage distribution:")
 
@@ -662,10 +966,42 @@ def main():
         .to_string()
     )
 
-    print("\nData source distribution:")
+    print("\nContext type distribution:")
 
     print(
-        df["data_source"]
+        df["context_type"]
+        .value_counts()
+        .to_string()
+    )
+
+    print("\nEnvironment distribution:")
+
+    print(
+        df["environment"]
+        .value_counts()
+        .to_string()
+    )
+
+    print("\nPlatform distribution:")
+
+    print(
+        df["platform"]
+        .value_counts()
+        .to_string()
+    )
+
+    print("\nIntent distribution:")
+
+    print(
+        df["intent"]
+        .value_counts()
+        .to_string()
+    )
+
+    print("\nContent category distribution:")
+
+    print(
+        df["content_category"]
         .value_counts()
         .to_string()
     )
@@ -696,19 +1032,13 @@ def main():
     )
 
     print("\nProcessed dataset:")
-
     print(
         OUTPUT_PATH
     )
 
     print("\nCleaning report:")
-
     print(
         REPORT_PATH
-    )
-
-    print(
-        "\nStep 2 completed successfully."
     )
 
 

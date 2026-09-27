@@ -13,22 +13,22 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 TRAIN_PATH = (
     "data/processed/"
-    "splits_robust/train.csv"
+    "splits_realworld/train.csv"
 )
 
 VALIDATION_PATH = (
     "data/processed/"
-    "splits_robust/validation.csv"
+    "splits_realworld/validation.csv"
 )
 
 TEST_PATH = (
     "data/processed/"
-    "splits_robust/test.csv"
+    "splits_realworld/test.csv"
 )
 
 FEATURE_DIR = (
     "data/processed/"
-    "features_robust"
+    "features_realworld"
 )
 
 MODEL_DIR = "models"
@@ -48,7 +48,7 @@ WORD_MIN_DF = 2
 
 
 # ------------------------------------------------------------
-# Normal character-level features
+# Character-level features
 # ------------------------------------------------------------
 
 CHAR_MAX_FEATURES = 15000
@@ -94,7 +94,10 @@ def load_dataset(path):
             f"Dataset not found: {path}"
         )
 
-    return pd.read_csv(path)
+    return pd.read_csv(
+        path,
+        encoding="utf-8-sig"
+    )
 
 
 # ============================================================
@@ -104,10 +107,9 @@ def load_dataset(path):
 def create_no_space_text(text):
 
     """
-    Creates an additional representation where
-    whitespace and separators are removed.
+    Creates an additional text representation.
 
-    Example:
+    Examples:
 
         "i love you"
         -> "iloveyou"
@@ -118,19 +120,17 @@ def create_no_space_text(text):
         "nee romba loosu da"
         -> "neerombaloosuda"
 
-    Original text is NOT modified.
+    Original text is not modified.
     """
 
     text = str(text).lower()
 
-    # Remove whitespace
     text = re.sub(
         r"\s+",
         "",
         text
     )
 
-    # Remove common separators
     text = re.sub(
         r"[-_]+",
         "",
@@ -176,19 +176,31 @@ def main():
     print("\nDataset sizes:")
 
     print(
-        f"Train      : "
-        f"{len(train_df)}"
+        f"Train      : {len(train_df)}"
     )
 
     print(
-        f"Validation : "
-        f"{len(validation_df)}"
+        f"Validation : {len(validation_df)}"
     )
 
     print(
-        f"Test       : "
-        f"{len(test_df)}"
+        f"Test       : {len(test_df)}"
     )
+
+    # --------------------------------------------------------
+    # Validate text column
+    # --------------------------------------------------------
+
+    for name, df in [
+        ("train", train_df),
+        ("validation", validation_df),
+        ("test", test_df),
+    ]:
+
+        if "text" not in df.columns:
+            raise ValueError(
+                f"'text' column missing in {name} dataset."
+            )
 
     # ========================================================
     # ORIGINAL TEXT
@@ -217,7 +229,7 @@ def main():
     # ========================================================
 
     print("\n" + "-" * 75)
-    print("Creating NO-SPACE text representation")
+    print("CREATING NO-SPACE TEXT REPRESENTATION")
     print("-" * 75)
 
     X_train_nospace = create_no_space_series(
@@ -237,6 +249,7 @@ def main():
     for i in range(
         min(5, len(X_train_text))
     ):
+
         print(
             f"Original : {X_train_text.iloc[i]}"
         )
@@ -246,7 +259,6 @@ def main():
         )
 
         print()
-
 
     # ========================================================
     # CHANNEL 1 — WORD TF-IDF
@@ -302,7 +314,6 @@ def main():
         f"Test            : "
         f"{X_test_word.shape}"
     )
-
 
     # ========================================================
     # CHANNEL 2 — NORMAL CHARACTER TF-IDF
@@ -360,7 +371,6 @@ def main():
         f"{X_test_char.shape}"
     )
 
-
     # ========================================================
     # CHANNEL 3 — NO-SPACE CHARACTER TF-IDF
     # ========================================================
@@ -417,7 +427,6 @@ def main():
         f"{X_test_nospace_char.shape}"
     )
 
-
     # ========================================================
     # COMBINE ALL THREE CHANNELS
     # ========================================================
@@ -465,24 +474,23 @@ def main():
         f"{X_test.shape}"
     )
 
-
     # ========================================================
     # SAVE VECTORIZERS
     # ========================================================
 
     word_vectorizer_path = os.path.join(
         MODEL_DIR,
-        "tfidf_word_robust_vectorizer.joblib"
+        "tfidf_word_realworld_vectorizer.joblib"
     )
 
     char_vectorizer_path = os.path.join(
         MODEL_DIR,
-        "tfidf_char_robust_vectorizer.joblib"
+        "tfidf_char_realworld_vectorizer.joblib"
     )
 
     nospace_char_vectorizer_path = os.path.join(
         MODEL_DIR,
-        "tfidf_nospace_char_robust_vectorizer.joblib"
+        "tfidf_nospace_char_realworld_vectorizer.joblib"
     )
 
     joblib.dump(
@@ -500,24 +508,23 @@ def main():
         nospace_char_vectorizer_path
     )
 
-
     # ========================================================
     # SAVE COMBINED FEATURES
     # ========================================================
 
     train_features_path = os.path.join(
         FEATURE_DIR,
-        "X_train_tfidf_robust.npz"
+        "X_train_tfidf_realworld.npz"
     )
 
     validation_features_path = os.path.join(
         FEATURE_DIR,
-        "X_validation_tfidf_robust.npz"
+        "X_validation_tfidf_realworld.npz"
     )
 
     test_features_path = os.path.join(
         FEATURE_DIR,
-        "X_test_tfidf_robust.npz"
+        "X_test_tfidf_realworld.npz"
     )
 
     save_npz(
@@ -534,7 +541,6 @@ def main():
         test_features_path,
         X_test
     )
-
 
     # ========================================================
     # SAVE LABELS
@@ -559,7 +565,7 @@ def main():
         y_train,
         os.path.join(
             FEATURE_DIR,
-            "y_train_robust.joblib"
+            "y_train_realworld.joblib"
         )
     )
 
@@ -567,7 +573,7 @@ def main():
         y_validation,
         os.path.join(
             FEATURE_DIR,
-            "y_validation_robust.joblib"
+            "y_validation_realworld.joblib"
         )
     )
 
@@ -575,10 +581,9 @@ def main():
         y_test,
         os.path.join(
             FEATURE_DIR,
-            "y_test_robust.joblib"
+            "y_test_realworld.joblib"
         )
     )
-
 
     # ========================================================
     # SAVE FEATURE INFORMATION
@@ -645,13 +650,12 @@ def main():
         feature_info,
         os.path.join(
             FEATURE_DIR,
-            "feature_info_robust.joblib"
+            "feature_info_realworld.joblib"
         )
     )
 
-
     # ========================================================
-    # FINAL OUTPUT
+    # FINAL SUMMARY
     # ========================================================
 
     print("\n" + "=" * 75)
@@ -659,37 +663,37 @@ def main():
     print("=" * 75)
 
     print(
-        f"Word vocabulary                : "
+        f"Word vocabulary               : "
         f"{len(word_vectorizer.vocabulary_)}"
     )
 
     print(
-        f"Character vocabulary           : "
+        f"Character vocabulary          : "
         f"{len(char_vectorizer.vocabulary_)}"
     )
 
     print(
-        f"No-space character vocabulary  : "
+        f"No-space character vocabulary : "
         f"{len(nospace_char_vectorizer.vocabulary_)}"
     )
 
     print(
-        f"Combined features              : "
+        f"Combined features             : "
         f"{X_train.shape[1]}"
     )
 
     print(
-        f"Train shape                    : "
+        f"Train shape                   : "
         f"{X_train.shape}"
     )
 
     print(
-        f"Validation shape               : "
+        f"Validation shape              : "
         f"{X_validation.shape}"
     )
 
     print(
-        f"Test shape                     : "
+        f"Test shape                    : "
         f"{X_test.shape}"
     )
 
@@ -704,8 +708,6 @@ def main():
     print(train_features_path)
     print(validation_features_path)
     print(test_features_path)
-
-    print("\nStep 5 completed successfully.")
 
 
 # ============================================================

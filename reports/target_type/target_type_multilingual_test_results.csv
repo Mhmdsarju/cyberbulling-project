@@ -1,2 +1,0 @@
-model,dataset,accuracy,macro_precision,macro_recall,macro_f1
-Linear SVM,multilingual_9000,0.8744444444444445,0.7618131868131868,0.7543591389855709,0.7413526671081831

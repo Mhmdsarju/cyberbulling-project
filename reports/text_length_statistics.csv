@@ -1,9 +1,9 @@
 metric,value
-minimum_characters,8.0
-maximum_characters,84.0
-mean_characters,39.66
-median_characters,38.0
+minimum_characters,6.0
+maximum_characters,87.0
+mean_characters,44.59
+median_characters,44.0
 minimum_words,1.0
-maximum_words,13.0
-mean_words,7.05
-median_words,7.0
+maximum_words,15.0
+mean_words,8.09
+median_words,8.0

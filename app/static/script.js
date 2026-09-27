@@ -1,6 +1,12 @@
-// ============================================================
-// GLOBAL STATE
-// ============================================================
+/* ============================================================
+   CYBERBULLYING DETECTION SYSTEM
+   FRONTEND SCRIPT
+============================================================ */
+
+
+/* ============================================================
+   GLOBAL STATE
+============================================================ */
 
 let totalAnalysis = 0;
 let cyberbullyingCount = 0;
@@ -11,114 +17,126 @@ let detectionHistory = [];
 
 let lastPrediction = null;
 
-
-// ============================================================
-// SESSION STORAGE
-// ============================================================
-
 const SESSION_STORAGE_KEY =
     "cyberbullying_detection_session";
 
 
-// ============================================================
-// DOM ELEMENTS
-// ============================================================
+/* ============================================================
+   DOM HELPERS
+============================================================ */
+
+function getElement(id) {
+
+    return document.getElementById(id);
+
+}
+
+
+/* ============================================================
+   DOM ELEMENTS
+============================================================ */
 
 const messageInput =
-    document.getElementById("messageInput");
+    getElement("messageInput");
 
 const analyzeButton =
-    document.getElementById("analyzeButton");
+    getElement("analyzeButton");
 
 const clearButton =
-    document.getElementById("clearButton");
+    getElement("clearButton");
 
 const characterCount =
-    document.getElementById("characterCount");
+    getElement("characterCount");
 
 const loadingState =
-    document.getElementById("loadingState");
+    getElement("loadingState");
 
 const errorMessage =
-    document.getElementById("errorMessage");
+    getElement("errorMessage");
 
 const apiStatus =
-    document.getElementById("apiStatus");
+    getElement("apiStatus");
+
+const sidebarApiDot =
+    getElement("sidebarApiDot");
 
 const resultStatusBadge =
-    document.getElementById("resultStatusBadge");
+    getElement("resultStatusBadge");
 
 const resultMain =
-    document.getElementById("resultMain");
+    getElement("resultMain");
 
 const resultDetails =
-    document.getElementById("resultDetails");
+    getElement("resultDetails");
 
 const summaryText =
-    document.getElementById("summaryText");
+    getElement("summaryText");
 
 const predictionStatus =
-    document.getElementById("predictionStatus");
+    getElement("predictionStatus");
 
 const confidenceValue =
-    document.getElementById("confidenceValue");
+    getElement("confidenceValue");
 
 const confidenceFill =
-    document.getElementById("confidenceFill");
+    getElement("confidenceFill");
 
 const severityValue =
-    document.getElementById("severityValue");
+    getElement("severityValue");
 
 const targetValue =
-    document.getElementById("targetValue");
+    getElement("targetValue");
+
+const intentValue =
+    getElement("intentValue");
+
+const contentCategoryValue =
+    getElement("contentCategoryValue");
 
 const categoryContainer =
-    document.getElementById("categoryContainer");
+    getElement("categoryContainer");
 
 const reasonText =
-    document.getElementById("reasonText");
+    getElement("reasonText");
 
 const severityReason =
-    document.getElementById("severityReason");
+    getElement("severityReason");
 
 const targetReason =
-    document.getElementById("targetReason");
+    getElement("targetReason");
 
 const suggestionText =
-    document.getElementById("suggestionText");
+    getElement("suggestionText");
 
 const historyContainer =
-    document.getElementById("historyContainer");
+    getElement("historyContainer");
+
+const recentActivity =
+    getElement("recentActivity");
 
 const clearHistoryButton =
-    document.getElementById("clearHistoryButton");
+    getElement("clearHistoryButton");
 
 
-// ============================================================
-// SAVE SESSION DATA
-// ============================================================
+/* ============================================================
+   SESSION STORAGE
+============================================================ */
 
 function saveSessionData() {
 
     const sessionData = {
 
-        totalAnalysis:
-            totalAnalysis,
+        totalAnalysis,
 
-        cyberbullyingCount:
-            cyberbullyingCount,
+        cyberbullyingCount,
 
-        safeCount:
-            safeCount,
+        safeCount,
 
-        totalConfidence:
-            totalConfidence,
+        totalConfidence,
 
-        detectionHistory:
-            detectionHistory,
+        detectionHistory,
 
-        lastPrediction:
-            lastPrediction
+        lastPrediction
 
     };
 
@@ -142,26 +160,26 @@ function saveSessionData() {
 }
 
 
-// ============================================================
-// LOAD SESSION DATA
-// ============================================================
+/* ============================================================
+   LOAD SESSION DATA
+============================================================ */
 
 function loadSessionData() {
 
-    const savedData =
-        sessionStorage.getItem(
-            SESSION_STORAGE_KEY
-        );
-
-
-    if (!savedData) {
-
-        return;
-
-    }
-
-
     try {
+
+        const savedData =
+            sessionStorage.getItem(
+                SESSION_STORAGE_KEY
+            );
+
+
+        if (!savedData) {
+
+            return;
+
+        }
+
 
         const sessionData =
             JSON.parse(savedData);
@@ -231,68 +249,16 @@ function loadSessionData() {
 }
 
 
-// ============================================================
-// RESTORE SESSION UI
-// ============================================================
+/* ============================================================
+   UPDATE ALL STATISTICS
+============================================================ */
 
-function restoreSessionUI() {
-
-    // --------------------------------------------------------
-    // MAIN STATISTICS
-    // --------------------------------------------------------
-
-    document.getElementById(
-        "totalAnalysis"
-    ).textContent =
-        totalAnalysis;
-
-
-    document.getElementById(
-        "cyberbullyingCount"
-    ).textContent =
-        cyberbullyingCount;
-
-
-    document.getElementById(
-        "safeCount"
-    ).textContent =
-        safeCount;
-
+function updateStatisticsUI() {
 
     const averageConfidence =
         totalAnalysis > 0
             ? totalConfidence / totalAnalysis
             : 0;
-
-
-    document.getElementById(
-        "averageConfidence"
-    ).textContent =
-        `${Math.round(
-            averageConfidence * 100
-        )}%`;
-
-
-    // --------------------------------------------------------
-    // ANALYTICS
-    // --------------------------------------------------------
-
-    document.getElementById(
-        "analyticsTotal"
-    ).textContent =
-        totalAnalysis;
-
-
-    document.getElementById(
-        "analyticsDetected"
-    ).textContent =
-        cyberbullyingCount;
-
-
-    document.getElementById(
-        "analyticsSafe"
-    ).textContent =
-        safeCount;
 
 
     const detectionRate =
@@ -304,43 +270,156 @@ function restoreSessionUI() {
             : 0;
 
 
-    document.getElementById(
-        "detectionRate"
-    ).textContent =
+    /* Dashboard */
+
+    setText(
+        "totalAnalysis",
+        totalAnalysis
+    );
+
+
+    setText(
+        "cyberbullyingCount",
+        cyberbullyingCount
+    );
+
+
+    setText(
+        "safeCount",
+        safeCount
+    );
+
+
+    setText(
+        "averageConfidence",
+        `${Math.round(
+            averageConfidence * 100
+        )}%`
+    );
+
+
+    /* Analytics */
+
+    setText(
+        "analyticsTotal",
+        totalAnalysis
+    );
+
+
+    setText(
+        "analyticsDetected",
+        cyberbullyingCount
+    );
+
+
+    setText(
+        "analyticsSafe",
+        safeCount
+    );
+
+
+    setText(
+        "detectionRate",
         `${Math.round(
             detectionRate
-        )}%`;
+        )}%`
+    );
 
 
-    // --------------------------------------------------------
-    // HISTORY
-    // --------------------------------------------------------
+    /* Other possible dashboard IDs */
+
+    setText(
+        "totalDetections",
+        totalAnalysis
+    );
+
+
+    setText(
+        "detectedCount",
+        cyberbullyingCount
+    );
+
+
+    setText(
+        "safeMessages",
+        safeCount
+    );
+
+
+    setText(
+        "confidenceScore",
+        `${Math.round(
+            averageConfidence * 100
+        )}%`
+    );
+
+}
+
+
+/* ============================================================
+   SET TEXT SAFELY
+============================================================ */
+
+function setText(id, value) {
+
+    const element =
+        getElement(id);
+
+
+    if (element) {
+
+        element.textContent =
+            value;
+
+    }
+
+}
+
+
+/* ============================================================
+   TEXT NORMALIZATION
+============================================================ */
+
+function normalizeInputText(value) {
+
+    return String(value || "")
+        .normalize("NFKC")
+        .replace(/\s+/g, " ")
+        .trim();
+
+}
+
+
+/* ============================================================
+   RESTORE SESSION UI
+============================================================ */
+
+function restoreSessionUI() {
+
+    updateStatisticsUI();
 
     renderHistory();
 
+    renderRecentActivity();
 
-    // --------------------------------------------------------
-    // LAST PREDICTION
-    // --------------------------------------------------------
 
-    if (lastPrediction) {
+    if (
+        lastPrediction &&
+        messageInput
+    ) {
 
-        if (
-            lastPrediction.text
-        ) {
+        if (lastPrediction.text) {
 
             messageInput.value =
                 lastPrediction.text;
 
-            characterCount.textContent =
-                `${lastPrediction.text.length} / 1000`;
+
+            updateCharacterCount();
 
         }
 
 
-        if (
-            lastPrediction.data
-        ) {
+        if (lastPrediction.data) {
 
             displayPrediction(
                 lastPrediction.data
@@ -353,49 +432,101 @@ function restoreSessionUI() {
 }
 
 
-// ============================================================
-// CHARACTER COUNTER
-// ============================================================
+/* ============================================================
+   CHARACTER COUNTER
+============================================================ */
 
-messageInput.addEventListener(
-    "input",
-    () => {
+function updateCharacterCount() {
 
-        const length =
-            messageInput.value.length;
+    if (!messageInput) {
+
+        return;
+
+    }
+
+
+    const length =
+        messageInput.value.length;
+
+
+    if (characterCount) {
 
         characterCount.textContent =
             `${length} / 1000`;
 
     }
-);
+
+}
 
 
-// ============================================================
-// CLEAR INPUT
-// ============================================================
+/* ============================================================
+   INPUT EVENTS
+============================================================ */
 
-clearButton.addEventListener(
-    "click",
-    () => {
+if (messageInput) {
 
-        messageInput.value =
-            "";
-
-        characterCount.textContent =
-            "0 / 1000";
-
-        messageInput.focus();
-
-        hideError();
-
-    }
-);
+    messageInput.addEventListener(
+        "input",
+        updateCharacterCount
+    );
 
 
-// ============================================================
-// EXAMPLE BUTTONS
-// ============================================================
+    messageInput.addEventListener(
+        "keydown",
+        (event) => {
+
+            if (
+                event.key === "Enter" &&
+                (
+                    event.ctrlKey ||
+                    event.metaKey
+                )
+            ) {
+
+                event.preventDefault();
+
+                analyzeMessage();
+
+            }
+
+        }
+    );
+
+}
+
+
+/* ============================================================
+   CLEAR INPUT
+============================================================ */
+
+if (clearButton) {
+
+    clearButton.addEventListener(
+        "click",
+        () => {
+
+            if (messageInput) {
+
+                messageInput.value = "";
+
+                updateCharacterCount();
+
+                messageInput.focus();
+
+            }
+
+
+            hideError();
+
+        }
+    );
+
+}
+
+
+/* ============================================================
+   EXAMPLE BUTTONS
+============================================================ */
 
 const exampleButtons =
     document.querySelectorAll(
@@ -410,20 +541,25 @@ exampleButtons.forEach(
             "click",
             () => {
 
+                if (!messageInput) {
+
+                    return;
+
+                }
+
+
                 const text =
-                    button.dataset.text;
+                    button.dataset.text ||
+                    button.textContent.trim();
 
 
                 messageInput.value =
-                    text;
+                    normalizeInputText(text);
 
 
-                characterCount.textContent =
-                    `${text.length} / 1000`;
-
+                updateCharacterCount();
 
                 hideError();
-
 
                 messageInput.focus();
 
@@ -434,55 +570,45 @@ exampleButtons.forEach(
 );
 
 
-// ============================================================
-// ANALYZE BUTTON
-// ============================================================
+/* ============================================================
+   ANALYZE BUTTON
+============================================================ */
 
-analyzeButton.addEventListener(
-    "click",
-    analyzeMessage
-);
+if (analyzeButton) {
 
+    analyzeButton.addEventListener(
+        "click",
+        analyzeMessage
+    );
 
-// ============================================================
-// ENTER KEY SUPPORT
-// ============================================================
-
-messageInput.addEventListener(
-    "keydown",
-    (event) => {
-
-        if (
-            event.key === "Enter" &&
-            (event.ctrlKey || event.metaKey)
-        ) {
-
-            event.preventDefault();
-
-            analyzeMessage();
-
-        }
-
-    }
-);
+}
 
 
-// ============================================================
-// ANALYZE MESSAGE
-// ============================================================
+/* ============================================================
+   ANALYZE MESSAGE
+============================================================ */
 
 async function analyzeMessage() {
 
+    if (!messageInput) {
+
+        return;
+
+    }
+
+
     const text =
-        messageInput.value.trim();
+        normalizeInputText(
+            messageInput.value
+        );
 
 
     hideError();
 
 
-    // --------------------------------------------------------
-    // VALIDATION
-    // --------------------------------------------------------
+    /* --------------------------------------------------------
+       VALIDATION
+    -------------------------------------------------------- */
 
     if (!text) {
 
@@ -508,9 +634,11 @@ async function analyzeMessage() {
     }
 
 
-    // --------------------------------------------------------
-    // LOADING STATE
-    // --------------------------------------------------------
+    messageInput.value =
+        text;
+
+    updateCharacterCount();
+
 
     setLoading(true);
 
@@ -525,13 +653,18 @@ async function analyzeMessage() {
                     method: "POST",
 
                     headers: {
+
                         "Content-Type":
                             "application/json"
+
                     },
 
-                    body: JSON.stringify({
-                        text: text
-                    })
+                    body:
+                        JSON.stringify({
+
+                            text: text
+
+                        })
 
                 }
             );
@@ -551,40 +684,40 @@ async function analyzeMessage() {
         }
 
 
-        // ----------------------------------------------------
-        // SAVE LAST PREDICTION
-        // ----------------------------------------------------
+        /* ----------------------------------------------------
+           SAVE LATEST PREDICTION
+        ---------------------------------------------------- */
 
         lastPrediction = {
 
-            text: text,
+            text,
 
-            data: data
+            data
 
         };
 
 
-        // ----------------------------------------------------
-        // DISPLAY RESULT
-        // ----------------------------------------------------
+        /* ----------------------------------------------------
+           DISPLAY RESULT
+        ---------------------------------------------------- */
 
         displayPrediction(
             data
         );
 
 
-        // ----------------------------------------------------
-        // UPDATE STATISTICS
-        // ----------------------------------------------------
+        /* ----------------------------------------------------
+           UPDATE STATISTICS
+        ---------------------------------------------------- */
 
         updateStatistics(
             data
         );
 
 
-        // ----------------------------------------------------
-        // ADD HISTORY
-        // ----------------------------------------------------
+        /* ----------------------------------------------------
+           ADD HISTORY
+        ---------------------------------------------------- */
 
         addToHistory(
             text,
@@ -592,9 +725,9 @@ async function analyzeMessage() {
         );
 
 
-        // ----------------------------------------------------
-        // SAVE SESSION
-        // ----------------------------------------------------
+        /* ----------------------------------------------------
+           SAVE SESSION
+        ---------------------------------------------------- */
 
         saveSessionData();
 
@@ -615,18 +748,16 @@ async function analyzeMessage() {
 
     } finally {
 
-        setLoading(
-            false
-        );
+        setLoading(false);
 
     }
 
 }
 
 
-// ============================================================
-// DISPLAY PREDICTION
-// ============================================================
+/* ============================================================
+   DISPLAY PREDICTION
+============================================================ */
 
 function displayPrediction(data) {
 
@@ -636,76 +767,97 @@ function displayPrediction(data) {
         );
 
 
-    // --------------------------------------------------------
-    // SHOW RESULT SECTION
-    // --------------------------------------------------------
+    /* --------------------------------------------------------
+       RESULT VISIBILITY
+    -------------------------------------------------------- */
 
-    resultMain.classList.add(
-        "hidden"
-    );
+    if (resultMain) {
 
-    resultDetails.classList.remove(
-        "hidden"
-    );
-
-
-    // --------------------------------------------------------
-    // STATUS
-    // --------------------------------------------------------
-
-    if (isCyberbullying) {
-
-        resultStatusBadge.textContent =
-            "Cyberbullying Detected";
-
-
-        resultStatusBadge.className =
-            "result-badge danger";
-
-
-        predictionStatus.textContent =
-            "Detected";
-
-
-        predictionStatus.className =
-            "metric-value danger";
-
-    } else {
-
-        resultStatusBadge.textContent =
-            "Safe Message";
-
-
-        resultStatusBadge.className =
-            "result-badge safe";
-
-
-        predictionStatus.textContent =
-            "Safe";
-
-
-        predictionStatus.className =
-            "metric-value safe";
+        resultMain.classList.add(
+            "hidden"
+        );
 
     }
 
 
-    // --------------------------------------------------------
-    // SUMMARY
-    // --------------------------------------------------------
+    if (resultDetails) {
 
-    summaryText.textContent =
-        data.summary ||
-        (
-            isCyberbullying
-                ? "The message was classified as potentially harmful."
-                : "The message was classified as non-harmful."
+        resultDetails.classList.remove(
+            "hidden"
         );
 
+    }
 
-    // --------------------------------------------------------
-    // CONFIDENCE
-    // --------------------------------------------------------
+
+    /* --------------------------------------------------------
+       STATUS BADGE
+    -------------------------------------------------------- */
+
+    if (resultStatusBadge) {
+
+        if (isCyberbullying) {
+
+            resultStatusBadge.textContent =
+                "Cyberbullying Detected";
+
+
+            resultStatusBadge.className =
+                "result-badge danger";
+
+        } else {
+
+            resultStatusBadge.textContent =
+                "Safe Message";
+
+
+            resultStatusBadge.className =
+                "result-badge safe";
+
+        }
+
+    }
+
+
+    /* --------------------------------------------------------
+       PREDICTION STATUS
+    -------------------------------------------------------- */
+
+    if (predictionStatus) {
+
+        predictionStatus.textContent =
+            isCyberbullying
+                ? "Detected"
+                : "Safe";
+
+
+        predictionStatus.className =
+            isCyberbullying
+                ? "metric-value danger"
+                : "metric-value safe";
+
+    }
+
+
+    /* --------------------------------------------------------
+       SUMMARY
+    -------------------------------------------------------- */
+
+    if (summaryText) {
+
+        summaryText.textContent =
+            data.summary ||
+            (
+                isCyberbullying
+                    ? "The message was classified as potentially harmful."
+                    : "The message was classified as non-harmful."
+            );
+
+    }
+
+
+    /* --------------------------------------------------------
+       CONFIDENCE
+    -------------------------------------------------------- */
 
     const confidence =
         Number(
@@ -729,86 +881,153 @@ function displayPrediction(data) {
         );
 
 
-    confidenceValue.textContent =
-        `${confidencePercentage}%`;
+    if (confidenceValue) {
+
+        confidenceValue.textContent =
+            `${confidencePercentage}%`;
+
+    }
 
 
-    confidenceFill.style.width =
-        `${confidencePercentage}%`;
+    if (confidenceFill) {
+
+        confidenceFill.style.width =
+            `${confidencePercentage}%`;
+
+    }
 
 
-    // --------------------------------------------------------
-    // SEVERITY
-    // --------------------------------------------------------
+    /* --------------------------------------------------------
+       SEVERITY
+    -------------------------------------------------------- */
 
-    severityValue.textContent =
-        formatLabel(
-            data.severity
-        );
+    if (severityValue) {
 
+        severityValue.textContent =
+            formatLabel(
+                data.severity
+            );
 
-    // --------------------------------------------------------
-    // TARGET
-    // --------------------------------------------------------
-
-    targetValue.textContent =
-        formatLabel(
-            data.target_type
-        );
+    }
 
 
-    // --------------------------------------------------------
-    // CATEGORIES
-    // --------------------------------------------------------
+    /* --------------------------------------------------------
+       TARGET
+    -------------------------------------------------------- */
+
+    if (targetValue) {
+
+        targetValue.textContent =
+            formatLabel(
+                data.target_type
+            );
+
+    }
+
+
+    /* --------------------------------------------------------
+       INTENT
+    -------------------------------------------------------- */
+
+    if (intentValue) {
+
+        intentValue.textContent =
+            formatLabel(
+                data.intent
+            );
+
+    }
+
+
+    /* --------------------------------------------------------
+       CONTENT CATEGORY
+    -------------------------------------------------------- */
+
+    if (contentCategoryValue) {
+
+        contentCategoryValue.textContent =
+            formatLabel(
+                data.content_category
+            );
+
+    }
+
+
+    /* --------------------------------------------------------
+       OFFENSE CATEGORIES
+    -------------------------------------------------------- */
 
     renderCategories(
         data.categories
     );
 
 
-    // --------------------------------------------------------
-    // EXPLANATION
-    // --------------------------------------------------------
+    /* --------------------------------------------------------
+       EXPLANATION
+    -------------------------------------------------------- */
 
-    reasonText.textContent =
-        data.reason ||
-        "No explanation available.";
+    if (reasonText) {
 
+        reasonText.textContent =
+            data.reason ||
+            "No explanation available.";
 
-    // --------------------------------------------------------
-    // SEVERITY REASON
-    // --------------------------------------------------------
-
-    severityReason.textContent =
-        data.severity_reason ||
-        "No severity explanation available.";
+    }
 
 
-    // --------------------------------------------------------
-    // TARGET REASON
-    // --------------------------------------------------------
+    /* --------------------------------------------------------
+       SEVERITY REASON
+    -------------------------------------------------------- */
 
-    targetReason.textContent =
-        data.target_reason ||
-        "No target explanation available.";
+    if (severityReason) {
+
+        severityReason.textContent =
+            data.severity_reason ||
+            "No severity explanation available.";
+
+    }
 
 
-    // --------------------------------------------------------
-    // POLITE SUGGESTION
-    // --------------------------------------------------------
+    /* --------------------------------------------------------
+       TARGET REASON
+    -------------------------------------------------------- */
 
-    suggestionText.textContent =
-        data.polite_suggestion ||
-        "No suggestion available.";
+    if (targetReason) {
+
+        targetReason.textContent =
+            data.target_reason ||
+            "No target explanation available.";
+
+    }
+
+
+    /* --------------------------------------------------------
+       POLITE SUGGESTION
+    -------------------------------------------------------- */
+
+    if (suggestionText) {
+
+        suggestionText.textContent =
+            data.polite_suggestion ||
+            "No suggestion available.";
+
+    }
 
 }
 
 
-// ============================================================
-// RENDER CATEGORIES
-// ============================================================
+/* ============================================================
+   RENDER OFFENSE CATEGORIES
+============================================================ */
 
 function renderCategories(categories) {
+
+    if (!categoryContainer) {
+
+        return;
+
+    }
+
 
     categoryContainer.innerHTML =
         "";
@@ -853,7 +1072,7 @@ function renderCategories(categories) {
 
 
             badge.className =
-                "category-badge";
+                "category-tag";
 
 
             badge.textContent =
@@ -872,9 +1091,9 @@ function renderCategories(categories) {
 }
 
 
-// ============================================================
-// UPDATE STATISTICS
-// ============================================================
+/* ============================================================
+   UPDATE STATISTICS
+============================================================ */
 
 function updateStatistics(data) {
 
@@ -908,87 +1127,14 @@ function updateStatistics(data) {
     }
 
 
-    // --------------------------------------------------------
-    // MAIN STATISTICS
-    // --------------------------------------------------------
-
-    document.getElementById(
-        "totalAnalysis"
-    ).textContent =
-        totalAnalysis;
-
-
-    document.getElementById(
-        "cyberbullyingCount"
-    ).textContent =
-        cyberbullyingCount;
-
-
-    document.getElementById(
-        "safeCount"
-    ).textContent =
-        safeCount;
-
-
-    const averageConfidence =
-        totalAnalysis > 0
-            ? totalConfidence /
-              totalAnalysis
-            : 0;
-
-
-    document.getElementById(
-        "averageConfidence"
-    ).textContent =
-        `${Math.round(
-            averageConfidence * 100
-        )}%`;
-
-
-    // --------------------------------------------------------
-    // ANALYTICS
-    // --------------------------------------------------------
-
-    document.getElementById(
-        "analyticsTotal"
-    ).textContent =
-        totalAnalysis;
-
-
-    document.getElementById(
-        "analyticsDetected"
-    ).textContent =
-        cyberbullyingCount;
-
-
-    document.getElementById(
-        "analyticsSafe"
-    ).textContent =
-        safeCount;
-
-
-    const detectionRate =
-        totalAnalysis > 0
-            ? (
-                cyberbullyingCount /
-                totalAnalysis
-            ) * 100
-            : 0;
-
-
-    document.getElementById(
-        "detectionRate"
-    ).textContent =
-        `${Math.round(
-            detectionRate
-        )}%`;
+    updateStatisticsUI();
 
 }
 
 
-// ============================================================
-// HISTORY
-// ============================================================
+/* ============================================================
+   ADD HISTORY
+============================================================ */
 
 function addToHistory(
     text,
@@ -997,7 +1143,7 @@ function addToHistory(
 
     const historyItem = {
 
-        text: text,
+        text,
 
         cyberbullying:
             Boolean(
@@ -1009,8 +1155,27 @@ function addToHistory(
                 data.confidence || 0
             ),
 
+        categories:
+            Array.isArray(
+                data.categories
+            )
+                ? data.categories
+                : [],
+
+        intent:
+            data.intent ||
+            "none",
+
+        content_category:
+            data.content_category ||
+            "none",
+
         severity:
             data.severity ||
+            "none",
+
+        target_type:
+            data.target_type ||
             "none",
 
         timestamp:
@@ -1024,7 +1189,7 @@ function addToHistory(
     );
 
 
-    // Keep latest 10
+    /* Keep latest 10 */
 
     if (
         detectionHistory.length > 10
@@ -1041,14 +1206,23 @@ function addToHistory(
 
     renderHistory();
 
+    renderRecentActivity();
+
 }
 
 
-// ============================================================
-// RENDER HISTORY
-// ============================================================
+/* ============================================================
+   RENDER ANALYSIS PAGE HISTORY
+============================================================ */
 
 function renderHistory() {
+
+    if (!historyContainer) {
+
+        return;
+
+    }
+
 
     historyContainer.innerHTML =
         "";
@@ -1059,8 +1233,20 @@ function renderHistory() {
     ) {
 
         historyContainer.innerHTML = `
-            <div class="empty-history">
-                No messages analyzed yet.
+            <div class="empty-state">
+
+                <div>
+                    ⌁
+                </div>
+
+                <p>
+                    No messages analyzed yet.
+                </p>
+
+                <small>
+                    Your recent detections will appear here.
+                </small>
+
             </div>
         `;
 
@@ -1096,8 +1282,21 @@ function renderHistory() {
 
             const confidence =
                 Math.round(
-                    item.confidence * 100
+                    Number(
+                        item.confidence || 0
+                    ) * 100
                 );
+
+
+            const categoryText =
+                Array.isArray(
+                    item.categories
+                ) &&
+                item.categories.length > 0
+                    ? item.categories
+                        .map(formatLabel)
+                        .join(", ")
+                    : "None";
 
 
             const time =
@@ -1107,10 +1306,6 @@ function renderHistory() {
 
 
             historyElement.innerHTML = `
-
-                <div
-                    class="history-status ${statusClass}"
-                ></div>
 
                 <div class="history-content">
 
@@ -1122,7 +1317,9 @@ function renderHistory() {
 
                     <div class="history-meta">
 
-                        <span>
+                        <span
+                            class="history-status ${statusClass}"
+                        >
                             ${statusText}
                         </span>
 
@@ -1134,12 +1331,34 @@ function renderHistory() {
                         </span>
 
                         <span>
+                            Category:
+                            ${escapeHtml(
+                                categoryText
+                            )}
+                        </span>
+
+                        <span>
+                            Intent:
+                            ${formatLabel(
+                                item.intent
+                            )}
+                        </span>
+
+                        <span>
+                            Content:
+                            ${formatLabel(
+                                item.content_category
+                            )}
+                        </span>
+
+                        <span>
                             ${time}
                         </span>
 
                     </div>
 
                 </div>
+
 
                 <div class="history-confidence">
                     ${confidence}%
@@ -1158,64 +1377,263 @@ function renderHistory() {
 }
 
 
-// ============================================================
-// CLEAR HISTORY
-// ============================================================
+/* ============================================================
+   RENDER DASHBOARD RECENT ACTIVITY
+============================================================ */
 
-clearHistoryButton.addEventListener(
-    "click",
-    () => {
+function renderRecentActivity() {
 
-        detectionHistory = [];
+    if (!recentActivity) {
 
-        lastPrediction = null;
-
-        renderHistory();
-
-
-        // Clear stored session
-
-        saveSessionData();
-
-
-        // Reset result panel
-
-        resultDetails.classList.add(
-            "hidden"
-        );
-
-
-        resultMain.classList.remove(
-            "hidden"
-        );
-
-
-        resultStatusBadge.textContent =
-            "Waiting";
-
-
-        resultStatusBadge.className =
-            "result-badge neutral";
-
-
-        // Clear input
-
-        messageInput.value =
-            "";
-
-
-        characterCount.textContent =
-            "0 / 1000";
+        return;
 
     }
-);
 
 
-// ============================================================
-// LOADING STATE
-// ============================================================
+    recentActivity.innerHTML =
+        "";
+
+
+    if (
+        !detectionHistory ||
+        detectionHistory.length === 0
+    ) {
+
+        recentActivity.innerHTML = `
+            <div class="empty-state">
+
+                <div>
+                    ◷
+                </div>
+
+                <p>
+                    No analysis performed yet.
+                </p>
+
+                <small>
+                    Your recent predictions will appear here.
+                </small>
+
+            </div>
+        `;
+
+        return;
+
+    }
+
+
+    /* Show latest 5 */
+
+    const recentItems =
+        detectionHistory.slice(
+            0,
+            5
+        );
+
+
+    recentItems.forEach(
+        (item) => {
+
+            const activity =
+                document.createElement(
+                    "div"
+                );
+
+
+            activity.className =
+                "recent-activity-item";
+
+
+            const statusClass =
+                item.cyberbullying
+                    ? "danger"
+                    : "safe";
+
+
+            const statusText =
+                item.cyberbullying
+                    ? "Cyberbullying"
+                    : "Safe";
+
+
+            const confidence =
+                Math.round(
+                    Number(
+                        item.confidence || 0
+                    ) * 100
+                );
+
+
+            const categoryText =
+                Array.isArray(
+                    item.categories
+                ) &&
+                item.categories.length > 0
+                    ? item.categories
+                        .map(formatLabel)
+                        .join(", ")
+                    : "No category";
+
+
+            activity.innerHTML = `
+
+                <div class="recent-activity-main">
+
+                    <div class="recent-activity-text">
+
+                        ${escapeHtml(
+                            item.text
+                        )}
+
+                    </div>
+
+                    <div class="recent-activity-meta">
+
+                        <span
+                            class="history-status ${statusClass}"
+                        >
+                            ${statusText}
+                        </span>
+
+                        <span>
+                            ${escapeHtml(
+                                categoryText
+                            )}
+                        </span>
+
+                        <span>
+                            Intent:
+                            ${formatLabel(
+                                item.intent
+                            )}
+                        </span>
+
+                        <span>
+                            Content:
+                            ${formatLabel(
+                                item.content_category
+                            )}
+                        </span>
+
+                        <span>
+                            ${formatTime(
+                                item.timestamp
+                            )}
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="recent-activity-confidence">
+
+                    ${confidence}%
+
+                </div>
+
+            `;
+
+
+            recentActivity.appendChild(
+                activity
+            );
+
+        }
+    );
+
+}
+
+
+/* ============================================================
+   CLEAR HISTORY
+============================================================ */
+
+if (clearHistoryButton) {
+
+    clearHistoryButton.addEventListener(
+        "click",
+        () => {
+
+            detectionHistory = [];
+
+            lastPrediction = null;
+
+            totalAnalysis = 0;
+
+            cyberbullyingCount = 0;
+
+            safeCount = 0;
+
+            totalConfidence = 0;
+
+
+            renderHistory();
+
+            renderRecentActivity();
+
+            updateStatisticsUI();
+
+
+            if (messageInput) {
+
+                messageInput.value = "";
+
+                updateCharacterCount();
+
+            }
+
+
+            if (resultDetails) {
+
+                resultDetails.classList.add(
+                    "hidden"
+                );
+
+            }
+
+
+            if (resultMain) {
+
+                resultMain.classList.remove(
+                    "hidden"
+                );
+
+            }
+
+
+            if (resultStatusBadge) {
+
+                resultStatusBadge.textContent =
+                    "Waiting";
+
+
+                resultStatusBadge.className =
+                    "result-badge neutral";
+
+            }
+
+
+            saveSessionData();
+
+        }
+    );
+
+}
+
+
+/* ============================================================
+   LOADING STATE
+============================================================ */
 
 function setLoading(isLoading) {
+
+    if (!analyzeButton) {
+
+        return;
+
+    }
+
 
     if (isLoading) {
 
@@ -1229,9 +1647,13 @@ function setLoading(isLoading) {
         `;
 
 
-        loadingState.classList.remove(
-            "hidden"
-        );
+        if (loadingState) {
+
+            loadingState.classList.remove(
+                "hidden"
+            );
+
+        }
 
     } else {
 
@@ -1246,20 +1668,31 @@ function setLoading(isLoading) {
         `;
 
 
-        loadingState.classList.add(
-            "hidden"
-        );
+        if (loadingState) {
+
+            loadingState.classList.add(
+                "hidden"
+            );
+
+        }
 
     }
 
 }
 
 
-// ============================================================
-// ERROR HANDLING
-// ============================================================
+/* ============================================================
+   ERROR HANDLING
+============================================================ */
 
 function showError(message) {
+
+    if (!errorMessage) {
+
+        return;
+
+    }
+
 
     errorMessage.textContent =
         message;
@@ -1274,6 +1707,13 @@ function showError(message) {
 
 function hideError() {
 
+    if (!errorMessage) {
+
+        return;
+
+    }
+
+
     errorMessage.classList.add(
         "hidden"
     );
@@ -1285,9 +1725,9 @@ function hideError() {
 }
 
 
-// ============================================================
-// FORMAT LABEL
-// ============================================================
+/* ============================================================
+   FORMAT LABEL
+============================================================ */
 
 function formatLabel(value) {
 
@@ -1316,26 +1756,54 @@ function formatLabel(value) {
 }
 
 
-// ============================================================
-// FORMAT TIME
-// ============================================================
+/* ============================================================
+   FORMAT TIME
+============================================================ */
 
 function formatTime(date) {
 
-    return date.toLocaleTimeString(
-        [],
-        {
-            hour: "2-digit",
-            minute: "2-digit"
+    try {
+
+        const parsedDate =
+            date instanceof Date
+                ? date
+                : new Date(date);
+
+
+        if (
+            Number.isNaN(
+                parsedDate.getTime()
+            )
+        ) {
+
+            return "--:--";
+
         }
-    );
+
+
+        return parsedDate.toLocaleTimeString(
+            [],
+            {
+
+                hour: "2-digit",
+
+                minute: "2-digit"
+
+            }
+        );
+
+    } catch {
+
+        return "--:--";
+
+    }
 
 }
 
 
-// ============================================================
-// HTML ESCAPE
-// ============================================================
+/* ============================================================
+   HTML ESCAPE
+============================================================ */
 
 function escapeHtml(value) {
 
@@ -1346,7 +1814,7 @@ function escapeHtml(value) {
 
 
     div.textContent =
-        value;
+        String(value);
 
 
     return div.innerHTML;
@@ -1354,11 +1822,18 @@ function escapeHtml(value) {
 }
 
 
-// ============================================================
-// API HEALTH CHECK
-// ============================================================
+/* ============================================================
+   API HEALTH CHECK
+============================================================ */
 
 async function checkApiHealth() {
+
+    if (!apiStatus) {
+
+        return;
+
+    }
+
 
     try {
 
@@ -1382,7 +1857,7 @@ async function checkApiHealth() {
 
 
         console.log(
-            "Cyberbullying Detection API connected."
+            "Prediction API connected."
         );
 
 
@@ -1399,17 +1874,28 @@ async function checkApiHealth() {
 
 
         console.log(
+            "Prediction Components:",
+            data.prediction_components
+        );
+
+
+        console.log(
             "Feature Dimension:",
             data.feature_dimension
         );
 
 
-        if (apiStatus) {
+        apiStatus.innerHTML = `
+            <span class="online-dot"></span>
+            API Connected
+        `;
 
-            apiStatus.innerHTML = `
-                <span class="status-dot"></span>
-                API Connected
-            `;
+
+        if (sidebarApiDot) {
+
+            sidebarApiDot.classList.add(
+                "online-dot"
+            );
 
         }
 
@@ -1422,12 +1908,19 @@ async function checkApiHealth() {
         );
 
 
-        if (apiStatus) {
+        apiStatus.innerHTML = `
+            <span
+                class="online-dot"
+                style="background:#ff5d73"
+            ></span>
+            API Offline
+        `;
 
-            apiStatus.innerHTML = `
-                <span class="status-dot"></span>
-                API Offline
-            `;
+
+        if (sidebarApiDot) {
+
+            sidebarApiDot.style.background =
+                "#ff5d73";
 
         }
 
@@ -1436,12 +1929,28 @@ async function checkApiHealth() {
 }
 
 
-// ============================================================
-// INITIALIZE
-// ============================================================
+/* ============================================================
+   PAGE INITIALIZATION
+============================================================ */
 
-loadSessionData();
+function initializePage() {
 
-restoreSessionUI();
+    loadSessionData();
 
-checkApiHealth();
+    restoreSessionUI();
+
+    checkApiHealth();
+
+    updateCharacterCount();
+
+}
+
+
+/* ============================================================
+   START
+============================================================ */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    initializePage
+);

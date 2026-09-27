@@ -1,0 +1,15 @@
+context_type,category,positive_count
+non_social_realworld,insult,600
+non_social_realworld,threat,400
+non_social_realworld,violence,400
+non_social_realworld,hate,400
+non_social_realworld,sexual_harassment,375
+non_social_realworld,sexual_abuse,375
+non_social_realworld,profanity,400
+social_media,insult,598
+social_media,threat,395
+social_media,violence,390
+social_media,hate,386
+social_media,sexual_harassment,373
+social_media,sexual_abuse,369
+social_media,profanity,493

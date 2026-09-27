@@ -1,0 +1,6 @@
+metric,value
+accuracy,0.938
+macro_f1,0.9265571877078902
+num_classes,13.0
+feature_dimension,27665.0
+test_samples,2500.0

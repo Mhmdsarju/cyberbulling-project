@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard | Cyberbullying Detection System</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                🛡
+            </div>
+
+            <div>
+
+                <h2>Cyberbullying Detection</h2>
+
+                <span>Machine Learning System</span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="/"
+                class="nav-item active"
+            >
+
+                <span class="nav-icon">⌂</span>
+
+                Dashboard
+
+            </a>
+
+
+            <a
+                href="/analysis"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">⌕</span>
+
+                Analysis
+
+            </a>
+
+
+            <a
+                href="/about"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">ⓘ</span>
+
+                About Project
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="system-card">
+
+                <span class="online-dot"></span>
+
+                <div>
+
+                    <strong>System Online</strong>
+
+                    <small>
+                        ML Pipeline Ready
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="sidebar-model">
+
+                <span>MODEL</span>
+
+                <strong>
+                    Real-World Multilingual
+                </strong>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+
+                <span class="eyebrow">
+                    MACHINE LEARNING PLATFORM
+                </span>
+
+                <h1>
+                    Cyberbullying Detection System
+                </h1>
+
+                <p>
+                    Analyze English and Tanglish messages
+                    and identify potentially harmful content.
+                </p>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <div
+                    class="api-pill"
+                    id="apiStatus"
+                >
+
+                    <span class="online-dot"></span>
+
+                    API Online
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- HERO -->
+
+        <section class="dashboard-hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    REAL-TIME TEXT ANALYSIS
+                </span>
+
+                <h2>
+                    Detect harmful content
+                    <span>with explainable AI.</span>
+                </h2>
+
+                <p>
+                    Analyze English and Tanglish messages
+                    using a multilingual machine learning
+                    pipeline that identifies cyberbullying,
+                    offensive categories, intent, content
+                    category, severity, and target type.
+                </p>
+
+
+                <a
+                    href="/analysis"
+                    class="primary-button"
+                >
+
+                    Start Analysis
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="shield-orb">
+                    🛡
+                </div>
+
+                <div class="floating-card card-one">
+
+                    <span>Detection</span>
+
+                    <strong>Active</strong>
+
+                </div>
+
+
+                <div class="floating-card card-two">
+
+                    <span>Features</span>
+
+                    <strong>27,665</strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- STATS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>Total Analysis</span>
+
+                    <div class="stat-icon blue">
+                        ◉
+                    </div>
+
+                </div>
+
+                <h3 id="totalAnalysis">
+                    0
+                </h3>
+
+                <small>
+                    Messages analyzed this session
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>Detected</span>
+
+                    <div class="stat-icon red">
+                        ⚠
+                    </div>
+
+                </div>
+
+                <h3 id="cyberbullyingCount">
+                    0
+                </h3>
+
+                <small>
+                    Potentially harmful messages
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>Safe Messages</span>
+
+                    <div class="stat-icon green">
+                        ✓
+                    </div>
+
+                </div>
+
+                <h3 id="safeCount">
+                    0
+                </h3>
+
+                <small>
+                    Non-cyberbullying messages
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>Avg. Confidence</span>
+
+                    <div class="stat-icon purple">
+                        ◈
+                    </div>
+
+                </div>
+
+                <h3 id="averageConfidence">
+                    0%
+                </h3>
+
+                <small>
+                    Current session average
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <section class="dashboard-grid">
+
+            <div class="panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            QUICK ACTION
+                        </span>
+
+                        <h2>
+                            Analyze a Message
+                        </h2>
+
+                    </div>
+
+                    <span class="panel-icon">
+                        ✦
+                    </span>
+
+                </div>
+
+
+                <p class="panel-description">
+
+                    Analyze a message using the trained
+                    multilingual machine learning pipeline.
+
+                </p>
+
+
+                <a
+                    href="/analysis"
+                    class="secondary-button"
+                >
+
+                    Open Analysis
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+
+            <div class="panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            MACHINE LEARNING
+                        </span>
+
+                        <h2>
+                            Prediction Pipeline
+                        </h2>
+
+                    </div>
+
+                    <span class="panel-icon">
+                        ◈
+                    </span>
+
+                </div>
+
+
+                <div class="pipeline-mini">
+
+                    <span>TF-IDF</span>
+
+                    <i>→</i>
+
+                    <span>Logistic Regression</span>
+
+                    <i>→</i>
+
+                    <span>Linear SVM</span>
+
+                </div>
+
+
+                <p class="panel-description">
+
+                    Word, character and no-space character
+                    features support English and Tanglish text.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- DETECTION COMPONENTS -->
+
+        <section class="panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        AI ANALYSIS
+                    </span>
+
+                    <h2>
+                        Detection Components
+                    </h2>
+
+                </div>
+
+                <span class="panel-icon">
+                    ✦
+                </span>
+
+            </div>
+
+
+            <div class="pipeline-mini">
+
+                <span>Cyberbullying</span>
+
+                <i>→</i>
+
+                <span>Offense Category</span>
+
+                <i>→</i>
+
+                <span>Intent</span>
+
+                <i>→</i>
+
+                <span>Content Category</span>
+
+                <i>→</i>
+
+                <span>Severity</span>
+
+                <i>→</i>
+
+                <span>Target</span>
+
+            </div>
+
+
+            <p class="panel-description">
+
+                The system analyzes multiple aspects of each
+                message and generates an explainable prediction
+                with confidence and a polite communication suggestion.
+
+            </p>
+
+        </section>
+
+
+        <!-- RECENT ACTIVITY -->
+
+        <section class="panel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        SESSION ACTIVITY
+                    </span>
+
+                    <h2>
+                        Recent Analysis
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="/analysis"
+                    class="text-link"
+                >
+
+                    Analyze →
+
+                </a>
+
+            </div>
+
+
+            <div
+                id="recentActivity"
+                class="recent-activity"
+            >
+
+                <div class="empty-state">
+
+                    <div>
+                        ◷
+                    </div>
+
+                    <p>
+                        No analysis performed yet.
+                    </p>
+
+                    <small>
+                        Your recent predictions will appear here.
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer class="footer">
+
+            <span>
+                Cyberbullying Detection System
+            </span>
+
+            <span>
+                Tanglish & English Machine Learning Analysis
+            </span>
+
+            <span>
+                © 2026
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script
+    src="{{ url_for('static', filename='script.js') }}"
+></script>
+
+</body>
+
+</html>
