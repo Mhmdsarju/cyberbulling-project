@@ -1,0 +1,2 @@
+model,accuracy,precision,recall,f1_score
+Linear SVM,1.0,1.0,1.0,1.0

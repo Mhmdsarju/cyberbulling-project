@@ -1,0 +1,26 @@
+id,text,language,cyberbullying,target_type,insult,threat,violence,hate,sexual_harassment,sexual_abuse,profanity,severity,reason,data_source
+1,i love you,english,0,none,0,0,0,0,0,0,0,none,Positive and affectionate message.,synthetic_robustness
+2,I LOVE YOU,english,0,none,0,0,0,0,0,0,0,none,Positive and affectionate message.,synthetic_robustness
+3,iloveyou,english,0,none,0,0,0,0,0,0,0,none,Positive and affectionate message.,synthetic_robustness
+4,i love you so much,english,0,none,0,0,0,0,0,0,0,none,Positive and affectionate message.,synthetic_robustness
+5,i miss you,english,0,none,0,0,0,0,0,0,0,none,Positive and friendly message.,synthetic_robustness
+6,I MISS YOU,english,0,none,0,0,0,0,0,0,0,none,Positive and friendly message.,synthetic_robustness
+7,imissyou,english,0,none,0,0,0,0,0,0,0,none,Positive and friendly message.,synthetic_robustness
+8,thank you for the information,english,0,none,0,0,0,0,0,0,0,none,Polite and informative message.,synthetic_robustness
+9,you are doing great,english,0,none,0,0,0,0,0,0,0,none,Positive and supportive message.,synthetic_robustness
+10,nee nalla pannura,tanglish,0,none,0,0,0,0,0,0,0,none,Positive and supportive message.,synthetic_robustness
+11,romba nalla information,tanglish,0,none,0,0,0,0,0,0,0,none,Positive and informative message.,synthetic_robustness
+12,thanks da useful information,tanglish,0,none,0,0,0,0,0,0,0,none,Polite and informative message.,synthetic_robustness
+13,nee super ah pannita,tanglish,0,none,0,0,0,0,0,0,0,none,Positive and supportive message.,synthetic_robustness
+14,nee romba loosu da,tanglish,1,individual,1,0,0,0,0,0,0,low,Insulting language directed towards an individual.,synthetic_robustness
+15,neerombaloosuda,tanglish,1,individual,1,0,0,0,0,0,0,low,Insulting language directed towards an individual.,synthetic_robustness
+16,nee oru loosu,tanglish,1,individual,1,0,0,0,0,0,0,low,Insulting language directed towards an individual.,synthetic_robustness
+17,nee oru loosu da,tanglish,1,individual,1,0,0,0,0,0,0,low,Insulting language directed towards an individual.,synthetic_robustness
+18,unakku violence panniduven,tanglish,1,individual,0,1,1,0,0,0,0,high,Threatening language indicating possible physical harm.,synthetic_robustness
+19,unakkuviolencepanniduven,tanglish,1,individual,0,1,1,0,0,0,0,high,Threatening language indicating possible physical harm.,synthetic_robustness
+20,unna adichiduven,tanglish,1,individual,0,1,1,0,0,0,0,high,Threatening language indicating possible physical harm.,synthetic_robustness
+21,unnaadichiduven,tanglish,1,individual,0,1,1,0,0,0,0,high,Threatening language indicating possible physical harm.,synthetic_robustness
+22,good morning,english,0,none,0,0,0,0,0,0,0,none,Neutral greeting.,synthetic_robustness
+23,good morning everyone,english,0,none,0,0,0,0,0,0,0,none,Neutral greeting.,synthetic_robustness
+24,have a nice day,english,0,none,0,0,0,0,0,0,0,none,Positive and polite message.,synthetic_robustness
+25,haveaniceday,english,0,none,0,0,0,0,0,0,0,none,Positive and polite message.,synthetic_robustness

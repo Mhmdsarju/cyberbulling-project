@@ -1,0 +1,2 @@
+model,dataset,accuracy,precision,recall,f1_score
+Logistic Regression,multilingual_9000,1.0,1.0,1.0,1.0

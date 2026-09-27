@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Cyberbullying Detection System</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">🛡️</div>
+
+            <div>
+
+                <h2>Cyberbullying Detection</h2>
+
+                <span>AI Detection System</span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="#"
+                class="nav-item active"
+            >
+
+                <span>▦</span>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a
+                href="#detection"
+                class="nav-item"
+            >
+
+                <span>⌕</span>
+
+                <span>Detection</span>
+
+            </a>
+
+
+            <a
+                href="#analytics"
+                class="nav-item"
+            >
+
+                <span>◫</span>
+
+                <span>Analytics</span>
+
+            </a>
+
+
+            <a
+                href="#history"
+                class="nav-item"
+            >
+
+                <span>◷</span>
+
+                <span>History</span>
+
+            </a>
+
+
+            <a
+                href="#about"
+                class="nav-item"
+            >
+
+                <span>ⓘ</span>
+
+                <span>About</span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+
+                    <strong>System Online</strong>
+
+                    <small>ML Pipeline Ready</small>
+
+                </div>
+
+            </div>
+
+
+            <div class="model-info">
+
+                <span>Model</span>
+
+                <strong>
+                    Robust Multilingual ML
+                </strong>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP BAR
+        ================================================== -->
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="eyebrow">
+                    AI-POWERED MODERATION
+                </p>
+
+
+                <h1>
+                    Cyberbullying Detection
+                </h1>
+
+
+                <p class="subtitle">
+
+                    Analyze Tanglish and English messages
+                    and identify harmful or offensive
+                    content using machine learning.
+
+                </p>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+
+                <div
+                    class="api-status"
+                    id="apiStatus"
+                >
+
+                    <span class="status-dot"></span>
+
+                    API Checking...
+
+                </div>
+
+
+                <div class="profile">
+
+                    <div class="profile-avatar">
+                        S
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Admin
+                        </strong>
+
+
+                        <small>
+                            Detection System
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             STAT CARDS
+        ================================================== -->
+
+        <section class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    ◉
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Total Analysis
+                    </span>
+
+                    <h2 id="totalAnalysis">
+                        0
+                    </h2>
+
+                    <small>
+                        Messages analyzed
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon red">
+                    ⚠
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Cyberbullying
+                    </span>
+
+                    <h2 id="cyberbullyingCount">
+                        0
+                    </h2>
+
+                    <small>
+                        Harmful messages
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    ✓
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Safe Messages
+                    </span>
+
+                    <h2 id="safeCount">
+                        0
+                    </h2>
+
+                    <small>
+                        Non-harmful messages
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    ◈
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Avg. Confidence
+                    </span>
+
+                    <h2 id="averageConfidence">
+                        0%
+                    </h2>
+
+                    <small>
+                        Model confidence
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DETECTION SECTION
+        ================================================== -->
+
+        <section
+            class="content-grid"
+            id="detection"
+        >
+
+
+            <!-- =================================================
+                 INPUT PANEL
+            ================================================== -->
+
+            <div class="panel detection-panel">
+
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <p class="section-label">
+                            MESSAGE ANALYSIS
+                        </p>
+
+
+                        <h2>
+                            Analyze a Message
+                        </h2>
+
+
+                        <p>
+
+                            Enter a Tanglish or English
+                            message below to detect
+                            cyberbullying and understand
+                            the prediction.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="ai-badge">
+                        ✦ AI
+                    </div>
+
+                </div>
+
+
+
+                <!-- INPUT -->
+
+                <div class="input-wrapper">
+
+
+                    <label for="messageInput">
+                        Message
+                    </label>
+
+
+                    <textarea
+                        id="messageInput"
+                        rows="7"
+                        maxlength="1000"
+                        placeholder="Example: nee romba loosu da..."
+                    ></textarea>
+
+
+                    <div class="input-footer">
+
+                        <span id="characterCount">
+                            0 / 1000
+                        </span>
+
+
+                        <button
+                            type="button"
+                            id="clearButton"
+                            class="clear-button"
+                        >
+
+                            Clear
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EXAMPLES -->
+
+                <div class="examples">
+
+                    <span>
+                        Try an example:
+                    </span>
+
+
+                    <button
+                        type="button"
+                        class="example-button"
+                        data-text="nee romba loosu da"
+                    >
+
+                        Insult
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="example-button"
+                        data-text="unakku violence panniduven"
+                    >
+
+                        Threat
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="example-button"
+                        data-text="Ithu nalla useful information da"
+                    >
+
+                        Safe
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="example-button"
+                        data-text="i love you"
+                    >
+
+                        Safe Variation
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="example-button"
+                        data-text="iloveyou"
+                    >
+
+                        Joined Text
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- ANALYZE BUTTON -->
+
+                <button
+                    type="button"
+                    id="analyzeButton"
+                    class="analyze-button"
+                >
+
+                    <span class="button-icon">
+                        ✦
+                    </span>
+
+                    Analyze Message
+
+                    <span class="button-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+
+                <!-- LOADING -->
+
+                <div
+                    id="loadingState"
+                    class="loading-state hidden"
+                >
+
+                    <div class="spinner"></div>
+
+
+                    <div>
+
+                        <strong>
+                            Analyzing message...
+                        </strong>
+
+                        <small>
+                            Running robust multilingual ML prediction pipeline
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ERROR -->
+
+                <div
+                    id="errorMessage"
+                    class="error-message hidden"
+                ></div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RESULT PANEL
+            ================================================== -->
+
+            <div class="panel result-panel">
+
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <p class="section-label">
+                            PREDICTION RESULT
+                        </p>
+
+
+                        <h2>
+                            Analysis Result
+                        </h2>
+
+
+                        <p>
+                            AI-generated classification
+                            and explanation.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        id="resultStatusBadge"
+                        class="result-badge neutral"
+                    >
+
+                        Waiting
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MAIN RESULT -->
+
+                <div
+                    id="resultMain"
+                    class="result-main empty-result"
+                >
+
+                    <div class="empty-icon">
+                        ✦
+                    </div>
+
+
+                    <h3>
+                        No analysis yet
+                    </h3>
+
+
+                    <p>
+
+                        Enter a message and click
+                        <strong>
+                            Analyze Message
+                        </strong>
+                        to see the prediction.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- RESULT DETAILS -->
+
+                <div
+                    id="resultDetails"
+                    class="result-details hidden"
+                >
+
+
+                    <!-- PREDICTION SUMMARY -->
+
+                    <div class="detail-section">
+
+                        <div class="detail-title">
+
+                            <span>
+                                📋 Prediction Summary
+                            </span>
+
+                        </div>
+
+
+                        <p
+                            id="summaryText"
+                            class="detail-text"
+                        >
+
+                            —
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- METRICS -->
+
+                    <div class="result-metrics">
+
+
+                        <div class="metric-card">
+
+                            <span>
+                                Status
+                            </span>
+
+
+                            <strong
+                                id="predictionStatus"
+                                class="metric-value"
+                            >
+
+                                —
+
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="metric-card">
+
+                            <span>
+                                Confidence
+                            </span>
+
+
+                            <strong id="confidenceValue">
+                                —
+                            </strong>
+
+
+                            <div class="confidence-bar">
+
+                                <div
+                                    id="confidenceFill"
+                                    class="confidence-fill"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="metric-card">
+
+                            <span>
+                                Severity
+                            </span>
+
+
+                            <strong id="severityValue">
+                                —
+                            </strong>
+
+                        </div>
+
+
+
+                        <div class="metric-card">
+
+                            <span>
+                                Target Type
+                            </span>
+
+
+                            <strong id="targetValue">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CATEGORIES -->
+
+                    <div class="detail-section">
+
+
+                        <div class="detail-title">
+
+                            <span>
+                                Detected Categories
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            id="categoryContainer"
+                            class="category-container"
+                        >
+
+                            <span class="empty-category">
+
+                                No categories detected
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EXPLANATION -->
+
+                    <div class="detail-section">
+
+
+                        <div class="detail-title">
+
+                            <span>
+                                💡 Explanation
+                            </span>
+
+                        </div>
+
+
+                        <p
+                            id="reasonText"
+                            class="detail-text"
+                        >
+
+                            —
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- SEVERITY REASON -->
+
+                    <div class="detail-section">
+
+
+                        <div class="detail-title">
+
+                            <span>
+                                ⚠ Severity Analysis
+                            </span>
+
+                        </div>
+
+
+                        <p
+                            id="severityReason"
+                            class="detail-text"
+                        >
+
+                            —
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- TARGET REASON -->
+
+                    <div class="detail-section">
+
+
+                        <div class="detail-title">
+
+                            <span>
+                                🎯 Target Analysis
+                            </span>
+
+                        </div>
+
+
+                        <p
+                            id="targetReason"
+                            class="detail-text"
+                        >
+
+                            —
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- POLITE SUGGESTION -->
+
+                    <div class="suggestion-box">
+
+
+                        <div class="suggestion-icon">
+                            ✍
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Suggested Response
+                            </strong>
+
+
+                            <p id="suggestionText">
+                                —
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ANALYTICS
+        ================================================== -->
+
+        <section
+            class="panel analytics-panel"
+            id="analytics"
+        >
+
+
+            <div class="panel-header">
+
+                <div>
+
+                    <p class="section-label">
+                        SYSTEM OVERVIEW
+                    </p>
+
+
+                    <h2>
+                        Detection Analytics
+                    </h2>
+
+
+                    <p>
+                        Real-time statistics from
+                        the current session.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="analytics-grid">
+
+
+                <div class="analytics-item">
+
+                    <span>
+                        Total Requests
+                    </span>
+
+
+                    <strong id="analyticsTotal">
+                        0
+                    </strong>
+
+                </div>
+
+
+
+                <div class="analytics-item">
+
+                    <span>
+                        Detected
+                    </span>
+
+
+                    <strong
+                        id="analyticsDetected"
+                        class="danger-text"
+                    >
+
+                        0
+
+                    </strong>
+
+                </div>
+
+
+
+                <div class="analytics-item">
+
+                    <span>
+                        Safe
+                    </span>
+
+
+                    <strong
+                        id="analyticsSafe"
+                        class="success-text"
+                    >
+
+                        0
+
+                    </strong>
+
+                </div>
+
+
+
+                <div class="analytics-item">
+
+                    <span>
+                        Detection Rate
+                    </span>
+
+
+                    <strong id="detectionRate">
+                        0%
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             HISTORY
+        ================================================== -->
+
+        <section
+            class="panel history-panel"
+            id="history"
+        >
+
+
+            <div class="panel-header">
+
+                <div>
+
+                    <p class="section-label">
+                        RECENT ACTIVITY
+                    </p>
+
+
+                    <h2>
+                        Detection History
+                    </h2>
+
+
+                    <p>
+                        Recent messages analyzed
+                        during this session.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="clearHistoryButton"
+                    class="secondary-button"
+                >
+
+                    Clear History
+
+                </button>
+
+            </div>
+
+
+
+            <div
+                id="historyContainer"
+                class="history-container"
+            >
+
+                <div class="empty-history">
+
+                    No messages analyzed yet.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
+
+        <section
+            class="panel about-panel"
+            id="about"
+        >
+
+
+            <div class="panel-header">
+
+                <div>
+
+                    <p class="section-label">
+                        ABOUT THE SYSTEM
+                    </p>
+
+
+                    <h2>
+                        Cyberbullying Detection System
+                    </h2>
+
+
+                    <p>
+
+                        An explainable machine learning
+                        system designed for robust
+                        Tanglish and English cyberbullying
+                        detection.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SYSTEM INFORMATION -->
+
+            <div class="tech-stack">
+
+
+                <div class="tech-item">
+
+                    <strong>
+                        Word TF-IDF
+                    </strong>
+
+                    <span>
+                        Word-level text features
+                    </span>
+
+                </div>
+
+
+
+                <div class="tech-item">
+
+                    <strong>
+                        Character TF-IDF
+                    </strong>
+
+                    <span>
+                        Character-level robustness
+                    </span>
+
+                </div>
+
+
+
+                <div class="tech-item">
+
+                    <strong>
+                        No-Space Character TF-IDF
+                    </strong>
+
+                    <span>
+                        Joined text variation handling
+                    </span>
+
+                </div>
+
+
+
+                <div class="tech-item">
+
+                    <strong>
+                        Logistic Regression
+                    </strong>
+
+                    <span>
+                        Cyberbullying prediction confidence
+                    </span>
+
+                </div>
+
+
+
+                <div class="tech-item">
+
+                    <strong>
+                        Linear SVM
+                    </strong>
+
+                    <span>
+                        Category and attribute classification
+                    </span>
+
+                </div>
+
+
+
+                <div class="tech-item">
+
+                    <strong>
+                        Flask
+                    </strong>
+
+                    <span>
+                        Backend REST API
+                    </span>
+
+                </div>
+
+
+
+                <div class="tech-item">
+
+                    <strong>
+                        Explainable AI
+                    </strong>
+
+                    <span>
+                        Prediction explanation
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MODEL DETAILS -->
+
+            <div class="detail-section">
+
+                <div class="detail-title">
+
+                    <span>
+                        ⚙ Model Pipeline
+                    </span>
+
+                </div>
+
+
+                <p class="detail-text">
+
+                    Word TF-IDF + Character TF-IDF +
+                    No-Space Character TF-IDF →
+                    Logistic Regression / Linear SVM →
+                    Category, Severity and Target Classification →
+                    Explainable Prediction Result.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="detail-section">
+
+                <div class="detail-title">
+
+                    <span>
+                        📊 Feature Dimension
+                    </span>
+
+                </div>
+
+
+                <p class="detail-text">
+
+                    Combined robust feature dimension:
+                    <strong>29,385</strong>
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+            <span>
+                Cyberbullying Detection System
+            </span>
+
+
+            <span>
+                Tanglish & English Cyberbullying Detection
+            </span>
+
+
+            <span>
+                Robust Multilingual ML Pipeline
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+
+
+</body>
+
+</html>

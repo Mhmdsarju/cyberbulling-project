@@ -1,0 +1,14 @@
+text,expected,logistic_prediction,svm_prediction,logistic_correct,svm_correct
+i love you,0,0,0,True,True
+I LOVE YOU,0,0,0,True,True
+ilove you,0,1,1,False,False
+iloveyou,0,0,0,True,True
+i miss you,0,0,0,True,True
+I MISS YOU,0,0,0,True,True
+imissyou,0,0,0,True,True
+nee romba loosu da,1,1,1,True,True
+neerombaloosuda,1,1,1,True,True
+unakku violence panniduven,1,1,1,True,True
+unakkuviolencepanniduven,1,1,1,True,True
+unna adichiduven,1,1,1,True,True
+unnaadichiduven,1,1,1,True,True

@@ -1,0 +1,13 @@
+check,value,status
+total_rows,9000,PASS
+total_columns,15,PASS
+missing_values,0,PASS
+duplicate_ids,0,PASS
+duplicate_texts,0,PASS
+invalid_cyberbullying_values,0,PASS
+invalid_language_values,0,PASS
+invalid_data_source_values,0,PASS
+invalid_category_values,0,PASS
+invalid_severity_values,0,PASS
+invalid_target_type_values,0,PASS
+empty_texts,0,PASS

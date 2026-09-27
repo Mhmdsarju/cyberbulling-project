@@ -1,0 +1,7 @@
+check,value,status
+original_rows,9000,PASS
+robustness_rows,25,PASS
+combined_rows,9025,PASS
+duplicate_ids,0,PASS
+duplicate_texts,2,WARNING
+overlapping_original_robustness_texts,0,PASS

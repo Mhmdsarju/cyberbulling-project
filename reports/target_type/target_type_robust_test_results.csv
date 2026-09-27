@@ -1,0 +1,2 @@
+model,dataset,samples,features,accuracy,macro_precision,macro_recall,macro_f1
+Linear SVM,robust_test,903,29385,0.8803986710963455,0.7786370148476165,0.7656461253824806,0.7626811594202899

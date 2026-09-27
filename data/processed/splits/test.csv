@@ -1,0 +1,901 @@
+id,text,language,cyberbullying,target_type,insult,threat,violence,hate,sexual_harassment,sexual_abuse,profanity,severity,reason,data_source
+4110,"In this chat, You deserve to be attacked in this chat",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+2941,bro un appearance pathi unwanted comment poda vendam public ah da,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+506,You are useless right now,english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+7131,honestly presentation clear ah irundhuchu bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7849,bro code check pannitu sollu da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8329,nee unna damage panniduven public ah bro,tanglish,1,individual,0,1,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+8036,seriously personal appearance ah target panni tease pannadha comment section la podi,tanglish,1,other,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+8300,Can we discuss this further in this discussion 651,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+1648,"Seriously, You are selfish person online",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+6777,dei nee unakku consequences irukkum inga ippo,tanglish,1,individual,0,1,1,0,0,0,0,medium,threatening language,synthetic_tanglish
+4992,da naalaikku continue pannalam honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1877,nee un appearance pathi unwanted comment poda vendam online la nu,tanglish,1,other,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+5237,nee nee oru joker message la,tanglish,1,other,1,0,0,0,0,0,1,medium,direct personal insult,synthetic_tanglish
+3240,bro later discuss pannalam nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1308,I think That was a useful suggestion! 717,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+276,macha keep going bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8773,actually team work nalla pannenga honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1347,macha nee enna pannalum naan respond panren intha post la da,tanglish,1,individual,0,1,1,0,0,0,0,high,threatening language,synthetic_tanglish
+1054,da nee daily improve aagite irukka,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8436,I think This is very useful information in this discussion 392,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+5884,macha indha idea useful ah irukku inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5538,macha nee oru useless fellow message la la,tanglish,1,individual,1,0,0,0,0,0,0,low,direct personal insult,synthetic_tanglish
+3866,"Seriously, People from your group are awful in this chat",english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+7147,ivan dei mokka public ah macha,tanglish,1,other,1,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+526,macha un performance romba kevalam daily ah,tanglish,1,individual,1,0,0,0,0,0,0,low,direct personal insult,synthetic_tanglish
+1513,dei nee nee enna pannalum naan respond panren inga podi,tanglish,1,other,0,1,0,0,0,0,0,medium,threatening language,synthetic_tanglish
+6564,inniku session epdi pochu macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2312,"Honestly, You are annoying. 393",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+8401,I hope you get hurt! 1141,english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+6774,bro fight panna vandha paathukalam message la macha,tanglish,1,other,0,0,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+89,"Thanks, I agree with your point. 1234",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+6310,dei nee unnoda actions ku answer kudukkanum,tanglish,1,other,0,1,0,0,0,0,0,medium,threatening language,synthetic_tanglish
+2744,listen nee stop pannalana problem aagum inga da,tanglish,1,individual,0,1,1,0,0,0,0,high,threatening language,synthetic_tanglish
+7842,"In this chat, You are selfish person.",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+7541,honestly un effort romba nalla irukku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1674,"Honestly, Your presentation was clear. 1178",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+888,bro podi da daily nu,tanglish,1,individual,0,0,0,0,0,0,1,low,profane or abusive wording,synthetic_tanglish
+204,"Listen, You are complete joke!",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+4266,"Honestly, Thanks for sharing this for the project 433",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+8425,nee nee careful ah iru chat la la,tanglish,1,individual,0,1,1,0,0,0,0,high,threatening language,synthetic_tanglish
+3258,yes solution useful ah irukku 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8568,yes indha idea useful ah irukku 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1360,I think Thank you for the information for the project 517,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+4877,"Listen, You are complete joke! 592",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+3116,nice ah keep going bro bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2284,I think This is useful today 942,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+126,"Honestly, You are idiot today",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+4059,"For this project, Let's work on this together. 1430",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+3419,nee andha group people ellam mosam inga ah,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+7456,bro correct ah sonna da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+283,"In this chat, People from your group are awful!",english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+68,class nalla irundhucha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7948,macha un appearance pathi unwanted comment poda vendam inga nu,tanglish,1,individual,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+3616,dei nee nee romba pathetic social media la ippo,tanglish,1,individual,1,0,0,0,0,0,0,medium,direct personal insult,synthetic_tanglish
+6332,true bro indha idea useful ah irukku la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3311,macha super ah panniruka 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+930,seri un effort romba nalla irukku da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+798,seriously private photo share panna force pannadha online la bro,tanglish,1,individual,0,0,0,0,1,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+910,da nee daily improve aagite irukka inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4760,"Honestly, Thanks for sharing this for the project 1273",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+950,"Thanks, I agree with your point. 1409",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7335,macha good job bro inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6034,nice ah thanks for helping me inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2338,"Honestly, Your project looks good",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+6185,That was a great idea 386,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7100,nee sexual pressure kudukka koodadhu public ah la,tanglish,1,individual,0,0,0,0,0,1,0,medium,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+8631,"Honestly, I hate people like you today 1405",english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+4283,listen andha community people romba kevalam inga,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+1406,"Thanks, This is a helpful explanation in this discussion 749",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+5461,actually naan unakku support panren inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5575,bro avanai poi adichidu intha post la podi,tanglish,1,other,0,1,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+8254,"Honestly, Could you send me the details in this discussion 903",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+952,I appreciate your help for the project 531,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+2759,true bro keep going bro nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5320,dei nee avanga ellarum same madhiri chat la poda,tanglish,1,group,0,0,0,1,0,0,0,medium,group-targeted hateful language,synthetic_tanglish
+5224,nee podi dei comment section la poda,tanglish,1,individual,0,0,0,0,0,0,1,low,profane or abusive wording,synthetic_tanglish
+5913,seriously nee total dummy intha post la macha,tanglish,1,individual,1,0,0,0,0,0,1,low,direct personal insult,synthetic_tanglish
+2165,da correct ah sonna,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6839,"Honestly, Your presentation was clear. 303",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+187,bro nee oru embarrassment public ah bro,tanglish,1,individual,1,0,0,0,0,0,0,medium,direct personal insult,synthetic_tanglish
+8171,da naalaikku continue pannalam,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2669,seriously nee inga vandha unakku problem inga ippo,tanglish,1,individual,0,1,0,0,0,0,0,medium,threatening language,synthetic_tanglish
+197,seriously unna vida maaten nu nenachuko online la,tanglish,1,individual,0,1,0,0,0,0,0,medium,threatening language,synthetic_tanglish
+6578,dei andha group people ellam mosam intha post la ippo,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+3962,"Seriously, You should be scared of me online 932",english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+2057,"For this project, Have a nice day as well 1440",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+6771,macha un appearance pathi unwanted comment poda vendam la,tanglish,1,other,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+5134,da happy for your progress inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4417,nee sandaila unna adikka thonudhu message la bro,tanglish,1,individual,0,0,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+5045,da super ah panniruka 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7328,"For this project, Have a nice day as well 1160",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+5014,seri indha idea useful ah irukku honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3975,dei nee total dummy poda,tanglish,1,other,1,0,0,0,0,0,1,medium,direct personal insult,synthetic_tanglish
+7658,listen avanai poi adichidu intha post la nu,tanglish,1,other,0,0,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+5121,da rest eduthuko la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8553,da naalaikku continue pannalam today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7205,bro seri paakalam 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2588,nice ah meeting five mani ku irukku macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8451,true bro later discuss pannalam bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+138,"Honestly, I agree with this as well 1433",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+8562,actually super ah panniruka macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4050,That sounds interesting today 1166,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7611,That sounds interesting today 1411,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+4053,"For this project, That is a good question for the project 1035",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+3022,ava poda da chat la poda,tanglish,1,individual,1,0,0,0,0,0,1,low,profane or abusive wording,synthetic_tanglish
+3635,nee nee stop pannalana problem aagum intha post la la,tanglish,1,individual,0,1,1,0,0,0,0,high,threatening language,synthetic_tanglish
+4844,"In this chat, You are worthless seriously 324",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+2766,ivan un photo ku sexual comment podradhu wrong comment section la,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+2084,andha group people ellam mosam inga poda,tanglish,1,group,0,0,0,1,0,0,0,medium,group-targeted hateful language,synthetic_tanglish
+1106,"Listen, Someone should beat you up seriously 1180",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+2920,nee nee stop pannalana problem aagum message la nu,tanglish,1,individual,0,1,1,0,0,0,0,medium,threatening language,synthetic_tanglish
+4805,yes database update panniten honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7304,da nee daily improve aagite irukka nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3418,"Hey, Everyone from your group is terrible in this chat 1425",english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+1756,yes later discuss pannalam,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8772,That was a great idea 946,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7354,seri nee nalla work pannita inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5600,da meeting five mani ku irukku inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4535,Everyone from your group is terrible seriously,english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+1704,listen poda dei message la poda,tanglish,1,other,0,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+998,"For this project, Good work on the project 960",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+2140,"Listen, You are bully. 400",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+5094,seriously andha people ellam problem public ah bro,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+8096,seriously private photo share panna force pannadha daily da,tanglish,1,individual,0,0,0,0,1,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+5586,ava un photo paathu sexual comments podradhu wrong intha post la ah,tanglish,1,other,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+8020,yes meeting five mani ku irukku honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2670,That sounds interesting today 781,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+8688,"In this chat, I will find you for real 972",english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+3137,Someone should hurt you right now 1225,english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+8997,listen nee enna pannalum naan respond panren public ah poda,tanglish,1,individual,0,1,0,0,0,0,0,medium,threatening language,synthetic_tanglish
+2529,nice ah class nalla irundhucha nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5430,"Thanks, Good explanation for the project 1189",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+4207,seri rest eduthuko 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8356,semma performance bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3082,ivan poda poi velaiya paaru chat la macha,tanglish,1,other,0,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+1601,da indha idea useful ah irukku nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7933,listen podi loosu comment section la bro,tanglish,1,individual,1,0,0,0,0,0,1,low,profane or abusive wording,synthetic_tanglish
+3647,yes indha idea useful ah irukku macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3169,"Thanks, I will check it later 729",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+5500,Can we discuss this further in this discussion 1141,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7536,true bro thanks for helping me today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2160,dei enna paaru naan unna paathukuren public ah podi,tanglish,1,other,0,1,0,0,0,0,0,high,threatening language,synthetic_tanglish
+4025,true bro nee daily improve aagite irukka nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3736,nice ah all the best da bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4307,da project nalla develop aaguthu bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+228,"For this project, Have a nice day as well 1020",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+8325,I think Thank you for helping me. 457,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+5016,"Honestly, You are idiot. 201",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+3206,dei unna physical ah attack panniduven public ah macha,tanglish,1,individual,0,0,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+2291,"Seriously, I hope someone attacks you! 1286",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+1332,You are terrible person. 391,english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+1787,macha inniku session epdi pochu honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7558,honestly all the best da honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8274,I think Thank you for helping me. 142,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7590,"For this project, Let's work on this together. 695",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+5346,"In this chat, I am going to kill you!",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+11,thanks for helping me,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6917,dei mokka daily da,tanglish,1,individual,1,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+1660,ivan innoru message anuppina paathuko social media la nu,tanglish,1,other,0,1,0,0,0,0,0,high,threatening language,synthetic_tanglish
+3074,"Thanks, This is a helpful explanation in this discussion 119",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+3777,da solution useful ah irukku da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+847,listen andha group people ellam mosam intha post la nu,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+1388,bro project nalla develop aaguthu 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7788,bro later discuss pannalam,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6215,dei poda waste chat la,tanglish,1,other,0,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+8387,honestly naalaikku continue pannalam inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4414,"In this chat, You deserve to be attacked right now 1296",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+5775,bro andha people ellam problem inga ippo,tanglish,1,group,0,0,0,1,0,0,0,medium,group-targeted hateful language,synthetic_tanglish
+779,"Hey, I will kill you! 1007",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+2447,nice ah presentation clear ah irundhuchu la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5088,seriously nee inga vandha unakku problem chat la podi,tanglish,1,individual,0,1,0,0,0,0,0,high,threatening language,synthetic_tanglish
+7949,macha unakku common sense illa message la ippo,tanglish,1,other,1,0,0,0,0,0,0,low,direct personal insult,synthetic_tanglish
+7626,yes nee daily improve aagite irukka macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+129,dei unna adikka varuven social media la macha,tanglish,1,individual,0,1,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+3493,true bro presentation clear ah irundhuchu today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6537,"Seriously, I will attack you for real 842",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+7355,"Thanks, I understand your point as well 229",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+1032,"Seriously, I will find you 986",english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+1137,"In this chat, That community is worthless today",english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+8341,bro solution useful ah irukku honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8636,listen unna physical ah attack panniduven message la da,tanglish,1,other,0,0,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+2399,dei nee nee oru joker daily bro,tanglish,1,other,1,0,0,0,0,0,0,medium,direct personal insult,synthetic_tanglish
+7507,"Thanks, I will check it later 274",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+3087,dei nee consent illama private photo kekkadha online la ah,tanglish,1,individual,0,0,0,0,0,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+7086,macha nee oru failure intha post la da,tanglish,1,individual,1,0,0,0,0,0,0,medium,direct personal insult,synthetic_tanglish
+1528,"Honestly, Thanks for sharing this for the project 1098",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+8863,"Honestly, Everyone from your group is terrible! 1393",english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+611,seri food saptiya today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5992,macha good job bro nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5692,I think Thank you for the information for the project 1182,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+1009,actually assignment submit pannitiya da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3468,"Honestly, You are annoying today 453",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+8805,nice ah naan unakku support panren bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6181,ava unakku physical harm panniduven chat la nu,tanglish,1,individual,0,0,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+264,seri seri paakalam la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1575,honestly nee nalla work pannita la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5454,dei mokka public ah bro,tanglish,1,other,1,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+8709,macha avanga madhiri people inga vendaam daily bro,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+7420,seriously poda waste comment section la ippo,tanglish,1,individual,0,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+7059,listen nee oru waste fellow intha post la,tanglish,1,other,1,0,0,0,0,0,0,medium,direct personal insult,synthetic_tanglish
+7021,dei poda mental public ah,tanglish,1,individual,0,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+1941,seri all the best da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2275,macha enna paaru naan unna paathukuren podi,tanglish,1,individual,0,1,0,0,0,0,0,medium,threatening language,synthetic_tanglish
+384,nice ah correct ah sonna,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4397,"Thanks, Good explanation for the project 314",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+4470,I think This is useful today 1117,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+2067,yes naalaikku continue pannalam,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4335,actually rest eduthuko macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3617,seri paakalam da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1743,true bro keep going bro bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3664,food saptiya 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+133,bro food saptiya inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3446,You are liar online,english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+5668,"Seriously, I will punch you today 914",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+4098,ava consent illama private photo kekkadha chat la,tanglish,1,individual,0,0,0,0,0,1,0,medium,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+2694,"Seriously, You will pay for this. 1004",english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+8634,macha nee oru useless fellow online la podi,tanglish,1,individual,1,0,0,0,0,0,1,low,direct personal insult,synthetic_tanglish
+6003,"Honestly, You are terrible person online 291",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+2775,yes class nalla irundhucha la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8259,nee nalla work pannita nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5546,"Hey, You are disappointment! 419",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+6287,seri meeting five mani ku irukku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8616,rest eduthuko today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7811,ivan unna adichiduven inga da,tanglish,1,individual,0,1,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+2610,"Hey, You should be physically harmed in this chat 1175",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+109,bro class nalla irundhucha la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2424,"For this project, That is a good question for the project 1420",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+6372,That sounds interesting today 1271,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+2591,dei poda inga intha post la la,tanglish,1,other,1,0,0,0,0,0,1,low,profane or abusive wording,synthetic_tanglish
+1218,nice ah later discuss pannalam bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7531,I hope you get hurt online,english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+6885,"In this chat, You are ridiculous for real 528",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+5573,I hate people like you right now 1397,english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+3515,ivan andha community ah nambave mudiyadhu macha,tanglish,1,group,0,0,0,1,0,0,0,medium,group-targeted hateful language,synthetic_tanglish
+6531,nee poda da message la poda,tanglish,1,other,0,0,0,0,0,0,1,low,profane or abusive wording,synthetic_tanglish
+4847,"For this project, Have a nice day as well 110",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7824,"Listen, Someone should beat you up today",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+3896,project nalla develop aaguthu today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3068,"Thanks, I agree with your point. 1304",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+1853,macha thanks for helping me la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8281,yes food saptiya 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3044,da thanks for helping me da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3375,seriously andha people ellam problem message la poda,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+3886,macha movie epdi irundhuchu nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8354,ava mela unwanted comments podradhu harassment social media la macha,tanglish,1,individual,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+1403,seriously consent illama sexual request pannadha chat la la,tanglish,1,other,0,0,0,0,0,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+4527,"For this project, Good work on the project 645",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+5966,nice ah indha idea useful ah irukku inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8191,I think Thank you for the information for the project 867,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+2969,seri presentation clear ah irundhuchu macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2946,bro avanga ellarum same madhiri intha post la la,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+7722,"For this project, Let's work on this together. 415",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+5691,I think I think this solution will work 92,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+2666,seriously poda mental comment section la podi,tanglish,1,individual,0,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+6581,"Hey, You should be physically harmed 1199",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+6387,"Honestly, Your project looks good 813",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+4179,actually project nalla develop aaguthu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6207,da project nalla develop aaguthu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5460,seriously podi da inga da,tanglish,1,individual,1,0,0,0,0,0,1,low,profane or abusive wording,synthetic_tanglish
+8461,"Thanks, This is a helpful explanation in this discussion 994",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7154,I think I think this solution will work 1457,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+6939,"Honestly, I really liked this post! 1473",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+8597,nee unakku physical harm panniduven public ah nu,tanglish,1,other,0,1,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+8866,macha un body ah comment panni disturb pannadha online la nu,tanglish,1,other,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+4181,dei nee avanga group ah support panna koodadhu public ah podi,tanglish,1,group,0,0,0,1,0,0,0,medium,group-targeted hateful language,synthetic_tanglish
+6035,nice explanation,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5745,all the best da 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5597,"Seriously, I will punch you seriously 830",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+8622,seriously nee total dummy online la macha,tanglish,1,individual,1,0,0,0,0,0,0,low,direct personal insult,synthetic_tanglish
+786,seri project nalla develop aaguthu today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2764,"Hey, Your group is disgusting today",english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+182,seriously unakku brain work aagala chat la macha,tanglish,1,individual,1,0,0,0,0,0,0,low,direct personal insult,synthetic_tanglish
+8285,"Thanks, Good explanation for the project 174",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+5688,"Hey, Someone should hurt you!",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+2422,"Thanks, Nice work! 1459",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+6968,I think Thank you for the information for the project 1252,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+4445,seriously personal appearance ah target panni tease pannadha social media la ah,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+6868,listen unakku sense eh illa inga ah,tanglish,1,individual,1,0,0,0,0,0,0,medium,direct personal insult,synthetic_tanglish
+3686,true bro team work nalla pannenga honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6156,macha nee nalla work pannita 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8220,"For this project, Good work on the project 925",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7851,listen dei poda inga podi,tanglish,1,individual,0,0,0,0,0,0,1,low,profane or abusive wording,synthetic_tanglish
+458,bro nee inga vandha unakku problem macha,tanglish,1,other,0,1,0,0,0,0,0,medium,threatening language,synthetic_tanglish
+7754,I think I learned something new today as well 852,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+5116,"Hey, You should be physically harmed right now 1223",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+7939,super ah panniruka macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3015,code check pannitu sollu today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7549,"Seriously, I hope someone attacks you!",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+3213,private photo share panna force pannadha inga poda,tanglish,1,individual,0,0,0,0,1,1,0,medium,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+7233,"Listen, You are hopeless. 574",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+5918,Everything looks good! 521,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+326,nee private photo share panna force pannadha inga la,tanglish,1,other,0,0,0,0,1,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+4921,da later discuss pannalam bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1487,seri correct ah sonna bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+686,macha dei poda daily poda,tanglish,1,other,0,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+3690,That was a great idea 666,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+5840,bro nee oru waste fellow chat la ippo,tanglish,1,individual,1,0,0,0,0,0,0,low,direct personal insult,synthetic_tanglish
+531,"Listen, I will punch you! 760",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+8147,macha avanga madhiri people inga vendaam chat la bro,tanglish,1,group,0,0,0,1,0,0,0,medium,group-targeted hateful language,synthetic_tanglish
+3305,da movie epdi irundhuchu 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3536,ivan nee romba stupid social media la la,tanglish,1,other,1,0,0,0,0,0,1,medium,direct personal insult,synthetic_tanglish
+4045,yes nice explanation bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6742,bro un body ah comment panni disturb pannadha daily poda,tanglish,1,individual,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+8883,Everyone from your group is terrible today 1409,english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+5552,"Honestly, You deserve to be beaten. 1203",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+943,"For this project, Let's work on this together. 1045",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+4120,macha un appearance pathi unwanted comment poda vendam bro,tanglish,1,individual,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+3725,da seri paakalam 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1541,andha group people ellam mosam social media la bro,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+945,nice ah database update panniten bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6678,un photo ku sexual comment podradhu wrong public ah podi,tanglish,1,other,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+6109,"In this chat, You are fool 366",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+8829,ava unakku nalla warning idhu public ah podi,tanglish,1,other,0,1,1,0,0,0,0,high,threatening language,synthetic_tanglish
+2849,nice ah database update panniten la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3566,"In this chat, You are disgusting today 450",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+8194,"Honestly, Please let me know your thoughts today 508",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+4200,"Seriously, You are complete joke seriously",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+8452,I appreciate your help for the project 76,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7138,movie epdi irundhuchu inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2873,"Honestly, Please let me know your thoughts today 53",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7485,nee un body ah comment panni disturb pannadha chat la podi,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+990,This looks great as well 1076,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+354,"Listen, You are disgusting right now 250",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+2650,"In this chat, That community is worthless today 1408",english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+7687,"Honestly, Could you send me the details in this discussion 483",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+8450,bro later discuss pannalam 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2926,da assignment submit pannitiya today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5507,ava consent illama private photo kekkadha,tanglish,1,individual,0,0,0,0,0,1,0,medium,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+5013,seriously unna vida maaten nu nenachuko poda,tanglish,1,individual,0,1,0,0,0,0,0,medium,threatening language,synthetic_tanglish
+2514,listen un body ah comment panni disturb pannadha public ah poda,tanglish,1,other,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+4854,true bro naalaikku continue pannalam da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6384,dei nee unna physical ah attack panniduven online la macha,tanglish,1,individual,0,1,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+7746,"Honestly, I agree with this as well 593",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+2191,bro podi poi ukkaru intha post la poda,tanglish,1,individual,1,0,0,0,0,0,1,low,profane or abusive wording,synthetic_tanglish
+2387,"Thanks, I understand your point as well 544",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+2772,actually movie epdi irundhuchu bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4117,da keep going bro la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4755,honestly inniku session epdi pochu inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+163,That was a great idea 1226,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+809,super ah panniruka nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4297,ivan online la unwanted sexual attention kudukkadha daily podi,tanglish,1,other,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+4851,nice ah code check pannitu sollu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2273,"For this project, Could you please help me! 1445",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+8704,un performance romba kevalam online la ippo,tanglish,1,other,1,0,0,0,0,0,0,low,direct personal insult,synthetic_tanglish
+3470,That sounds interesting today 46,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+4796,un appearance pathi unwanted comment poda vendam intha post la,tanglish,1,individual,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+678,seriously sexual pressure kudukka koodadhu intha post la nu,tanglish,1,individual,0,0,0,0,0,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+3753,nice ah nice explanation nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1577,da presentation clear ah irundhuchu 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8844,podi loosu daily la,tanglish,1,individual,0,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+2765,bro super ah panniruka inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4186,honestly nee nalla work pannita macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4450,listen online la unwanted sexual attention kudukkadha daily bro,tanglish,1,other,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+1460,"Honestly, Could you send me the details in this discussion 1393",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+1144,I think I think this solution will work 722,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+5680,I will destroy you in this chat 823,english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+8500,"For this project, Thanks for the update in this discussion 1050",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+6908,nee unakku edhuvume theriyadhu intha post la poda,tanglish,1,individual,1,0,0,0,0,0,1,medium,direct personal insult,synthetic_tanglish
+8932,"For this project, Good work on the project 1030",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+5545,You are failure online,english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+6322,You are useless 187,english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+1274,ivan andha group ellam useless intha post la poda,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+8721,listen poda dei intha post la,tanglish,1,individual,1,0,0,0,0,0,1,low,profane or abusive wording,synthetic_tanglish
+570,code check pannitu sollu inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8178,macha un effort romba nalla irukku da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4895,bro andha group ellam useless daily da,tanglish,1,group,0,0,0,1,0,0,0,medium,group-targeted hateful language,synthetic_tanglish
+2683,seriously unna damage panniduven intha post la macha,tanglish,1,other,0,0,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+7225,macha unwanted sexual message anuppadha comment section la macha,tanglish,1,other,0,0,0,0,1,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+7155,seri indha idea useful ah irukku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2886,da un effort romba nalla irukku 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7089,actually good job bro nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6873,nice ah naan unakku support panren la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+348,bro naan unakku support panren la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5526,dei nee avanga madhiri people inga vendaam social media la podi,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+7785,"Thanks, This is a helpful explanation in this discussion 819",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+1156,macha avanga ellarum same madhiri intha post la poda,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+6376,macha meeting five mani ku irukku da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2842,macha later discuss pannalam la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4411,nice ah indha idea useful ah irukku bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+572,"Honestly, You are rude person for real",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+144,"For this project, Let's work on this together. 660",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7838,"For this project, Could you please help me! 1200",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+8727,macha un effort romba nalla irukku nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+577,bro un appearance pathi unwanted comment poda vendam inga poda,tanglish,1,individual,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+8874,listen avanga madhiri people inga vendaam comment section la nu,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+4828,un photo paathu sexual comments podradhu wrong ippo,tanglish,1,individual,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+580,"Honestly, Everyone from your group is terrible! 1465",english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+3931,ivan andha community ah nambave mudiyadhu la,tanglish,1,group,0,0,0,1,0,0,0,medium,group-targeted hateful language,synthetic_tanglish
+3279,You deserve to be beaten 1123,english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+5828,"For this project, Well explained today 620",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+1716,I think Thank you for helping me. 667,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+5122,You are disappointment right now 439,english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+3508,honestly later discuss pannalam da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3672,true bro food saptiya,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+169,seriously poda mental chat la poda,tanglish,1,individual,0,0,0,0,0,0,1,low,profane or abusive wording,synthetic_tanglish
+2466,macha later discuss pannalam today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5120,I think That was a useful suggestion! 437,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7936,da assignment submit pannitiya 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+843,bro super ah panniruka bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2879,seriously podi dei inga ippo,tanglish,1,other,1,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+1996,dei nee unna beat panniduven intha post la ah,tanglish,1,other,0,1,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+8803,bro andha community ah nambave mudiyadhu message la bro,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+3378,naalaikku continue pannalam 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5687,macha po da inga irundhu message la bro,tanglish,1,individual,1,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+8885,true bro all the best da inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8211,"For this project, Could you please help me! 850",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+773,I think I think this solution will work 372,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+1912,seri later discuss pannalam da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5025,dei nee consent illama sexual request pannadha da,tanglish,1,other,0,0,0,0,0,1,0,medium,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+4452,listen ava mela unwanted comments podradhu harassment chat la la,tanglish,1,other,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+1611,listen naan unna confront panren comment section la da,tanglish,1,other,0,1,0,0,0,0,0,medium,threatening language,synthetic_tanglish
+5927,macha unna vida maaten nu nenachuko online la macha,tanglish,1,individual,0,1,1,0,0,0,0,high,threatening language,synthetic_tanglish
+2966,dei avanai poi adichidu inga bro,tanglish,1,individual,0,0,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+2423,I appreciate your help for the project 846,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+815,dei consent illama private photo kekkadha chat la da,tanglish,1,other,0,0,0,0,0,1,0,medium,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+6872,"Honestly, I will hurt you in this chat 813",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+3894,nice ah movie epdi irundhuchu inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3251,macha nee romba stupid online la ippo,tanglish,1,individual,1,0,0,0,0,0,0,medium,direct personal insult,synthetic_tanglish
+8656,yes solution useful ah irukku macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6894,seri solution useful ah irukku inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6522,"Hey, I will come after you online 803",english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+1065,"Honestly, I will kill you. 867",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+8724,dei nee nee oru failure chat la nu,tanglish,1,other,1,0,0,0,0,0,0,medium,direct personal insult,synthetic_tanglish
+8502,"Hey, You are annoying for real",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+5893,"In this chat, I will get you!",english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+357,dei unwanted sexual message anuppadha chat la,tanglish,1,individual,0,0,0,0,1,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+3787,"Thanks, I understand your point as well 1069",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+8777,"Seriously, You are selfish person online 296",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+1324,listen unna physical ah attack panniduven inga podi,tanglish,1,individual,0,0,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+91,ivan consent illama private photo kekkadha chat la ah,tanglish,1,individual,0,0,0,0,1,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+6835,class nalla irundhucha bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7734,nee fight panna vandha paathukalam online la ippo,tanglish,1,individual,0,0,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+2703,"In this chat, You are selfish person. 216",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+8082,ava unakku nalla warning idhu chat la ippo,tanglish,1,individual,0,1,1,0,0,0,0,high,threatening language,synthetic_tanglish
+1140,listen dei poda inga social media la bro,tanglish,1,other,0,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+7647,"Honestly, Your project looks good 1093",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+5812,"For this project, Thanks for the update in this discussion 1470",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+3391,bro assignment submit pannitiya honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2265,ivan unna hurt panniduven daily,tanglish,1,individual,0,0,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+209,"Thanks, Nice work! 1494",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+8536,Everything looks good! 836,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+4962,"Hey, I hate people like you!",english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+3960,true bro thanks for helping me 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3919,bro ava mela unwanted comments podradhu harassment comment section la la,tanglish,1,other,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+5796,Everything looks good! 1221,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+128,seri meeting five mani ku irukku nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+583,"Listen, People like you should disappear today 1406",english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+8855,yes correct ah sonna inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7941,"Honestly, Please let me know your thoughts today 963",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+2562,"Hey, Someone should hurt you online 1169",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+7303,bro class nalla irundhucha honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2385,listen andha community ah nambave mudiyadhu message la bro,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+1248,Everything looks good! 1046,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+211,listen unna hurt panniduven intha post la macha,tanglish,1,other,0,0,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+2453,dei andha group people ellam mosam daily poda,tanglish,1,group,0,0,0,1,0,0,0,medium,group-targeted hateful language,synthetic_tanglish
+5508,"Hey, I will make you regret this in this chat 947",english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+4652,I think Thank you for the information for the project 1357,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+1503,sandaila unna adikka thonudhu intha post la poda,tanglish,1,other,0,0,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+490,seriously nee romba stupid comment section la podi,tanglish,1,individual,1,0,0,0,0,0,0,medium,direct personal insult,synthetic_tanglish
+3073,"Thanks, I agree with your point. 569",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+342,consent illama sexual request pannadha comment section la da,tanglish,1,individual,0,0,0,0,0,1,0,medium,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+95,"In this chat, You are selfish person. 396",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+3301,seri food saptiya la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3360,seriously un body ah comment panni disturb pannadha inga nu,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+2697,inniku session epdi pochu 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4657,actually indha idea useful ah irukku la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2835,"Thanks, I understand your point as well 124",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+4360,bro indha idea useful ah irukku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4138,nee nalla work pannita bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2963,honestly all the best da da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7219,actually rest eduthuko 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6038,true bro nee nalla work pannita da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5578,nee enna paaru naan unna paathukuren intha post la ippo,tanglish,1,other,0,1,1,0,0,0,0,medium,threatening language,synthetic_tanglish
+7996,"Thanks, Can you explain this to me today 564",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7486,nee un brain enga pochu intha post la bro,tanglish,1,individual,1,0,0,0,0,0,0,low,direct personal insult,synthetic_tanglish
+4148,"Seriously, You are hopeless in this chat",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+1452,thanks for helping me today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4552,bro un appearance pathi unwanted comment poda vendam intha post la poda,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+2809,"Seriously, Your group is pathetic seriously",english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+3976,seriously nee stop pannalana problem aagum social media la bro,tanglish,1,other,0,1,0,0,0,0,0,high,threatening language,synthetic_tanglish
+8732,macha super ah panniruka bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8182,macha enna paaru naan unna paathukuren inga ippo,tanglish,1,individual,0,1,0,0,0,0,0,high,threatening language,synthetic_tanglish
+3596,dei nee stop pannalana problem aagum comment section la ippo,tanglish,1,other,0,1,1,0,0,0,0,medium,threatening language,synthetic_tanglish
+5067,meeting five mani ku irukku honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1526,"Honestly, Your project looks good 498",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+8946,dei nee consent illama private photo kekkadha public ah poda,tanglish,1,other,0,0,0,0,0,1,0,medium,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+3673,seri database update panniten honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+9,seri solution useful ah irukku today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1372,honestly happy for your progress 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+428,"In this chat, You are worthless today 264",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+6523,nice ah super ah panniruka da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4969,"Honestly, I cannot stand people like you. 1459",english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+1398,"In this chat, I will find you for real",english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+7298,bro super ah panniruka,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5906,actually semma performance inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8601,bro sexual content anuppi disturb panna koodadhu intha post la la,tanglish,1,individual,0,0,0,0,0,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+8551,Can we discuss this further in this discussion 1071,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+599,listen dei poda inga la,tanglish,1,other,0,0,0,0,0,0,1,low,profane or abusive wording,synthetic_tanglish
+4681,naalaikku continue pannalam inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7369,nice ah good job bro 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8301,da nee daily improve aagite irukka 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6475,"Honestly, I am coming for you 735",english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+7669,"Thanks, I understand your point as well 194",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7797,naan unna confront panren inga podi,tanglish,1,other,0,1,1,0,0,0,0,high,threatening language,synthetic_tanglish
+6715,online la unwanted sexual attention kudukkadha intha post la la,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+4219,"Hey, You are disappointment for real",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+5988,"Listen, I hope someone attacks you right now 1150",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+4980,"Honestly, Thanks for sharing this for the project 83",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+5321,ava sexual pressure kudukka koodadhu social media la podi,tanglish,1,individual,0,0,0,0,1,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+8637,seriously un body ah comment panni disturb pannadha social media la,tanglish,1,other,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+5457,macha all the best da 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4763,nee nee romba stupid public ah ippo,tanglish,1,individual,1,0,0,0,0,0,1,medium,direct personal insult,synthetic_tanglish
+2209,keep going bro la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5325,"Thanks, I understand your point as well 649",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+3245,da thanks for helping me,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7130,true bro later discuss pannalam,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1112,seriously unakku common sense illa online la da,tanglish,1,other,1,0,0,0,0,0,0,low,direct personal insult,synthetic_tanglish
+1785,actually happy for your progress macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5145,nee un photo ku sexual comment podradhu wrong social media la ah,tanglish,1,individual,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+7547,"For this project, That is a good question for the project 300",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7619,"In this chat, You will pay for this 738",english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+5074,da good job bro honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5458,"Seriously, People from your group are awful in this chat 1428",english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+8882,Everything looks good! 1256,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+3981,nice ah presentation clear ah irundhuchu today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5459,I will hurt you online,english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+161,nee nalla work pannita today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3530,seri indha idea useful ah irukku la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6022,listen private photo share panna force pannadha social media la macha,tanglish,1,other,0,0,0,0,1,1,0,medium,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+1974,You are disappointment 559,english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+7279,yes database update panniten macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3585,da database update panniten da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1113,macha keep going bro bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3504,macha unna vida maaten nu nenachuko social media la podi,tanglish,1,individual,0,1,1,0,0,0,0,medium,threatening language,synthetic_tanglish
+8884,bro naan unakku support panren nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8892,honestly nice explanation la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1421,macha all the best da inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2999,dei private content force panna vendam online la ippo,tanglish,1,other,0,0,0,0,0,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+2425,"Thanks, I will check it later 449",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+947,"Hey, I hope you get hurt today 1157",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+4974,"Seriously, You will pay for this today 920",english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+4419,ava podi poi ukkaru ippo,tanglish,1,individual,1,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+2206,actually nee nalla work pannita macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5175,dei nee online la unwanted sexual attention kudukkadha intha post la ah,tanglish,1,individual,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+4005,ivan sandaila unna adikka thonudhu message la poda,tanglish,1,individual,0,0,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+2109,actually code check pannitu sollu nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1359,nice ah later discuss pannalam inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2877,da later discuss pannalam da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7489,You are loser! 403,english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+4577,ava un photo paathu sexual comments podradhu wrong public ah ah,tanglish,1,other,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+5389,I think This is useful today 1327,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+1721,nee un body ah comment panni disturb pannadha social media la poda,tanglish,1,other,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+5482,true bro naalaikku continue pannalam la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5311,This looks great as well 936,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7359,macha sexual pressure kudukka koodadhu intha post la da,tanglish,1,individual,0,0,0,0,0,1,0,medium,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+8983,poda loosu inga la,tanglish,1,individual,0,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+4905,honestly inniku session epdi pochu la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8738,"Thanks, I agree with your point. 184",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7093,personal appearance ah target panni tease pannadha inga nu,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+7872,macha un photo paathu sexual comments podradhu wrong daily la,tanglish,1,other,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+5044,seriously unna physical ah attack panniduven comment section la nu,tanglish,1,individual,0,0,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+66,nice ah thanks for helping me today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6203,naalaikku continue pannalam bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1199,ava un body ah comment panni disturb pannadha inga ippo,tanglish,1,other,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+4250,"Honestly, Please let me know your thoughts today 298",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+463,nee careful ah iru public ah bro,tanglish,1,other,0,1,1,0,0,0,0,medium,threatening language,synthetic_tanglish
+665,honestly code check pannitu sollu bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2579,bro sexual pressure kudukka koodadhu public ah poda,tanglish,1,individual,0,0,0,0,0,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+4611,yes seri paakalam macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4834,"Listen, You are ridiculous seriously 508",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+6249,bro presentation clear ah irundhuchu 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6858,"For this project, Have a nice day as well 600",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+3037,yes thanks for helping me bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6587,macha nee pesuradhellam mokka inga poda,tanglish,1,other,1,0,0,0,0,0,1,low,direct personal insult,synthetic_tanglish
+7673,yes movie epdi irundhuchu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+772,"For this project, Thanks for the update in this discussion 1365",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+2968,"Honestly, I really liked this post! 808",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+6669,nee oru loosu intha post la nu,tanglish,1,individual,1,0,0,0,0,0,1,low,direct personal insult,synthetic_tanglish
+6117,macha happy for your progress today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4659,macha later discuss pannalam honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2179,honestly keep going bro la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5772,ivan un body pathi public ah pesa vendam online la podi,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+6186,Can we discuss this further in this discussion 301,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+1072,nee unakku physical harm panniduven online la bro,tanglish,1,individual,0,1,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+6257,ivan unna beat panniduven public ah bro,tanglish,1,individual,0,1,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+8668,da assignment submit pannitiya honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1706,true bro database update panniten bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2635,"In this chat, I will find you online 804",english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+5925,"Honestly, I will hurt you 855",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+7963,bro poda poi velaiya paaru online la macha,tanglish,1,individual,0,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+2361,You should be physically harmed today,english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+3187,bro poda poi velaiya paaru daily nu,tanglish,1,individual,0,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+5379,You are useless 367,english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+5265,"Hey, You are failure today 269",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+4220,seriously poda waste intha post la nu,tanglish,1,individual,1,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+525,nice ah assignment submit pannitiya macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6062,yes super ah panniruka da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+912,honestly presentation clear ah irundhuchu 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6607,true bro super ah panniruka bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8267,"Thanks, Nice work! 759",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+8173,nee naan unna confront panren online la ah,tanglish,1,individual,0,1,0,0,0,0,0,high,threatening language,synthetic_tanglish
+3586,macha happy for your progress honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1178,nice ah team work nalla pannenga la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4135,"Honestly, I will beat you up! 759",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+2921,yes semma performance honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6242,"Listen, You are stupid. 562",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+8912,macha unna adichiduven chat la,tanglish,1,other,0,0,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+5821,seriously nee enna pannalum naan respond panren la,tanglish,1,other,0,1,1,0,0,0,0,high,threatening language,synthetic_tanglish
+8994,dei nee poda mental message la la,tanglish,1,other,0,0,0,0,0,0,1,low,profane or abusive wording,synthetic_tanglish
+3151,dei nee nee careful ah iru public ah da,tanglish,1,individual,0,1,0,0,0,0,0,high,threatening language,synthetic_tanglish
+4867,ivan nee pesuradhellam mokka intha post la la,tanglish,1,other,1,0,0,0,0,0,0,medium,direct personal insult,synthetic_tanglish
+3487,Everything looks good! 66,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+6691,yes solution useful ah irukku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6339,"Seriously, I will punch you. 746",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+6009,"Honestly, You are loser right now 243",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+8550,actually later discuss pannalam da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5807,"Thanks, I understand your point as well 1279",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+2793,I appreciate your help for the project 181,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7341,naan unakku support panren da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1276,macha poda waste chat la,tanglish,1,individual,1,0,0,0,0,0,1,low,profane or abusive wording,synthetic_tanglish
+4000,"Thanks, Can you explain this to me today 1369",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7095,nee online la unwanted sexual attention kudukkadha message la macha,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+7468,da presentation clear ah irundhuchu honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5015,"Listen, I hope someone attacks you 1270",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+4237,dei nee nee onnum purinjikala la,tanglish,1,other,1,0,0,0,0,0,1,low,direct personal insult,synthetic_tanglish
+7176,yes happy for your progress da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4028,seriously poda mental chat la bro,tanglish,1,individual,1,0,0,0,0,0,1,low,profane or abusive wording,synthetic_tanglish
+5170,bro unakku basic knowledge kooda illa public ah ah,tanglish,1,other,1,0,0,0,0,0,1,medium,direct personal insult,synthetic_tanglish
+2366,honestly semma performance da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7431,nice ah thanks for helping me honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3056,da presentation clear ah irundhuchu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6827,"Honestly, I really liked this post! 143",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+6903,dei nee sandaila unna adikka thonudhu chat la poda,tanglish,1,other,0,0,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+4516,seri thanks for helping me la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4770,ivan un body pathi public ah pesa vendam online la la,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+8647,I think This is very useful information in this discussion 812,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7039,"Honestly, You should be physically harmed for real 1263",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+1029,nice ah naalaikku continue pannalam honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1016,macha seri paakalam macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3821,honestly indha idea useful ah irukku 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4204,da all the best da nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2916,dei nee un body pathi public ah pesa vendam comment section la ippo,tanglish,1,other,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+3495,dei nee andha community people romba kevalam da,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+3102,dei nee consent illama private photo kekkadha social media la nu,tanglish,1,individual,0,0,0,0,1,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+423,seriously unakku physical harm panniduven daily poda,tanglish,1,individual,0,0,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+162,seri project nalla develop aaguthu inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6664,"In this chat, People like you should disappear for real 1438",english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+6058,ava podi poi ukkaru comment section la podi,tanglish,1,individual,1,0,0,0,0,0,1,low,profane or abusive wording,synthetic_tanglish
+6244,nice ah class nalla irundhucha da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5144,macha meeting five mani ku irukku bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3131,da un effort romba nalla irukku inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4229,Someone should hurt you in this chat 1177,english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+3841,macha movie epdi irundhuchu macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4366,nee un photo paathu sexual comments podradhu wrong public ah da,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+584,bro rest eduthuko honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2420,bro un photo ku sexual comment podradhu wrong social media la ah,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+7079,macha thanks for helping me inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4091,da nice explanation nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8337,"Honestly, Your group is disgusting in this chat",english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+1412,dei fight panna vandha paathukalam inga,tanglish,1,other,0,1,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+4178,ava andha people ellam problem ah,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+4511,seriously unna adikka varuven podi,tanglish,1,individual,0,1,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+6927,seri project nalla develop aaguthu nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+220,dei nee avanai poi adichidu public ah ah,tanglish,1,individual,0,1,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+5998,true bro un effort romba nalla irukku nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7049,nee un body pathi public ah pesa vendam chat la poda,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+3100,"Hey, I am coming for you seriously",english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+3323,seriously unna hurt panniduven message la da,tanglish,1,other,0,1,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+392,nice ah happy for your progress da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8970,nee private photo share panna force pannadha comment section la la,tanglish,1,other,0,0,0,0,0,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+2680,"Honestly, I am coming for you in this chat 819",english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+604,I think That was a useful suggestion! 542,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+4467,nee andha community ah nambave mudiyadhu social media la da,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+6106,actually movie epdi irundhuchu nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3277,honestly database update panniten inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5129,listen dei mokka message la la,tanglish,1,individual,0,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+4454,macha avanai poi adichidu chat la ippo,tanglish,1,individual,0,1,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+6676,That was a great idea 1261,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+3709,"Honestly, Someone should hurt you seriously 1257",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+3117,seriously nee oru waste fellow la,tanglish,1,individual,1,0,0,0,0,0,0,low,direct personal insult,synthetic_tanglish
+4941,"Honestly, Please let me know your thoughts today 1313",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+4738,"In this chat, You are selfish person seriously 516",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+3711,bro ava mela unwanted comments podradhu harassment social media la podi,tanglish,1,other,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+1123,"Listen, I will attack you in this chat",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+4278,meeting five mani ku irukku inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1051,dei avanai poi adichidu nu,tanglish,1,other,0,0,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+7440,dei nee private content force panna vendam,tanglish,1,individual,0,0,0,0,0,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+3583,dei andha people ellam problem inga podi,tanglish,1,group,0,0,0,1,0,0,0,medium,group-targeted hateful language,synthetic_tanglish
+630,dei nee unna damage panniduven public ah podi,tanglish,1,other,0,1,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+164,dei fight panna vandha paathukalam comment section la macha,tanglish,1,individual,0,1,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+8290,"Honestly, You are useless seriously 507",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+3997,Everything looks good! 626,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+2037,nee dei mokka public ah nu,tanglish,1,individual,0,0,0,0,0,0,1,low,profane or abusive wording,synthetic_tanglish
+4978,"Honestly, I will beat you up online 927",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+3767,"Thanks, Can you explain this to me today 774",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+5158,personal appearance ah target panni tease pannadha public ah nu,tanglish,1,individual,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+130,seri seri paakalam,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1374,bro food saptiya la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2388,nice ah thanks for helping me macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3971,macha assignment submit pannitiya inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5221,ivan private content force panna vendam message la nu,tanglish,1,individual,0,0,0,0,0,1,0,medium,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+7606,"Hey, You deserve to be beaten! 1139",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+4840,"Seriously, I am going to kill you 980",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+7719,ivan avanai poi adichidu social media la bro,tanglish,1,other,0,0,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+1127,nice ah semma performance honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3474,"Thanks, Good explanation for the project 139",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+6279,actually solution useful ah irukku honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4635,"Hey, I will hurt you. 869",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+8369,"Seriously, You are stupid right now 242",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+2751,"Thanks, I agree with your point. 954",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+4670,Someone should hurt you right now 1297,english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+2358,"Listen, You are worthless right now 244",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+6734,honestly thanks for helping me inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8594,correct ah sonna 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+54,"Honestly, I will kill you seriously 825",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+420,You are disappointment 379,english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+1888,"Thanks, I understand your point as well 1349",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+8756,"Listen, You are selfish person",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+7641,seri later discuss pannalam inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6393,"Hey, You are failure. 209",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+7768,bro super ah panniruka honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2097,ava un body ah comment panni disturb pannadha message la macha,tanglish,1,individual,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+2343,macha code check pannitu sollu la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2130,dei nee unna beat panniduven intha post la bro,tanglish,1,individual,0,0,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+5076,bro seri paakalam today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3532,dei sandaila unna adikka thonudhu chat la poda,tanglish,1,individual,0,1,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+449,seri happy for your progress inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6297,nee nee oru loosu social media la ah,tanglish,1,other,1,0,0,0,0,0,0,low,direct personal insult,synthetic_tanglish
+4804,honestly semma performance,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4756,"Honestly, I will make you regret this for real 849",english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+5802,"Thanks, This is a helpful explanation in this discussion 1064",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+1731,"For this project, Good work on the project 400",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+2010,ava andha group people ellam mosam public ah da,tanglish,1,group,0,0,0,1,0,0,0,medium,group-targeted hateful language,synthetic_tanglish
+3464,seriously nee romba stupid public ah da,tanglish,1,individual,1,0,0,0,0,0,0,medium,direct personal insult,synthetic_tanglish
+1739,bro food saptiya honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2687,"For this project, Good work on the project 1205",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+6804,I think This is useful today 137,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+4602,bro enna paaru naan unna paathukuren inga macha,tanglish,1,individual,0,1,1,0,0,0,0,high,threatening language,synthetic_tanglish
+3936,da project nalla develop aaguthu inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6661,ivan avanga group ah support panna koodadhu daily la,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+8348,listen sexual content anuppi disturb panna koodadhu public ah da,tanglish,1,individual,0,0,0,0,0,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+6979,listen un appearance pathi unwanted comment poda vendam la,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+2945,"Thanks, I will check it later 1289",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+2675,macha good job bro today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5439,dei unakku consequences irukkum daily ippo,tanglish,1,individual,0,1,0,0,0,0,0,high,threatening language,synthetic_tanglish
+8050,thanks for helping me honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8352,listen nee oru loosu daily da,tanglish,1,other,1,0,0,0,0,0,0,medium,direct personal insult,synthetic_tanglish
+3811,da keep going bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+700,I appreciate your help for the project 321,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+7886,honestly happy for your progress,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7421,true bro team work nalla pannenga 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2436,"Listen, You are selfish person in this chat",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+7707,honestly rest eduthuko,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2720,yes assignment submit pannitiya da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8411,I think I learned something new today as well 1097,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+6748,"Honestly, You are loser 543",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+3097,true bro food saptiya inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2700,dei unakku consequences irukkum chat la poda,tanglish,1,individual,0,1,0,0,0,0,0,medium,threatening language,synthetic_tanglish
+7745,nee un photo ku sexual comment podradhu wrong,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+4004,nee avanai poi adichidu bro,tanglish,1,individual,0,0,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+5704,"Hey, You are rude person 557",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+5071,movie epdi irundhuchu 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2821,un effort romba nalla irukku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5211,"Seriously, You are ridiculous right now",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+7009,I think Thank you for the information for the project 237,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+6542,dei nee consent illama private photo kekkadha message la da,tanglish,1,individual,0,0,0,0,1,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+993,listen poda loosu comment section la macha,tanglish,1,other,1,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+57,yes un effort romba nalla irukku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7192,"Thanks, I understand your point as well 1419",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+8788,"For this project, That is a good question for the project 1315",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+8363,"Thanks, I agree with your point. 149",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+8969,"For this project, Well explained today 235",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+2070,I think I think this solution will work 582,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+3436,"For this project, Thanks for the update in this discussion 455",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+2710,"Hey, You should be physically harmed in this chat 1247",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+2696,"Honestly, I will make you regret this! 765",english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+6597,"Listen, I am going to kill you seriously",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+8404,dei online la unwanted sexual attention kudukkadha daily podi,tanglish,1,other,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+5849,bro nee nalla work pannita la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5696,"Listen, I will get you today 922",english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+4574,bro sexual pressure kudukka koodadhu social media la nu,tanglish,1,other,0,0,0,0,0,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+7283,You are rude person today,english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+6536,actually nee daily improve aagite irukka bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6500,dei nee un appearance pathi unwanted comment poda vendam daily poda,tanglish,1,other,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+8624,actually keep going bro today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5825,unna beat panniduven inga podi,tanglish,1,other,0,0,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+5929,I think This is useful today 872,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+5445,"For this project, Good work on the project",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+1431,seri correct ah sonna today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7663,macha consent illama private photo kekkadha online la nu,tanglish,1,individual,0,0,0,0,1,1,0,medium,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+4031,I am coming for you for real 973,english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+6987,listen un photo paathu sexual comments podradhu wrong social media la la,tanglish,1,other,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+3705,You are pathetic seriously,english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+5754,correct ah sonna macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5588,"Honestly, I will kill you. 993",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+8332,macha good job bro bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2145,"Listen, You are complete joke for real",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+3615,ivan nee oru waste fellow message la nu,tanglish,1,other,1,0,0,0,0,0,1,low,direct personal insult,synthetic_tanglish
+3393,nee sexual pressure kudukka koodadhu message la ippo,tanglish,1,other,0,0,0,0,0,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+4323,da code check pannitu sollu 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8236,nice ah naalaikku continue pannalam inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3182,honestly indha idea useful ah irukku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2016,macha nee daily improve aagite irukka,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2927,seri naalaikku continue pannalam honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3880,solution useful ah irukku bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3004,bro semma performance da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7398,dei nee un body ah comment panni disturb pannadha message la ippo,tanglish,1,individual,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+3665,"In this chat, You are fool",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+6113,"Honestly, Your presentation was clear. 93",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+6111,ava un appearance pathi unwanted comment poda vendam inga macha,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+7300,"For this project, Well explained today 795",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+8926,"For this project, Let's work on this together. 1185",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+515,actually keep going bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6440,nice ah nee nalla work pannita bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4013,un appearance pathi unwanted comment poda vendam intha post la nu,tanglish,1,individual,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+4815,"For this project, Have a nice day as well 355",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+3011,"Seriously, I will punch you. 872",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+816,ivan nee oru loosu online la ippo,tanglish,1,other,1,0,0,0,0,0,0,medium,direct personal insult,synthetic_tanglish
+4927,bro sandaila unna adikka thonudhu intha post la podi,tanglish,1,individual,0,0,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+8060,actually keep going bro la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2540,bro andha group ellam useless inga nu,tanglish,1,group,0,0,0,1,0,0,0,medium,group-targeted hateful language,synthetic_tanglish
+1965,"Listen, I will punch you! 886",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+6810,I think I learned something new today as well 257,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+2094,bro meeting five mani ku irukku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1045,dei nee un brain enga pochu public ah podi,tanglish,1,other,1,0,0,0,0,0,1,medium,direct personal insult,synthetic_tanglish
+4003,seriously andha community people romba kevalam social media la bro,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+5560,yes naalaikku continue pannalam honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3104,ava avanga madhiri people inga vendaam message la bro,tanglish,1,group,0,0,0,1,0,0,0,medium,group-targeted hateful language,synthetic_tanglish
+593,"For this project, Let's work on this together. 205",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+2548,"Seriously, I will punch you today",english,1,individual,0,1,1,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+882,un performance romba kevalam comment section la macha,tanglish,1,other,1,0,0,0,0,0,0,medium,direct personal insult,synthetic_tanglish
+498,bro nee nalla work pannita honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3451,I will make you regret this seriously,english,1,individual,0,1,0,0,0,0,0,high,Threatening or violent language directed at an individual.,synthetic_english
+4959,true bro later discuss pannalam 👍,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2230,seri happy for your progress la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5453,dei ava mela unwanted comments podradhu harassment public ah la,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+2827,dei avanga group ah support panna koodadhu online la podi,tanglish,1,group,0,0,0,1,0,0,0,high,group-targeted hateful language,synthetic_tanglish
+5428,bro unna physical ah attack panniduven intha post la la,tanglish,1,individual,0,1,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+5550,da food saptiya bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2989,ivan podi da online la da,tanglish,1,individual,0,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+5465,"Hey, You are useless for real 527",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+4065,ivan podi poi ukkaru intha post la da,tanglish,1,individual,1,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+3824,true bro inniku session epdi pochu da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+6554,dei nee naan unna confront panren la,tanglish,1,individual,0,1,1,0,0,0,0,medium,threatening language,synthetic_tanglish
+7586,nee private content force panna vendam inga la,tanglish,1,other,0,0,0,0,1,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+5593,dei nee consent illama sexual request pannadha comment section la nu,tanglish,1,individual,0,0,0,0,1,1,0,medium,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+6718,actually team work nalla pannenga bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4739,dei nee poda waste online la nu,tanglish,1,individual,0,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+4860,true bro meeting five mani ku irukku bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4236,dei mokka message la poda,tanglish,1,individual,0,0,0,0,0,0,1,medium,profane or abusive wording,synthetic_tanglish
+4010,true bro un effort romba nalla irukku honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+5108,actually indha idea useful ah irukku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7907,yes database update panniten inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3696,true bro indha idea useful ah irukku honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4298,macha ava mela unwanted comments podradhu harassment chat la macha,tanglish,1,individual,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+2758,bro seri paakalam la,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2746,seriously unna physical ah attack panniduven inga nu,tanglish,1,other,0,1,1,0,0,0,0,high,reference to physical harm,synthetic_tanglish
+5146,"In this chat, You are stupid! 582",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+1662,dei nee enna pannalum naan respond panren intha post la la,tanglish,1,individual,0,1,1,0,0,0,0,high,threatening language,synthetic_tanglish
+8102,"Honestly, You are disappointment seriously",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+1180,"In this chat, You are disgusting seriously 510",english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+624,"Seriously, That community is worthless for real",english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+6840,macha class nalla irundhucha da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+1438,seri un effort romba nalla irukku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4620,online la unwanted sexual attention kudukkadha daily podi,tanglish,1,individual,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+6770,dei nee dei poda public ah ah,tanglish,1,other,1,0,0,0,0,0,1,low,profane or abusive wording,synthetic_tanglish
+4014,honestly food saptiya honestly,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8524,dei nee nee oru waste fellow daily ippo,tanglish,1,individual,1,0,0,0,0,0,0,medium,direct personal insult,synthetic_tanglish
+4479,ivan un photo paathu sexual comments podradhu wrong social media la ippo,tanglish,1,other,0,0,0,0,1,0,0,high,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+2935,macha consent illama private photo kekkadha daily podi,tanglish,1,individual,0,0,0,0,0,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+6316,nice ah rest eduthuko,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4662,dei nee avanga ellarum same madhiri message la ah,tanglish,1,group,0,0,0,1,0,0,0,medium,group-targeted hateful language,synthetic_tanglish
+8304,bro private photo share panna force pannadha inga bro,tanglish,1,individual,0,0,0,0,1,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+856,seri thanks for helping me da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3274,macha unakku nalla warning idhu inga nu,tanglish,1,individual,0,1,0,0,0,0,0,medium,threatening language,synthetic_tanglish
+7081,dei nee sexual content anuppi disturb panna koodadhu message la podi,tanglish,1,individual,0,0,0,0,0,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+1059,yes assignment submit pannitiya today,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3278,seriously nee oru joker daily ippo,tanglish,1,other,1,0,0,0,0,0,0,low,direct personal insult,synthetic_tanglish
+6377,You are rude person.,english,1,individual,1,0,0,0,0,0,0,medium,Insulting or degrading language directed at an individual.,synthetic_english
+5868,yes keep going bro bro,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4666,actually inniku session epdi pochu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+7903,nee unna hurt panniduven ippo,tanglish,1,individual,0,1,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+2807,That sounds interesting today 1201,english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+829,"Thanks, Nice work! 304",english,0,none,0,0,0,0,0,0,0,none,No harmful or abusive content detected.,synthetic_english
+6486,nee nee romba pathetic intha post la nu,tanglish,1,individual,1,0,0,0,0,0,0,low,direct personal insult,synthetic_tanglish
+8916,honestly presentation clear ah irundhuchu nu,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+4487,"In this chat, I want to hurt you! 1290",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+6509,yes keep going bro da,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+3224,Everyone from your group is terrible. 1385,english,1,group,0,0,0,1,0,0,0,medium,Hostile language targeting a group.,synthetic_english
+6057,da food saptiya inniku,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+8845,dei nee online la unwanted sexual attention kudukkadha message la la,tanglish,1,individual,0,0,0,0,1,0,0,medium,unwanted sexualized or appearance-based harassment,synthetic_tanglish
+8039,"Honestly, I hope you get hurt 1197",english,1,individual,0,0,1,0,0,0,0,high,Violence-related language directed at an individual.,synthetic_english
+176,nee private photo share panna force pannadha social media la bro,tanglish,1,individual,0,0,0,0,1,1,0,medium,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+1699,dei nee unakku common sense illa daily podi,tanglish,1,individual,1,0,0,0,0,0,1,low,direct personal insult,synthetic_tanglish
+7954,dei nee unwanted sexual message anuppadha intha post la ah,tanglish,1,individual,0,0,0,0,1,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
+5730,unna adikka varuven daily da,tanglish,1,other,0,1,1,0,0,0,0,medium,reference to physical harm,synthetic_tanglish
+6687,nice ah all the best da macha,tanglish,0,none,0,0,0,0,0,0,0,none,"normal, neutral, or supportive statement",synthetic_tanglish
+2905,dei nee total dummy intha post la macha,tanglish,1,individual,1,0,0,0,0,0,1,medium,direct personal insult,synthetic_tanglish
+5141,nee stop pannalana problem aagum social media la da,tanglish,1,other,0,1,0,0,0,0,0,medium,threatening language,synthetic_tanglish
+1554,dei consent illama private photo kekkadha social media la poda,tanglish,1,individual,0,0,0,0,1,1,0,high,unwanted sexual pressure or abusive sexual request,synthetic_tanglish
